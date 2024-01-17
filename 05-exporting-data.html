@@ -259,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Exporting data</h1>
-        <p>Last updated on 2023-05-03 |
+        <p>Last updated on 2024-01-17 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/05-exporting-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -287,16 +287,16 @@ downstream applications?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Store spreadsheet data in universal file formats.</li>
+<ul><li>Understand why storing spreadsheet data in universal file formats is
+best-practise.</li>
 <li>Export data from a spreadsheet to a CSV file.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>Storing the data you’re going to work with for your analyses in Excel
-default file format (<code>*.xls</code> or <code>*.xlsx</code> -
-depending on the Excel version) isn’t a good idea. Why?</p>
+<p>Storing data in default Excel file formats (<code>*.xls</code> or
+<code>*.xlsx</code>) isn’t a good idea. Why?</p>
 <ul><li><p>Because it is a proprietary format, and it is possible that in
 the future, technology won’t exist (or will become sufficiently rare) to
 make it inconvenient, if not impossible, to open the file.</p></li>
@@ -304,9 +304,9 @@ make it inconvenient, if not impossible, to open the file.</p></li>
 a proprietary Excel format.</p></li>
 <li><p>Different versions of Excel may handle data differently, leading
 to inconsistencies.</p></li>
-<li><p>Finally, more journals and grant agencies are requiring you to
-deposit your data in a data repository, and most of them don’t accept
-Excel format. It needs to be in one of the formats discussed
+<li><p>Finally, more journals, funders, and institutions require
+researchers to deposit data in a data repository, and most of them don’t
+accept Excel formats. It needs to be in one of the formats discussed
 below.</p></li>
 <li><p>The above points also apply to other formats such as open data
 formats used by LibreOffice / Open Office. These formats are not static
@@ -316,27 +316,29 @@ packages.</p></li>
 we talked about how Excel stores dates earlier? It turns out that there
 are multiple defaults for different versions of the software, and you
 can switch between them all. So, say you’re compiling Excel-stored data
-from multiple sources. There are dates in each file - Excel interprets
-them as their own internally consistent serial numbers. When you combine
-the data, Excel will take the serial number from the place you’re
-importing it from, and interpret it using the rule set for the version
-of Excel you’re using. Essentially, you could be adding errors to your
-data, and it wouldn’t necessarily be flagged by any data cleaning
-methods if your ranges overlap.</p>
-<p>Storing data in a universal, open, and static format will help deal
-with this problem. Try tab-delimited (tab separated values or TSV) or
-comma-delimited (comma separated values or CSV). CSV files are plain
-text files where the columns are separated by commas, hence ‘comma
-separated values’ or CSV. The advantage of a CSV file over an
-Excel/SPSS/etc. file is that we can open and read a CSV file using just
-about any software, including plain text editors like TextEdit or
-NotePad. Data in a CSV file can also be easily imported into other
-formats and environments, such as SQLite and R. We’re not tied to a
-certain version of a certain expensive program when we work with CSV
-files, so it’s a good format to work with for maximum portability and
-endurance. Most spreadsheet programs can save to delimited text formats
-like CSV easily, although they may give you a warning during the file
-export.</p>
+from multiple sources and there are dates in each file. Excel will
+interpret them as their own internally consistent serial numbers. But
+when you combine the data, Excel will take the serial number from the
+place you’re importing it from, and interpret it using the rule set for
+the version of Excel you’re using. Essentially, you could be adding
+errors to your data, and it wouldn’t necessarily be flagged by any data
+cleaning methods if your ranges overlap.</p>
+<p>Storing data in a universal, open, and static format will help to
+deal with this problem. CSV (comma-separated values) files are plain
+text files where the columns are separated by commas. The advantages of
+CSV files over propriatery file formats like Excel or SPSS etc. files
+are:</p>
+<ul><li>You can open and read a CSV file using just about any software,
+including plain text editors like TextEdit or NotePad.</li>
+<li>Data in a CSV file can be easily imported into other formats and
+software environments, such as SQLite and R.</li>
+<li>It’s a good format to work with for maximum portability and
+endurance.</li>
+<li>CSV files are simple, lightweight, and don’t preserve formatting,
+highlighting, merged cells, etc.</li>
+</ul><p>Most spreadsheet programs can save to delimited text formats like CSV
+easily, although they may give you a scary-sounding warning when you
+save in a format other than their ‘own’ format.</p>
 <p>To save a file you have opened in Excel in CSV format:</p>
 <ol style="list-style-type: decimal"><li>From the top menu select ‘File’ and ‘Save as’.</li>
 <li>In the ‘Format’ field, from the list, select ‘Comma Separated
@@ -352,61 +354,8 @@ UNIX-style line endings (ASCII <code>LF</code> character) as
 representing line breaks. However, Windows uses an alternate line ending
 signifier (ASCII <code>CR LF</code> characters) by default for legacy
 compatibility with Teletype-based systems.</p>
-<p>As such, when exporting to CSV using Excel, your data in text format
-will look like this:</p>
-<blockquote>
-<p>data1,data2<cr><lf>1,2<cr><lf>4,5<cr><lf></lf></cr></lf></cr></lf></cr></p>
-</blockquote>
-<p>When opening your CSV file in Excel again, it will parse it as
-follows:</p>
-<figure><img width="307" alt="screen shot 2017-03-31 at 7 15 07 pm" src="https://cloud.githubusercontent.com/assets/13110354/24560663/db4a5786-1643-11e7-931a-ca2c72336878.png" class="figure mx-auto d-block"></figure><p>However, if you open your CSV file on a different system that does
-not parse the <code>CR</code> character it will interpret your CSV file
-differently:</p>
-<p>Your data in text format then look like this:</p>
-<blockquote>
-<p>data1<br> data2<cr><br> 1<br> 2<cr><br> …</cr></cr></p>
-</blockquote>
-<p>You will then see a weird character or possibly the string
-<code>CR</code> or <code>\r</code>:</p>
-<figure><img width="308" alt="screen shot 2017-03-31 at 7 26 42 pm" src="https://cloud.githubusercontent.com/assets/13110354/24561066/a990327c-1645-11e7-90b5-35a44e90f8d9.png" class="figure mx-auto d-block"></figure><p>thus causing terrible things to happen to your data. For example,
-<code>2\r</code> is not a valid integer, and thus will throw an error
-(if you’re lucky) when you attempt to operate on it in R or Python. Note
-that this happens on Excel for OSX as well as Windows, due to legacy
-Windows compatibility.</p>
-<p>There are a handful of solutions for enforcing uniform UNIX-style
-line endings on your exported CSV files:</p>
-<ol style="list-style-type: decimal"><li><p>When exporting from Excel, save as a “Windows comma separated
-(.csv)” file</p></li>
-<li><p>If you store your data file under version control using Git, edit
-the <code>.git/config</code> file in your repository to automatically
-translate <code>\r\n</code> line endings into <code>\n</code>. Add the
-following to the file (<a href="https://nicercode.github.io/blog/2013-04-30-excel-and-line-endings" class="external-link">see
-the detailed tutorial</a>):</p></li>
-</ol><pre><code> [filter "cr"]
- 	clean = LC_CTYPE=C awk '{printf(\"%s\\n\", $0)}' | LC_CTYPE=C tr '\\r' '\\n'
- 	smudge = tr '\\n' '\\r'` </code></pre>
-<p>and then create a file <code>.gitattributes</code> that contains the
-line:</p>
-<pre><code> *.csv filter=cr</code></pre>
-<ol start="3" style="list-style-type: decimal"><li>Use <a href="https://dos2unix.sourceforge.net/" class="external-link">dos2unix</a>
-(available on OSX, *nix, and Cygwin) on local files to standardize line
-endings.</li>
-</ol><div class="section level4">
-<h4 id="a-note-on-r-and--xlsx">A note on R and <code>.xlsx</code>
-<a class="anchor" aria-label="anchor" href="#a-note-on-r-and--xlsx"></a></h4>
-<p>There are R packages that can read <code>.xls</code> or
-<code>.xlsx</code> files (as well as Google spreadsheets). It is even
-possible to access different worksheets in the <code>.xlsx</code>
-documents.</p>
-<p><strong>But</strong></p>
-<ul><li>some of these only work on Windows</li>
-<li>this equates to replacing a (simple but manual) export to
-<code>csv</code> with additional complexity/dependencies in the data
-analysis R code</li>
-<li>data formatting best practice still apply</li>
-<li>Is there really a good reason why <code>csv</code> (or similar) is
-not adequate?</li>
-</ul></div>
+<p>As such, when exporting to CSV using Excel, it’s best to select
+“Windows comma separated (.csv)” file for compatibility.</p>
 <div class="section level4">
 <h4 id="caveats-on-commas">Caveats on commas<a class="anchor" aria-label="anchor" href="#caveats-on-commas"></a></h4>
 <p>In some datasets, the data values themselves may include commas (,).
@@ -422,6 +371,15 @@ TSV files can be exported from spreadsheet programs in the same way as
 CSV files. For more of a discussion on data formats and potential issues
 with commas within datasets see <a href="https://www.datacarpentry.org/spreadsheet-ecology-lesson/discuss/" class="external-link">the
 discussion page</a>.</p>
+</div>
+<div class="section level4">
+<h4 id="special-characters">Special characters<a class="anchor" aria-label="anchor" href="#special-characters"></a></h4>
+<p>.CSV files saved with UTF-8 encoding should display special
+characters, such as Chinese Characters. However, by default Microsoft
+Excel uses ANSI encoding which causes many special characters to display
+incorrectly. To import such a .CSV file, in Excel navigate to the Data
+tab &gt; From Text/CSV &gt; select the file and then in the import
+wizard select 65001 Unicode (UTF-8) from the Encoding dropdown.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -497,8 +455,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/05-exporting-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/05-exporting-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2023-05-03",
-  "datePublished": "2024-01-16"
+  "dateModified": "2024-01-17",
+  "datePublished": "2024-01-17"
 }
 
   </script><script>

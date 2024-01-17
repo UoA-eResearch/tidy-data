@@ -148,12 +148,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         2. Formatting data tables in Spreadsheets
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+        
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#structuring-data-in-spreadsheets">Structuring Data in Spreadsheets</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -252,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Formatting data tables in Spreadsheets</h1>
-        <p>Last updated on 2023-05-03 |
+        <p>Last updated on 2024-01-17 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -273,7 +280,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>How do we format data in spreadsheets for effective data use?</li>
+<ul><li>How do we properly format data in spreadsheets?</li>
 </ul></div>
 </div>
 </div>
@@ -290,124 +297,44 @@ spreadsheet.</li>
 </div>
 </div>
 </div>
-<p>The most common mistake made is treating spreadsheet programs like
-lab notebooks, that is, relying on context, notes in the margin, spatial
-layout of data and fields to convey information. As humans, we can
-(usually) interpret these things, but computers don’t view information
-the same way, and unless we explain to the computer what every single
-thing means (and that can be hard!), it will not be able to see how our
-data fits together.</p>
-<p>Using the power of computers, we can manage and analyze data in much
-more effective and faster ways, but to use that power, we have to set up
-our data for the computer to be able to understand it (and computers are
-very literal).</p>
-<p>This is why it’s extremely important to set up well-formatted tables
-from the outset - before you even start entering data from your very
-first preliminary experiment. Data organization is the foundation of
-your research project. It can make it easier or harder to work with your
-data throughout your analysis, so it’s worth thinking about when you’re
-doing your data entry or setting up your experiment. You can set things
-up in different ways in spreadsheets, but some of these choices can
-limit your ability to work with the data in other programs or have the
-you-of-6-months-from-now or your collaborator work with the data.</p>
-<div id="note" class="callout callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
-</h3>
-<div class="callout-content">
-<p>The best layouts/formats (as well as software and interfaces) for
-data entry and data analysis might be different. It is important to take
-this into account, and ideally automate the conversion from one to
-another.</p>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="keeping-track-of-your-analyses">Keeping track of your analyses<a class="anchor" aria-label="anchor" href="#keeping-track-of-your-analyses"></a></h3>
-<p>When you’re working with spreadsheets, during data clean up or
-analyses, it’s very easy to end up with a spreadsheet that looks very
-different from the one you started with. In order to be able to
-reproduce your analyses or figure out what you did when Reviewer #3 asks
-for a different analysis, you should</p>
-<ul><li>create a new file with your cleaned or analyzed data. Don’t modify
-the original dataset, or you will never know where you started!</li>
-<li>keep track of the steps you took in your clean up or analysis. You
-should track these steps as you would any step in an experiment. We
-recommend that you do this in a plain text file stored in the same
-folder as the data file.</li>
-</ul><p>This might be an example of a spreadsheet setup:</p>
-<figure><img src="../fig/spreadsheet-setup-updated.png" alt="spreadsheet setup" class="figure mx-auto d-block"></figure><p>Put these principles in to practice today during your Exercises.</p>
-<div id="note-1" class="callout callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="note-1" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
-</h3>
-<div class="callout-content">
-<p>This is out of scope for this lesson, but for information on how to
-maintain version control over your data, look at our lesson on <a href="https://swcarpentry.github.io/git-novice/" class="external-link">‘Git’</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="structuring-data-in-spreadsheets">Structuring data in spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a></h3>
-<p>The cardinal rule of using spreadsheet programs for data is to keep
-it “tidy”:</p>
+<section id="structuring-data-in-spreadsheets"><h2 class="section-heading">Structuring Data in Spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
+</h2>
+<hr class="half-width"><p>Using the power of computers, we can manage and analyse data in much
+more effective and faster ways. But to use that power, we need to set up
+our data in a way the computer can understand (and computers are very
+literal).</p>
+<p>One of the strengths of spreadsheet software can also lead to
+problems: the endless choices you have when setting up data in
+spreadsheets. You’ll need to make decisions early on which could end up
+limiting your ability to work with the data in other software, or make
+it difficult to understand what you did. By applying a few common
+principles to your data, you should be able to avoid these issues.</p>
+<p>The number one rule for working with tabular data in spreadsheet
+software is to keep it “tidy”:</p>
 <ol style="list-style-type: decimal"><li>Put all your variables in columns - the thing you’re measuring, like
 ‘weight’ or ‘temperature’.</li>
 <li>Put each observation in its own row.</li>
-<li>Don’t combine multiple pieces of information in one cell. Sometimes
-it just seems like one thing, but think if that’s the only way you’ll
-want to be able to use or sort that data.</li>
-<li>Leave the raw data raw - don’t change it!</li>
-<li>Export the cleaned data to a text-based format like CSV
-(comma-separated values) format. This ensures that anyone can use the
-data, and is required by most data repositories.</li>
-</ol><p>For instance, we have data from a survey of small mammals in a desert
-ecosystem. Different people have gone to the field and entered data into
-a spreadsheet. They keep track of things like species, plot, weight, sex
-and date collected.</p>
-<p>If they were to keep track of the data like this:</p>
-<figure><img src="../fig/multiple-info.png" alt="multiple-info example" class="figure mx-auto d-block"></figure><p>the problem is that species and sex are in the same field. So, if
-they wanted to look at all of one species or look at different weight
-distributions by sex, it would be hard to do this using this data setup.
-If instead we put sex and species in different columns, you can see that
-it would be much easier.</p>
-</div>
-<div class="section level3">
-<h3 id="columns-for-variables-and-rows-for-observations">Columns for variables and rows for observations<a class="anchor" aria-label="anchor" href="#columns-for-variables-and-rows-for-observations"></a></h3>
-<p>The rule of thumb, when setting up a datasheet, is columns =
-variables, rows = observations, cells = data (values).</p>
-<p>So, instead we should have:</p>
-<figure><img src="../fig/single-info.png" alt="single-info example" class="figure mx-auto d-block"></figure><div id="discussion" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="discussion" class="callout-inner">
-<h3 class="callout-title">Discussion<a class="anchor" aria-label="anchor" href="#discussion"></a>
-</h3>
-<div class="callout-content">
-<p>If not already discussed, introduce the dataset that will be used in
-this lesson, and in the other ecology lessons, the <a href="https://www.datacarpentry.org/ecology-workshop/data/" class="external-link">Portal
-Project Teaching Dataset</a>.</p>
-<p>The data used in the ecology lessons are observations of a small
-mammal community in southern Arizona. This is part of a project studying
-the effects of rodents and ants on the plant community that has been
-running for almost 40 years. The rodents are sampled on a series of 24
-plots, with different experimental manipulations controlling which
+<li>Don’t combine multiple pieces of information in one cell. You want
+maximum freedom to sort or subset your data later on.</li>
+<li>Keep a copy of the raw data, untouched, in it’s own folder.</li>
+<li>Export the cleaned or modified data to a text-based format like CSV
+(comma-separated values) format. This ensures that anyone can open the
+data, and is best-practise when depositing to research data
+repositories.</li>
+</ol><div class="section level3">
+<h3 id="portal-project-teaching-dataset">Portal Project Teaching Dataset<a class="anchor" aria-label="anchor" href="#portal-project-teaching-dataset"></a></h3>
+<p>The data used across the Data Carpentry lessons is a simplified
+version of the Portal Project Database designed for teaching. This
+dataset contains observations taken from a small mammal community in
+southern Arizona as part of a project studying the effects of rodents
+and ants on the plant community. The rodents are sampled on a series of
+24 plots, with different experimental manipulations controlling which
 rodents are allowed to access which plots.</p>
-<p>This is a real dataset that has been used in over 100 publications.
-We’ve simplified it just a little bit for the workshop, but you can
-download the full dataset and work with it using exactly the same tools
-we’ll learn about today.</p>
-</div>
-</div>
-</div>
+<p>The study has been running for almost 40 years and the full dataset
+has been used in over 100 publications. It’s been simplified a little
+bit for the workshop, but the full version is available to download if
+you’d like to look at it using the same tools we’ll learn about
+today.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -416,26 +343,19 @@ we’ll learn about today.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>We’re going to take a messy version of the survey data and describe
-how we would clean it up.</p>
-<ol style="list-style-type: decimal"><li>Download the data by clicking <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">here</a> to get it
-from FigShare.</li>
-<li>Open up the data in a spreadsheet program.</li>
-<li>You can see that there are two tabs. Two field assistants conducted
-the surveys, one in 2013 and one in 2014, and they both kept track of
-the data in their own way in tabs <code>2013</code> and
-<code>2014</code> of the dataset, respectively. Now you’re the person in
-charge of this project and you want to be able to start analyzing the
-data.</li>
-<li>With the person next to you, identify what is wrong with this
-spreadsheet. Also discuss the steps you would need to take to clean up
-the <code>2013</code> and <code>2014</code> tabs, and to put them all
-together in one spreadsheet.</li>
-</ol><p><strong>Important</strong> Do not forget our first piece of advice:
-to create a new file (or tab) for the cleaned data, never modify your
-original (raw) data.</p>
-<p>After you go through this exercise, we’ll discuss as a group what was
-wrong with this data and how you would fix it.</p>
+<p>We’re going to open up a messy version of a spreadsheet containing
+some of the Portal data. You can get a copy of the spreadsheet <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">here</a>.</p>
+<p>You can see that the data is spread across two tabs within this Excel
+workbook. Let’s assume two field assistants conducted the surveys, one
+in 2013 and one in 2014, and they both kept track of the data in their
+own way in tabs <code>2013</code> and <code>2014</code> of the workbook.
+Let’s say you were the person in charge of this project and you wanted
+to start analysing the data.</p>
+<p>With the person next to you (if the workshop is in-person), or in the
+chat (if the workshop is online), identify what is wrong with this
+spreadsheet and what you could do to fix the problem.</p>
+<p><strong>Important</strong> Do not forget to create a new file for the
+cleaned data. Never modify your original (raw) data.</p>
 </div>
 </div>
 </div>
@@ -444,15 +364,12 @@ wrong with this data and how you would fix it.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<ul><li>Take about 10 minutes to work on this exercise.</li>
-<li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
-messy dataset. If the exercise is done during a workshop, ask people
-what they saw as wrong with the data. As they bring up different points,
-you can refer to <a href="02-common-mistakes.html">02-common-mistakes</a> or expand a bit on
-the point they brought up.</li>
-<li>Note that there is a problem with dates in table ‘plot 3’ in
+<ul><li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
+messy dataset. As different points are brought up, refer to <a href="02-common-mistakes.html">02-common-mistakes</a> or expand a bit on
+the point.</li>
+<li>Note: There is a problem with dates in table ‘plot 3’ in the
 <code>2014</code> tab. The field assistant who collected the data for
 year 2014 initially forgot to include their data for ‘plot 3’. They came
 back in 2015 to include the missing data and entered the dates for ‘plot
@@ -469,19 +386,6 @@ dates in spreadsheets in episode <a href="03-dates-as-data.html">03-dates-as-dat
 </div>
 </div>
 </div>
-<p>There are excellent references to help you work with data in
-spreadsheets. These include:</p>
-<p>Regarding R scripting;</p>
-<blockquote>
-<p>Hadley Wickham, <em>Tidy Data</em>, Vol. 59, Issue 10, Sep 2014,
-Journal of Statistical Software. <a href="https://www.jstatsoft.org/v59/i10" class="external-link">http://www.jstatsoft.org/v59/i10</a>.</p>
-</blockquote>
-<p>Appropriately Regarding Data organization in spreadsheets;</p>
-<blockquote>
-<p>Karl W. Broman &amp; Kara H. Woo (2018) Data Organization in
-Spreadsheets, The American Statistician, 72:1, 2-10, <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989" class="external-link">DOI:
-10.1080/00031305.2017.1375989</a>.</p>
-</blockquote>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -499,10 +403,7 @@ plain text file.</li>
 </div>
 </div>
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/00-intro.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/02-common-mistakes.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -560,8 +461,8 @@ plain text file.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/01-format-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/01-format-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2023-05-03",
-  "datePublished": "2024-01-16"
+  "dateModified": "2024-01-17",
+  "datePublished": "2024-01-17"
 }
 
   </script><script>

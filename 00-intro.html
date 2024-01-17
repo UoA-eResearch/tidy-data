@@ -259,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2023-12-07 |
+        <p>Last updated on 2024-01-17 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -279,7 +279,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What are basic principles for using spreadsheets for good data
-organization?</li>
+organisation?</li>
 </ul></div>
 </div>
 </div>
@@ -287,53 +287,62 @@ organization?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Describe best practices for organizing data so computers can make
+<ul><li>Describe best practices for organising data so computers can make
 the best use of data sets.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<p>Good data organization is the foundation of your research project.
-Most researchers have data or do data entry in spreadsheets. Spreadsheet
-programs are very useful graphical interfaces for designing data tables
-and handling very basic data quality control functions.</p>
+<p>Good data organisation is the foundation of your research project.
+Most researchers will need to interact with data that is arranged in
+tables with rows and columns (tabular data), or do data entry in
+spreadsheets.</p>
 <div class="section level3">
-<h3 id="spreadsheet-outline">Spreadsheet outline<a class="anchor" aria-label="anchor" href="#spreadsheet-outline"></a></h3>
+<h3 id="lesson-outline">Lesson outline<a class="anchor" aria-label="anchor" href="#lesson-outline"></a></h3>
 <p>After this lesson, you will be able to:</p>
-<ul><li>Implement best practices in data table formatting</li>
+<ul><li>Implement best practices in formatting data tables</li>
 <li>Identify and address common formatting mistakes</li>
 <li>Understand approaches for handling dates in spreadsheets</li>
-<li>Utilize basic quality control features and data manipulation
+<li>Utilise basic quality control features and data manipulation
 practices</li>
 <li>Effectively export data from spreadsheet programs</li>
-</ul><p><em>Overall good data practices</em></p>
-<p>Spreadsheets are good for data entry. Therefore we have a lot of data
-in spreadsheets. Much of your time as a researcher will be spent in this
-‘data wrangling’ stage. It’s not the most fun, but it’s necessary. We’ll
-teach you how to think about data organization and some practices for
-more effective data wrangling. Not only will this save time and effort,
-it also paves the way for more equitable and inclusive science. Making
-our work more accessible provides wider avenues for collaboration and
-improvement!</p>
+</ul></div>
+<div class="section level3">
+<h3 id="spreadsheet-software">Spreadsheet software<a class="anchor" aria-label="anchor" href="#spreadsheet-software"></a></h3>
+<p>Many spreadsheet programs are available. Since most researchers use
+Excel as their primary spreadsheet program, this lesson will make use of
+Excel examples. Free alternatives include LibreOffice Calc, and even
+Google Sheets, but commands may differ between programs.</p>
 </div>
 <div class="section level3">
 <h3 id="what-this-lesson-will-not-teach-you">What this lesson will not teach you<a class="anchor" aria-label="anchor" href="#what-this-lesson-will-not-teach-you"></a></h3>
 <ul><li>How to do <em>statistics</em> in a spreadsheet</li>
 <li>How to do <em>plotting</em> in a spreadsheet</li>
 <li>How to <em>write code</em> in spreadsheet programs</li>
-</ul><p>If you’re looking to do this, a good reference is <a href="https://www.amazon.com/Head-First-Excel-learners-spreadsheets/dp/0596807694/" class="external-link">Head
-First Excel</a>, published by O’Reilly.</p>
-</div>
-<div class="section level3">
-<h3 id="spreadsheet-programs">Spreadsheet programs<a class="anchor" aria-label="anchor" href="#spreadsheet-programs"></a></h3>
-<p>Many spreadsheet programs are available. Since most participants
-utilize Excel as their primary spreadsheet program, this lesson will
-make use of Excel examples.</p>
-<p>Free spreadsheet programs that can also be used are LibreOffice Calc,
-and even Google Sheets.</p>
-<p>Commands may differ a bit between programs, but the general idea is
-the same.</p>
+</ul></div>
+<section id="problems-with-spreadsheets"><h2 class="section-heading">Problems with Spreadsheets<a class="anchor" aria-label="anchor" href="#problems-with-spreadsheets"></a>
+</h2>
+<hr class="half-width"><p>Spreadsheet programs like Excel were originally designed to enter,
+manipulate, and visualise financial data. When we use them in the
+context of research we can run into problems when we use them in ways
+that don’t gel with research data. For example:</p>
+<ul><li>Be very cautious when opening and saving research data in Excel
+because it automatically reformats certain types of data, and this can
+introduce major errors (we’ll explore an example later when we talk
+about dates).</li>
+<li>Making tables ‘pretty’ with merged cells, borders, highlighting, and
+notes in the margin mean that the data will not be recognised when
+imported into more specialised data analysis software, and will first
+require extensive clean up.</li>
+<li>Statistics and figures generated within ‘point and click’ software
+like Excel cannot be replicated by someone else without detailed
+instructions, and it’s easy to introduce errors when performing actions
+by hand.</li>
+</ul><p>Doing statistics, plotting data, writing code, and doing in-depth
+data cleaning are best handled by software which has been especially
+designed for these roles. We will explore Openrefine and R during the
+course of this workshop.</p>
 <div id="exercise" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -348,55 +357,18 @@ frustrated or sad?</li>
 </ul></div>
 </div>
 </div>
-<p>Spreadsheets encompass a lot of the things we need to be able to do
-as researchers. We can use them for:</p>
-<ul><li>Data entry</li>
-<li>Organizing data</li>
-<li>Subsetting and sorting data</li>
-<li>Statistics</li>
-<li>Plotting</li>
-</ul><p>We do a lot of different operations in spreadsheets. What kind of
-operations do you do in spreadsheets? Which ones do you think
-spreadsheets are good for?</p>
-</div>
-<section id="problems-with-spreadsheets"><h2 class="section-heading">Problems with Spreadsheets<a class="anchor" aria-label="anchor" href="#problems-with-spreadsheets"></a>
-</h2>
-<hr class="half-width"><p>Spreadsheets are good for data entry, but in reality we tend to use
-spreadsheet programs for much more than data entry. We use them to
-create data tables for publications, to generate summary statistics, and
-make figures.</p>
-<p>Generating tables for publications in a spreadsheet is not optimal -
-often, when formatting a data table for publication, we’re reporting key
-summary statistics in a way that is not really meant to be read as data,
-and often involves special formatting (merging cells, creating borders,
-making it pretty). Cutting and pasting from a spreadsheet to a document
-software (like Word) can have unpredictable results. We advise you to
-create tables within these document software using the document’s own
-table editing software.</p>
-<p>The latter two applications, generating statistics and figures,
-should be used with caution: because of the graphical, drag and drop
-nature of spreadsheet programs, it can be very difficult, if not
-impossible, to replicate your steps (much less retrace anyone else’s),
-particularly if your stats or figures require you to do more complex
-calculations. Furthermore, in doing calculations in a spreadsheet, it’s
-easy to accidentally apply a slightly different formula to multiple
-adjacent cells. When using a command-line based statistics program like
-R or SAS, it’s practically impossible to apply a calculation to one
-observation in your dataset but not another unless you’re doing it on
-purpose.</p>
 <div class="section level3">
-<h3 id="using-spreadsheets-for-data-entry-and-cleaning">Using Spreadsheets for Data Entry and Cleaning<a class="anchor" aria-label="anchor" href="#using-spreadsheets-for-data-entry-and-cleaning"></a></h3>
-<p>However, there are circumstances where you might want to use a
-spreadsheet program to produce “quick and dirty” calculations or
-figures, and data cleaning will help you use some of these features.
-Data cleaning also puts your data in a better format prior to
-importation into a statistical analysis program. We will show you how to
-use some features of spreadsheet programs to check your data quality
-along the way and produce preliminary summary statistics.</p>
-<p>In this lesson, we will assume that you are most likely using Excel
-as your primary spreadsheet program - there are others (gnumeric, Calc
-from OpenOffice), and their functionality is similar, but Excel seems to
-be the program most used by biologists and ecologists.</p>
+<h3 id="using-spreadsheet-software-for-data-entry">Using Spreadsheet Software for Data Entry<a class="anchor" aria-label="anchor" href="#using-spreadsheet-software-for-data-entry"></a></h3>
+<p>There are, however, useful things we can do with spreadsheet software
+to help us with our research. In particular, quality control features
+can ensure that data entered manually is standardised and free of
+errors.</p>
+<p>The way you organise data can make it easier or harder to work with
+your data throughout your analysis, so it’s worth thinking about at the
+start of your project. Setting up well-formatted data tables and getting
+into good habits early on will pay off throughout the whole research
+process. Your future collaborators (and even your future self) will
+appreciate the benefits of having clean and tidy data to work with.</p>
 <p>In this lesson we’re going to talk about:</p>
 <ol style="list-style-type: decimal"><li><a href="01-format-data.html">Formatting data tables in
 spreadsheets</a></li>
@@ -412,7 +384,9 @@ spreadsheets</a></li>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>Good data organization is the foundation of any research
+<ul><li>Be aware of the limitations of spreadsheet software when working
+with research data.</li>
+<li>Good data organisation is the foundation of any research
 project.</li>
 </ul></div>
 </div>
@@ -476,8 +450,8 @@ project.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/00-intro.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/00-intro.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2023-12-07",
-  "datePublished": "2024-01-16"
+  "dateModified": "2024-01-17",
+  "datePublished": "2024-01-17"
 }
 
   </script><script>

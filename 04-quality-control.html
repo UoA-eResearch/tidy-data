@@ -260,7 +260,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Quality control</h1>
-        <p>Last updated on 2023-05-03 |
+        <p>Last updated on 2024-01-17 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/04-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -333,39 +333,37 @@ only allow plot values that are integers between 1 and 24.</p>
 </ol><figure><img src="fig/plot_validation.png" alt="Image of Data Validation window for validating plot values" class="figure mx-auto d-block"></figure><p>Now let’s try entering a new value in the plot column that isn’t a
 valid plot. The spreadsheet stops us from entering the wrong value and
 asks us if we would like to try again.</p>
-<figure><img src="fig/invalid_value.png" alt="Image of error when trying to enter invalid data" class="figure mx-auto d-block"></figure><p>You can also customize the resulting message to be more informative
+<figure><img src="fig/invalid_value.png" alt="Image of error when trying to enter invalid data" class="figure mx-auto d-block"></figure><p>You can also customise the resulting message to be more informative
 by entering your own message in the <code>Input Message</code> tab</p>
 <figure><img src="fig/input_message.png" alt="Image of Input Message tab" class="figure mx-auto d-block"></figure><p>or allow invalid data to result in a warning rather than an error by
 modifying the <code>Style</code> option on the <code>Error Alert</code>
 tab.</p>
 <figure><img src="fig/error_alert.png" alt="Image of Error Alert tab" class="figure mx-auto d-block"></figure><p>Quality assurance can make data entry easier as well as more robust.
 For example, if you use a list of options to restrict data entry, the
-spreadsheet will provide you with a drop-downlist of the available
+spreadsheet will provide you with a dropdown list of the available
 items. So, instead of trying to remember how to spell <em>Dipodomys
 spectabilis</em>, you can select the right option from the list.</p>
 <figure><img src="fig/drop_down_list2.png" alt="Image of drop-down menu" class="figure mx-auto d-block"></figure></section><section id="quality-control"><h2 class="section-heading">Quality Control<a class="anchor" aria-label="anchor" href="#quality-control"></a>
 </h2>
-<hr class="half-width"><p>Tip: <em>Before doing any quality control operations, save your
-original file with the formulas and a name indicating it is the original
-data. Create a separate file with appropriate naming and versioning, and
-ensure your data is stored as values and not as formulas. Because
-formulas refer to other cells, and you may be moving cells around, you
-may compromise the integrity of your data if you do not take this
-step!</em></p>
-<p>readMe (README) files: As you start manipulating your data files,
-create a readMe document / text file to keep track of your files and
-document your manipulations so that they may be easily understood and
-replicated, either by your future self or by an independent researcher.
-Your readMe file should document all of the files in your data set
-(including documentation), describe their content and format, and lay
-out the organizing principles of folders and subfolders. For each of the
-separate files listed, it is a good idea to document the manipulations
-or analyses that were carried out on those data. <a href="https://data.research.cornell.edu/content/readme" class="external-link">Cornell
-University’s Research Data Management Service Group</a> provides
-detailed guidelines for how to write a good readMe file, along with an
-adaptable template.</p>
+<hr class="half-width"><div id="note" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="note" class="callout-inner">
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
+</h3>
+<div class="callout-content">
+<p>If you have used formulas in your spreadsheet, then before doing any
+quality control operations it’s best to save your spreadsheet and create
+a new copy. In the new copy, copy and paste the contents as values so
+the formulas are removed. Because formulas refer to other cells, and you
+may be moving cells around, you may compromise the integrity of your
+data if you do not take this step.</p>
+</div>
+</div>
+</div>
 <div class="section level3">
-<h3 id="sorting">Sorting<a class="anchor" aria-label="anchor" href="#sorting"></a></h3>
+<h3 id="manual-method-sorting">Manual method: Sorting<a class="anchor" aria-label="anchor" href="#manual-method-sorting"></a></h3>
 <p>Bad values often sort to the bottom or top of the column. For
 example, if your data should be numeric, then alphabetical and null data
 will group at the ends of the sorted data. Sort your data by each field,
@@ -373,11 +371,18 @@ one at a time. Scan through each column, but pay the most attention to
 the top and the bottom of a column. If your dataset is well-structured
 and does not contain formulas, sorting should never affect the integrity
 of your dataset.</p>
-<p><strong>Remember</strong> to expand your sort in order to prevent
+<p><strong>But remember</strong> to expand your sort in order to prevent
 data corruption. Expanding your sort ensures that the all the data in
 one row move together instead of only sorting a single column in
 isolation. Sorting by only a single column will scramble your data - a
 single row will no longer represent an individual observation.</p>
+</div>
+<div class="section level3">
+<h3 id="conditional-formatting">Conditional formatting<a class="anchor" aria-label="anchor" href="#conditional-formatting"></a></h3>
+<p>Conditional formatting can highlight bad values based on certain
+criteria. This makes it easy to scan your data for errors. Conditional
+formatting should be used with caution, but it can be a great way to
+flag inconsistent values when entering data.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -386,13 +391,15 @@ single row will no longer represent an individual observation.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>We’ve combined all of the tables from the messy data into a single
-table in a single tab. Download this semi-cleaned data file to your
-computer: <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true" class="external-link">survey_sorting_exercise</a></p>
-<p>Once downloaded, sort the <code>Weight_grams</code> column in your
-spreadsheet program from <code>Largest to Smallest</code>.</p>
-<p>What do you notice?</p>
-</div>
+<p>Download this semi-cleaned <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true" class="external-link">spreadsheet
+file</a>.</p>
+<ol style="list-style-type: decimal"><li>Make sure the Weight_grams column is highlighted.</li>
+<li>In the main Excel menu bar, click <code>Home</code> &gt;
+<code>Conditional Formatting...</code> choose a formatting rule.</li>
+<li>Apply any <code>2-Colour Scale</code> formatting rule.</li>
+<li>Now we can scan through and different colours will stand out. Do you
+notice any strange values?</li>
+</ol></div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -400,62 +407,9 @@ spreadsheet program from <code>Largest to Smallest</code>.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>Click the Sort button on the data tab in Excel. A pop-up will appear.
-Make sure you select <code>Expand the selection</code>.</p>
-<p><img src="fig/sorting_button.png" class="figure"> {alt=‘quality_control0,
-exercise1’ .output}</p>
-<p>The following window will display, choose the column you want to sort
-as well as the sort order.</p>
-<p><img src="fig/sorting_example.png" class="figure"> {alt=‘quality_control1,
-exercise1’ .output}</p>
-<p><strong>Note</strong> how the odd values sort to the top and bottom
-of the tabular data. The cells containing no data values sort to the
-bottom of the tabular data, while the cells where the letter “g” was
-included can be found towards the top. This is a powerful way to check
-your data for outliers and odd values.</p>
-<p><img src="fig/sorting_solution_1.png" class="figure"> {alt=‘quality_control2,
-exercise1’ .output}</p>
-<p><img src="fig/sorting_solution_2.png" class="figure"> {alt=‘quality_control3,
-exercise1’ .output}</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="conditional-formatting">Conditional formatting<a class="anchor" aria-label="anchor" href="#conditional-formatting"></a></h3>
-<p>Conditional formatting basically can do something like color code
-your values by some criteria or lowest to highest. This makes it easy to
-scan your data for outliers.</p>
-<p>Conditional formatting should be used with caution, but it can be a
-great way to flag inconsistent values when entering data.</p>
-<div id="exercise-1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="exercise-1" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise-1"></a>
-</h3>
-<div class="callout-content">
-<ol style="list-style-type: decimal"><li>Make sure the Weight_grams column is highlighted.</li>
-<li>In the main Excel menu bar, click <code>Home</code> &gt;
-<code>Conditional Formatting...</code> choose a formatting rule.</li>
-<li>Apply any <code>2-Color Scale</code> formatting rule.</li>
-<li>Now we can scan through and different colors will stand out. Do you
-notice any strange values?</li>
-</ol></div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>Cells that contain non-numerical values are not colored. This
+<p>Cells that contain non-numerical values are not coloured. This
 includes both the cells where the letter “g” was included and the empty
 cells. <img src="fig/conditional_formating.png" class="figure">
 {alt=‘quality_control4, exercise2’ .output}</p>
@@ -463,9 +417,9 @@ cells. <img src="fig/conditional_formating.png" class="figure">
 </div>
 </div>
 </div>
-<p>It is nice to be able to do these scans in spreadsheets, but we also
-can do these checks in a programming language like R, or in OpenRefine
-or SQL.</p>
+<p>These kinds of checks are useful to ensure your data does not have
+errors introduced, but it’s worth knowing we can also perform much more
+powerful checks in tools like Openrefine and R.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -543,8 +497,8 @@ data.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/04-quality-control.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/04-quality-control.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2023-05-03",
-  "datePublished": "2024-01-16"
+  "dateModified": "2024-01-17",
+  "datePublished": "2024-01-17"
 }
 
   </script><script>
