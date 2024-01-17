@@ -6,42 +6,33 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe best practices for organizing data so computers can make the best use of data sets.
+- Describe best practices for organising data so computers can make the best use of data sets.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for using spreadsheets for good data organization?
+- What are basic principles for using spreadsheets for good data organisation?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Good data organization is the foundation of your research
-project. Most researchers have data or do data entry in
-spreadsheets. Spreadsheet programs are very useful graphical
-interfaces for designing data tables and handling very basic data
-quality control functions.
+Good data organisation is the foundation of your research
+project. Most researchers will need to interact with data that is arranged in tables with rows and columns (tabular data),
+or do data entry in spreadsheets. 
 
-### Spreadsheet outline
+### Lesson outline
 
 After this lesson, you will be able to:
 
-- Implement best practices in data table formatting
+- Implement best practices in formatting data tables
 - Identify and address common formatting mistakes
 - Understand approaches for handling dates in spreadsheets
-- Utilize basic quality control features and data manipulation practices
+- Utilise basic quality control features and data manipulation practices
 - Effectively export data from spreadsheet programs
 
-*Overall good data practices*
+### Spreadsheet software
 
-Spreadsheets are good for data entry. Therefore we have a lot of data
-in spreadsheets.
-Much of your time as a researcher will be spent in this 'data wrangling' stage.
-It's not the most fun, but it's necessary. We'll teach you how to think
-about data organization and some practices for more effective data wrangling. Not only
-will this save time and effort, it also paves the way for more equitable and inclusive
-science. Making our work more accessible provides wider avenues for collaboration
-and improvement!
+Many spreadsheet programs are available. Since most researchers use Excel as their primary spreadsheet program, this lesson will make use of Excel examples. Free alternatives include LibreOffice Calc, and even Google Sheets, but commands may differ between programs.
 
 ### What this lesson will not teach you
 
@@ -49,17 +40,24 @@ and improvement!
 - How to do *plotting* in a spreadsheet
 - How to *write code* in spreadsheet programs
 
-If you're looking to do this, a good reference is
-[Head First Excel](https://www.amazon.com/Head-First-Excel-learners-spreadsheets/dp/0596807694/), published by O'Reilly.
+## Problems with Spreadsheets
 
-### Spreadsheet programs
+Spreadsheet programs like Excel were originally designed to enter, manipulate, and visualise
+financial data. When we use them in the context of research we can run into problems when
+we use them in ways that don't gel with research data. For example:
 
-Many spreadsheet programs are available. Since most participants utilize Excel as their primary spreadsheet program, this lesson will make use of Excel examples.
+- Be very cautious when opening and saving research data in Excel because it automatically 
+reformats certain types of data, and this can introduce major errors (we'll explore an example 
+later when we talk about dates).
+- Making tables 'pretty' with merged cells, borders, highlighting, and notes in the margin
+mean that the data will not be recognised when imported into more specialised data analysis software, 
+and will first require extensive clean up. 
+- Statistics and figures generated within 'point and click' software like Excel cannot be 
+replicated by someone else without detailed instructions, and it's easy to introduce errors
+when performing actions by hand.
 
-Free spreadsheet programs that can also be used are LibreOffice Calc, and even Google Sheets.
-
-Commands may differ a bit between programs, but the general idea
-is the same.
+Doing statistics, plotting data, writing code, and doing in-depth data cleaning are best handled by software which has 
+been especially designed for these roles. We will explore Openrefine and R during the course of this workshop.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -72,58 +70,18 @@ is the same.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Spreadsheets encompass a lot of the things we need
-to be able to do as researchers. We can use them for:
+### Using Spreadsheet Software for Data Entry
 
-- Data entry
-- Organizing data
-- Subsetting and sorting data
-- Statistics
-- Plotting
+There are, however, useful things we can do with spreadsheet software to help us
+with our research. In particular, quality control features can ensure that data
+entered manually is standardised and free of errors.
 
-We do a lot of different operations in spreadsheets. What kind of operations do you do in spreadsheets? Which ones do you think spreadsheets are good for?
-
-## Problems with Spreadsheets
-
-Spreadsheets are good for data entry, but in reality we tend to
-use spreadsheet programs for much more than data entry. We use them
-to create data tables for publications, to generate summary
-statistics, and make figures.
-
-Generating tables for publications in a spreadsheet is not
-optimal - often, when formatting a data table for publication, we're
-reporting key summary statistics in a way that is not really meant to
-be read as data, and often involves special formatting
-(merging cells, creating borders, making it pretty). Cutting and pasting from a spreadsheet
-to a document software (like Word) can have unpredictable results.
-We advise you to create tables within these document software
-using the document's own table editing software.
-
-The latter two applications, generating statistics and figures, should
-be used with caution: because of the graphical, drag and drop nature of
-spreadsheet programs, it can be very difficult, if not impossible, to
-replicate your steps (much less retrace anyone else's), particularly if your
-stats or figures require you to do more complex calculations. Furthermore,
-in doing calculations in a spreadsheet, it's easy to accidentally apply a
-slightly different formula to multiple adjacent cells. When using a
-command-line based statistics program like R or SAS, it's practically
-impossible to apply a calculation to one observation in your
-dataset but not another unless you're doing it on purpose.
-
-### Using Spreadsheets for Data Entry and Cleaning
-
-However, there are circumstances where you might want to use a spreadsheet
-program to produce "quick and dirty" calculations or figures, and data
-cleaning will help you use some of these features. Data cleaning also
-puts your data in a better format prior to importation into a
-statistical analysis program. We will show you how to use some features of
-spreadsheet programs to check your data quality along the way and produce
-preliminary summary statistics.
-
-In this lesson, we will assume that you are most likely using Excel as
-your primary spreadsheet program - there are others (gnumeric, Calc
-from OpenOffice), and their functionality is similar, but Excel seems
-to be the program most used by biologists and ecologists.
+The way you organise data can make it easier or harder
+to work with your data throughout your analysis, so it's worth
+thinking about at the start of your project. Setting up well-formatted
+data tables and getting into good habits early on will pay off 
+throughout the whole research process. Your future collaborators (and even your future self)
+will appreciate the benefits of having clean and tidy data to work with.
 
 In this lesson we're going to talk about:
 
@@ -135,7 +93,8 @@ In this lesson we're going to talk about:
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Good data organization is the foundation of any research project.
+- Be aware of the limitations of spreadsheet software when working with research data.
+- Good data organisation is the foundation of any research project.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
