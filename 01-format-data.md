@@ -17,18 +17,43 @@ exercises: 20
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+Spreadsheets are ubiquitous in research environments, yet many researchers are never taught how to properly format tabular data to ensure it is easy to analyse later.
+
+Since most researchers use Excel as their primary spreadsheet program, the rest of this lesson will make use of examples using Excel. Free alternatives including LibreOffice Calc and Google Sheets can be used, but commands may differ between programs.
+
+### What this lesson will not teach you
+
+- How to do *statistics* in a spreadsheet
+- How to do *plotting* in a spreadsheet
+- How to *write code* in spreadsheet programs
+
+## Problems with Spreadsheets
+
+Spreadsheet programs like Excel were originally designed to enter, manipulate, and visualise financial data. It's easy to run into problems when working with research data when we forget Excel's purpose and limitations. For example:
+
+- Be very cautious when opening and saving research data in Excel because by default it automatically reformats certain types of data, and this can introduce major errors (we'll explore an example 
+later when we talk about dates).
+- Making tables 'pretty' with merged cells, borders, highlighting, and notes in the margin mean that the data will not be recognised when imported into more specialised data analysis software,and will first require extensive clean up. 
+- Statistics and figures generated within 'point and click' software like Excel cannot be replicated by someone else without detailed instructions, and it's easy to introduce errors when performing these kinds of actions by hand.
+
+Doing statistics, plotting data, writing code, and doing in-depth data cleaning are best handled by other software which has been designed for these tasks. Data Carpentry includes lessons on Openrefine and R, which are better suited to performing these kinds of operations.
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Exercise
+
+- 
+  
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## Structuring Data in Spreadsheets
 
-Using the power of computers, we can manage and analyse data in much more
-effective and faster ways. But to use that power, we need to set up
-our data in a way the computer can understand (and computers are very
-literal).
-
-One of the strengths of spreadsheet software can also lead to problems: the endless
-choices you have when setting up data in spreadsheets. You'll need to make decisions early on 
-which could end up limiting your ability to work with the data in other software, or make it 
-difficult to understand what you did. By applying a few common principles to your data, you
-should be able to avoid these issues.
+There are, however, useful things we can do with spreadsheet software to help us
+with our research. In particular, quality control features can ensure that data
+entered manually is standardised and free of errors. Ensuring tabular data is structured
+in a way that computers understand means we can harness the power of programming languags like R or Python to perform complex analyses with a few lines of code. But to do that, we need to set up our data in a way the computer can understand (and computers are very
+literal). 
 
 The number one rule for working with tabular data in spreadsheet software is to keep it "tidy":
 
@@ -36,14 +61,13 @@ The number one rule for working with tabular data in spreadsheet software is to 
 2. Put each observation in its own row.
 3. Don't combine multiple pieces of information in one cell. You want maximum freedom to sort or subset your data later on.
 4. Keep a copy of the raw data, untouched, in it's own folder.
-5. Export the cleaned or modified data to a text-based format like CSV (comma-separated values) format. This
-    ensures that anyone can open the data, and is best-practise when depositing to research data repositories.
+5. Export the cleaned or modified data to a text-based format like CSV (comma-separated values) format. This ensures anyone can open the data, and is best-practise when depositing to research data repositories.
 
 ### Portal Project Teaching Dataset
 
 The data used across the Data Carpentry lessons is a simplified version of the Portal Project Database designed for teaching. This dataset contains observations taken from a small mammal community in southern Arizona as part of a project studying the effects of rodents and ants on the plant community. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots.
 
-The study has been running for almost 40 years and the full dataset has been used in over 100 publications. It's been simplified a little bit for the workshop, but the full version is available to download if you'd like to look at it using the same tools we'll learn about today.  
+The study has been running for almost 40 years and the full dataset has been used in over 100 publications. The data we're going to look at has been simplified a little bit for the workshop, but the full version is available to download if you're interested.  
 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
