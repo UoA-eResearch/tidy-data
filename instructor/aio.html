@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>Data Organization in Spreadsheets for Ecologists: All in One View</title>
+<title>Tidy Data: All in One View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../assets/styles.css">
 <script src="../assets/scripts.js" type="text/javascript"></script><!-- mathjax --><script type="text/x-mathjax-config">
@@ -58,7 +58,7 @@
       <img class="small-logo" alt="Data Carpentry" src="../assets/images/data-logo-sm.svg">
 </div>
     <div class="lesson-title-md">
-      Data Organization in Spreadsheets for Ecologists
+      Tidy Data
     </div>
     <div class="search-icon-sm">
       <!-- TODO: do not show until we have search
@@ -69,7 +69,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 <li class="nav-item">
           <span class="lesson-title">
-            Data Organization in Spreadsheets for Ecologists
+            Tidy Data
           </span>
         </li>
         <li class="nav-item">
@@ -104,7 +104,7 @@
   </div>
 <!--/div.container-fluid -->
 </nav><div class="col-md-12 mobile-title">
-  Data Organization in Spreadsheets for Ecologists
+  Tidy Data
 </div>
 
 <aside class="col-md-12 lesson-progress"><div style="width: %" class="percentage">
@@ -305,7 +305,7 @@
         
 <section id="aio-00-intro"><p>Content from <a href="00-intro.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-01-17 |
+<p>Last updated on 2024-01-19 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 18 minutes</p>
@@ -320,8 +320,8 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are basic principles for using spreadsheets for good data
-organisation?</li>
+<li>What are basic principles for ensuring we can find and understand
+research files?</li>
 </ul>
 </div>
 </div>
@@ -331,24 +331,21 @@ organisation?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Describe best practices for organising data so computers can make
-the best use of data sets.</li>
+<li>Describe best practices for keeping research projects
+organised.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Good data organisation is the foundation of your research project.
-Most researchers will need to interact with data that is arranged in
-tables with rows and columns (tabular data), or do data entry in
-spreadsheets.</p>
 <div class="section level3">
 <h3 id="lesson-outline">Lesson outline<a class="anchor" aria-label="anchor" href="#lesson-outline"></a>
 </h3>
 <p>After this lesson, you will be able to:</p>
 <ul>
-<li>Implement best practices in formatting data tables</li>
+<li>Apply best practices for organising files in research projects</li>
+<li>Apply tidy data principles to formatting data tables</li>
 <li>Identify and address common formatting mistakes</li>
 <li>Understand approaches for handling dates in spreadsheets</li>
 <li>Utilise basic quality control features and data manipulation
@@ -357,84 +354,121 @@ practices</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="spreadsheet-software">Spreadsheet software<a class="anchor" aria-label="anchor" href="#spreadsheet-software"></a>
+<h3 id="project-organisation">Project Organisation<a class="anchor" aria-label="anchor" href="#project-organisation"></a>
 </h3>
-<p>Many spreadsheet programs are available. Since most researchers use
-Excel as their primary spreadsheet program, this lesson will make use of
-Excel examples. Free alternatives include LibreOffice Calc, and even
-Google Sheets, but commands may differ between programs.</p>
+<p>Using computers to create, modify, and manage digital files is an
+essential skill for all researchers. Applying best practices to the way
+you manage research data and files will save you an enormous amount of
+time, and help you to get from research question to publication with
+fewer headaches. When you need to come back to a project after a couple
+of months or years you will appreciate navigating clean and tidy files
+and folders. The below principles are a useful starting point.</p>
+<ol style="list-style-type: decimal">
+<li>Use logical directory and file names.</li>
+</ol>
+<p>Each research project should have it’s own project directory
+(folder), named after the project, containing files organised into a
+sensible folder hierarchy. The level at which projects become separate
+will be different for each researcher, based on the kinds of projects
+they work on. For example, each discrete set of data resulting in a
+publication may have it’s own project folder, or perhaps each grant has
+it’s own project folder containing the datasets and manuscripts
+generated from it. As a general rule, if two projects share more than
+half of their files then it might make sense to manage them as a single
+project.</p>
+<p>Every project will have different needs, but a suggested set of
+common subfolders include:</p>
+<ul>
+<li>
+<code>data</code>: Keep raw, untouched data files here.</li>
+<li>
+<code>results</code>: Keep cleaned/transformed datasets, figures,
+and tables here.</li>
+<li>
+<code>docs</code>: Keep manuscripts, lab notebooks, and other
+documents here.</li>
+<li>
+<code>src</code>: Keep source code or script files here.</li>
+</ul>
+<p>File names should:</p>
+<ul>
+<li>Be short, descriptive, and consistent.</li>
+<li>Avoid special characters and spaces.</li>
+<li>Conform to a schema or template.</li>
+</ul>
+<p>For example, <code>2020-01-20_bird-counts_north.csv</code> contains a
+date, subject, and field site location in three fields separated by
+underscores. This is much more informative than <code>data.xlsx</code>.
+The order of fields determines how files will sort, and this may be a
+useful consideration when working lots of files.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Ensure files are backed up</li>
+</ol>
+<p>Hardware fails. Ensure you’re not the victim of data loss by backing
+up your research projects, or better yet, store them on a platform or
+service that is automatically backed up for you. The University of
+Auckland provides Research Drive and Dropbox team folders for
+researchers to use. Both are backed up automatically. See <a href="https://research-hub.auckland.ac.nz/article/choosing-data-storage" class="external-link">here</a>
+for more information.</p>
+<p>A related concept is ‘version control’. These systems are frequently
+used in software development to track each change made to a set of
+files, take snapshots of files at various points, and provide the
+ability to roll back to a previous snapshot. When paired with services
+like GitHub they allow researchers to collaborate on analyses and
+writing manuscripts. Version control is out of scope for this lesson but
+see <a href="https://uoa-eresearch.github.io/git-novice/" class="external-link">here</a> for
+more information.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Keep a copy of the raw data</li>
+</ol>
+<p>One of the most important principles for working with research data
+is to keep a copy of all raw data files, whether they are generated by
+an instrument or software package, or transcribed by hand. It is
+essential to maintain the provenance of data in order to respond to
+questions from funders, institutions, and journal editors, should they
+arise. Having in-tact raw data also means you can recreate any modified
+datasets you’ve run analyses on.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Create ‘tidy’ data</li>
+</ol>
+<p>Tidy datasets are those where:</p>
+<ul>
+<li>Each variable has it’s own column.</li>
+<li>Each observation has it’s own row.</li>
+<li>Each cell contains a single value.</li>
+</ul>
+<p>The idea is to avoid combining multiple pieces of data in a cell.
+We’ll cover this more in the next episode.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Document your project with a README</li>
+</ol>
+<p>A README is a plain text file (.txt) that lives in the project folder
+and contains as much contextual information about your project as you
+think would be needed for another person (or your future self) to
+understand it. Suggested content includes:</p>
+<ul>
+<li>Title, abstract, authors, funders</li>
+<li>What the folders and files contain and how they relate to each
+other</li>
+<li>How data was generated, instrument/software settings</li>
+<li>Column names and units</li>
+<li>How data has been changed/transformed (if done manually)</li>
+</ul>
+<p>See <a href="https://research-hub.auckland.ac.nz/article/research-data-readme" class="external-link">here</a>
+for more information.</p>
 </div>
 <div class="section level3">
-<h3 id="what-this-lesson-will-not-teach-you">What this lesson will not teach you<a class="anchor" aria-label="anchor" href="#what-this-lesson-will-not-teach-you"></a>
+<h3 id="lesson-structure">Lesson structure<a class="anchor" aria-label="anchor" href="#lesson-structure"></a>
 </h3>
-<ul>
-<li>How to do <em>statistics</em> in a spreadsheet</li>
-<li>How to do <em>plotting</em> in a spreadsheet</li>
-<li>How to <em>write code</em> in spreadsheet programs</li>
-</ul>
-</div>
-<section id="problems-with-spreadsheets"><h2 class="section-heading">Problems with Spreadsheets<a class="anchor" aria-label="anchor" href="#problems-with-spreadsheets"></a>
-</h2>
-<hr class="half-width">
-<p>Spreadsheet programs like Excel were originally designed to enter,
-manipulate, and visualise financial data. When we use them in the
-context of research we can run into problems when we use them in ways
-that don’t gel with research data. For example:</p>
-<ul>
-<li>Be very cautious when opening and saving research data in Excel
-because it automatically reformats certain types of data, and this can
-introduce major errors (we’ll explore an example later when we talk
-about dates).</li>
-<li>Making tables ‘pretty’ with merged cells, borders, highlighting, and
-notes in the margin mean that the data will not be recognised when
-imported into more specialised data analysis software, and will first
-require extensive clean up.</li>
-<li>Statistics and figures generated within ‘point and click’ software
-like Excel cannot be replicated by someone else without detailed
-instructions, and it’s easy to introduce errors when performing actions
-by hand.</li>
-</ul>
-<p>Doing statistics, plotting data, writing code, and doing in-depth
-data cleaning are best handled by software which has been especially
-designed for these roles. We will explore Openrefine and R during the
-course of this workshop.</p>
-<div id="exercise" class="callout callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
-</h3>
-<div class="callout-content">
-<ul>
-<li>How many people have used spreadsheets in their research?</li>
-<li>How many people have accidentally done something that made them
-frustrated or sad?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="using-spreadsheet-software-for-data-entry">Using Spreadsheet Software for Data Entry<a class="anchor" aria-label="anchor" href="#using-spreadsheet-software-for-data-entry"></a>
-</h3>
-<p>There are, however, useful things we can do with spreadsheet software
-to help us with our research. In particular, quality control features
-can ensure that data entered manually is standardised and free of
-errors.</p>
-<p>The way you organise data can make it easier or harder to work with
-your data throughout your analysis, so it’s worth thinking about at the
-start of your project. Setting up well-formatted data tables and getting
-into good habits early on will pay off throughout the whole research
-process. Your future collaborators (and even your future self) will
-appreciate the benefits of having clean and tidy data to work with.</p>
-<p>In this lesson we’re going to talk about:</p>
+<p>The rest of this lesson focuses on spreadsheets, and how to keep
+tabular data in spreadsheets tidy.</p>
 <ol style="list-style-type: decimal">
 <li><a href="01-format-data.html">Formatting data tables in
 spreadsheets</a></li>
 <li><a href="02-common-mistakes.html">Formatting problems</a></li>
 <li><a href="03-dates-as-data.html">Dates as data</a></li>
 <li><a href="04-quality-control.html">Quality control</a></li>
-<li><a href="05-exporting-data.html">Exporting data</a></li>
+<li><a href="06-exporting-data.html">Exporting data</a></li>
 </ol>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -445,18 +479,20 @@ spreadsheets</a></li>
 </h3>
 <div class="callout-content">
 <ul>
-<li>Be aware of the limitations of spreadsheet software when working
-with research data.</li>
-<li>Good data organisation is the foundation of any research
+<li>Good project organisation is the foundation of any research
 project.</li>
+<li>Time invested into good project organisation is paid back multiple
+times over the course of a project.</li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-</section></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables in Spreadsheets</a></p>
+<p>For a more expansive view of good project organisation, see <a href="https://doi.org/10.1371/journal.pcbi.1005510" class="external-link">Good enough
+practices in scientific computing</a> by Greg Wilson and colleagues,
+published in PLoS Computational Biology.</p>
+</div></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables in Spreadsheets</a></p>
 <hr>
-<p>Last updated on 2024-01-17 |
+<p>Last updated on 2024-01-19 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
@@ -491,19 +527,71 @@ spreadsheet.</li>
 </div>
 </div>
 </div>
-<section id="structuring-data-in-spreadsheets"><h2 class="section-heading">Structuring Data in Spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
+<p>Spreadsheets are ubiquitous in research environments, yet many
+researchers are never taught how to properly format tabular data to
+ensure it is easy to analyse later.</p>
+<p>Since most researchers use Excel as their primary spreadsheet
+program, the rest of this lesson will make use of examples using Excel.
+Free alternatives including LibreOffice Calc and Google Sheets can be
+used, but commands may differ between programs.</p>
+<div class="section level3">
+<h3 id="what-this-lesson-will-not-teach-you">What this lesson will not teach you<a class="anchor" aria-label="anchor" href="#what-this-lesson-will-not-teach-you"></a>
+</h3>
+<ul>
+<li>How to do <em>statistics</em> in a spreadsheet</li>
+<li>How to do <em>plotting</em> in a spreadsheet</li>
+<li>How to <em>write code</em> in spreadsheet programs</li>
+</ul>
+</div>
+<section id="problems-with-spreadsheets"><h2 class="section-heading">Problems with Spreadsheets<a class="anchor" aria-label="anchor" href="#problems-with-spreadsheets"></a>
 </h2>
 <hr class="half-width">
-<p>Using the power of computers, we can manage and analyse data in much
-more effective and faster ways. But to use that power, we need to set up
-our data in a way the computer can understand (and computers are very
-literal).</p>
-<p>One of the strengths of spreadsheet software can also lead to
-problems: the endless choices you have when setting up data in
-spreadsheets. You’ll need to make decisions early on which could end up
-limiting your ability to work with the data in other software, or make
-it difficult to understand what you did. By applying a few common
-principles to your data, you should be able to avoid these issues.</p>
+<p>Spreadsheet programs like Excel were originally designed to enter,
+manipulate, and visualise financial data. It’s easy to run into problems
+when working with research data when we forget Excel’s purpose and
+limitations. For example:</p>
+<ul>
+<li>Be very cautious when opening and saving research data in Excel
+because by default it automatically reformats certain types of data, and
+this can introduce major errors (we’ll explore an example later when we
+talk about dates).</li>
+<li>Making tables ‘pretty’ with merged cells, borders, highlighting, and
+notes in the margin mean that the data will not be recognised when
+imported into more specialised data analysis software,and will first
+require extensive clean up.</li>
+<li>Statistics and figures generated within ‘point and click’ software
+like Excel cannot be replicated by someone else without detailed
+instructions, and it’s easy to introduce errors when performing these
+kinds of actions by hand.</li>
+</ul>
+<p>Doing statistics, plotting data, writing code, and doing in-depth
+data cleaning are best handled by other software which has been designed
+for these tasks. Data Carpentry includes lessons on Openrefine and R,
+which are better suited to performing these kinds of operations.</p>
+<div id="exercise" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="exercise" class="callout-inner">
+<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
+</h3>
+<div class="callout-content">
+<ul><li>
+</li></ul>
+</div>
+</div>
+</div>
+</section><section id="structuring-data-in-spreadsheets"><h2 class="section-heading">Structuring Data in Spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
+</h2>
+<hr class="half-width">
+<p>There are, however, useful things we can do with spreadsheet software
+to help us with our research. In particular, quality control features
+can ensure that data entered manually is standardised and free of
+errors. Ensuring tabular data is structured in a way that computers
+understand means we can harness the power of programming languags like R
+or Python to perform complex analyses with a few lines of code. But to
+do that, we need to set up our data in a way the computer can understand
+(and computers are very literal).</p>
 <p>The number one rule for working with tabular data in spreadsheet
 software is to keep it “tidy”:</p>
 <ol style="list-style-type: decimal">
@@ -514,9 +602,8 @@ software is to keep it “tidy”:</p>
 maximum freedom to sort or subset your data later on.</li>
 <li>Keep a copy of the raw data, untouched, in it’s own folder.</li>
 <li>Export the cleaned or modified data to a text-based format like CSV
-(comma-separated values) format. This ensures that anyone can open the
-data, and is best-practise when depositing to research data
-repositories.</li>
+(comma-separated values) format. This ensures anyone can open the data,
+and is best-practise when depositing to research data repositories.</li>
 </ol>
 <div class="section level3">
 <h3 id="portal-project-teaching-dataset">Portal Project Teaching Dataset<a class="anchor" aria-label="anchor" href="#portal-project-teaching-dataset"></a>
@@ -529,16 +616,15 @@ and ants on the plant community. The rodents are sampled on a series of
 24 plots, with different experimental manipulations controlling which
 rodents are allowed to access which plots.</p>
 <p>The study has been running for almost 40 years and the full dataset
-has been used in over 100 publications. It’s been simplified a little
-bit for the workshop, but the full version is available to download if
-you’d like to look at it using the same tools we’ll learn about
-today.</p>
-<div id="exercise" class="callout challenge">
+has been used in over 100 publications. The data we’re going to look at
+has been simplified a little bit for the workshop, but the full version
+is available to download if you’re interested.</p>
+<div id="exercise-1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="exercise" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
+<div id="exercise-1" class="callout-inner">
+<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise-1"></a>
 </h3>
 <div class="callout-content">
 <p>We’re going to open up a messy version of a spreadsheet containing
@@ -1627,8 +1713,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/aio.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-01-17",
-  "datePublished": "2024-01-17"
+  "dateModified": "2024-01-19",
+  "datePublished": "2024-01-19"
 }
 
   </script><script>
