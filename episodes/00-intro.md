@@ -6,96 +6,98 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe best practices for organising data so computers can make the best use of data sets.
+- Describe best practices for keeping research projects organised.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for using spreadsheets for good data organisation?
+- What are basic principles for ensuring we can find and understand research files?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Good data organisation is the foundation of your research
-project. Most researchers will need to interact with data that is arranged in tables with rows and columns (tabular data),
-or do data entry in spreadsheets. 
 
 ### Lesson outline
 
 After this lesson, you will be able to:
 
-- Implement best practices in formatting data tables
+- Apply best practices for organising files in research projects
+- Apply tidy data principles to formatting data tables
 - Identify and address common formatting mistakes
 - Understand approaches for handling dates in spreadsheets
 - Utilise basic quality control features and data manipulation practices
 - Effectively export data from spreadsheet programs
 
-### Spreadsheet software
+### Project Organisation
 
-Many spreadsheet programs are available. Since most researchers use Excel as their primary spreadsheet program, this lesson will make use of Excel examples. Free alternatives include LibreOffice Calc, and even Google Sheets, but commands may differ between programs.
+Using computers to create, modify, and manage digital files is an essential skill for all researchers. Applying best practices to the way you manage research data and files will save you an enormous amount of time, and help you to get from research question to publication with fewer headaches. When you need to come back to a project after a couple of months or years you will appreciate navigating clean and tidy files and folders. The below principles are a useful starting point.
 
-### What this lesson will not teach you
+1. Use logical directory and file names.
 
-- How to do *statistics* in a spreadsheet
-- How to do *plotting* in a spreadsheet
-- How to *write code* in spreadsheet programs
+Each research project should have it's own project directory (folder), named after the project, containing files organised into a sensible folder hierarchy. The level at which projects become separate will be different for each researcher, based on the kinds of projects they work on. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts generated from it. As a general rule, if two projects share more than half of their files then it might make sense to manage them as a single project. 
 
-## Problems with Spreadsheets
+Every project will have different needs, but a suggested set of common subfolders include:
 
-Spreadsheet programs like Excel were originally designed to enter, manipulate, and visualise
-financial data. When we use them in the context of research we can run into problems when
-we use them in ways that don't gel with research data. For example:
+- `data`: Keep raw, untouched data files here.
+- `results`: Keep cleaned/transformed datasets, figures, and tables here.
+- `docs`: Keep manuscripts, lab notebooks, and other documents here.
+- `src`: Keep source code or script files here.
 
-- Be very cautious when opening and saving research data in Excel because it automatically 
-reformats certain types of data, and this can introduce major errors (we'll explore an example 
-later when we talk about dates).
-- Making tables 'pretty' with merged cells, borders, highlighting, and notes in the margin
-mean that the data will not be recognised when imported into more specialised data analysis software, 
-and will first require extensive clean up. 
-- Statistics and figures generated within 'point and click' software like Excel cannot be 
-replicated by someone else without detailed instructions, and it's easy to introduce errors
-when performing actions by hand.
+File names should:
 
-Doing statistics, plotting data, writing code, and doing in-depth data cleaning are best handled by software which has 
-been especially designed for these roles. We will explore Openrefine and R during the course of this workshop.
+- Be short, descriptive, and consistent.
+- Avoid special characters and spaces. 
+- Conform to a schema or template.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+For example, `2020-01-20_bird-counts_north.csv` contains a date, subject, and field site location in three fields separated by underscores. This is much more informative than `data.xlsx`. The order of fields determines how files will sort, and this may be a useful consideration when working lots of files. 
 
-## Exercise
+2. Ensure files are backed up
 
-- How many people have used spreadsheets in their research?
-- How many people have accidentally done something that made them
-  frustrated or sad?
-  
+Hardware fails. Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers to use. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+A related concept is 'version control'. These systems are frequently used in software development to track each change made to a set of files, take snapshots of files at various points, and provide the ability to roll back to a previous snapshot. When paired with services like GitHub they allow researchers to collaborate on analyses and writing manuscripts. Version control is out of scope for this lesson but see [here](https://uoa-eresearch.github.io/git-novice/) for more information. 
 
-### Using Spreadsheet Software for Data Entry
+3. Keep a copy of the raw data
 
-There are, however, useful things we can do with spreadsheet software to help us
-with our research. In particular, quality control features can ensure that data
-entered manually is standardised and free of errors.
+One of the most important principles for working with research data is to keep a copy of all raw data files, whether they are generated by an instrument or software package, or transcribed by hand. It is essential to maintain the provenance of data in order to respond to questions from funders, institutions, and journal editors, should they arise. Having in-tact raw data also means you can recreate any modified datasets you've run analyses on.
 
-The way you organise data can make it easier or harder
-to work with your data throughout your analysis, so it's worth
-thinking about at the start of your project. Setting up well-formatted
-data tables and getting into good habits early on will pay off 
-throughout the whole research process. Your future collaborators (and even your future self)
-will appreciate the benefits of having clean and tidy data to work with.
+4. Create 'tidy' data
 
-In this lesson we're going to talk about:
+Tidy datasets are those where:
+
+- Each variable has it's own column.
+- Each observation has it's own row.
+- Each cell contains a single value.
+
+The idea is to avoid combining multiple pieces of data in a cell. We'll cover this more in the next episode. 
+
+5. Document your project with a README
+
+A README is a plain text file (.txt) that lives in the project folder and contains as much contextual information about your project as you think would be needed for another person (or your future self) to understand it. Suggested content includes:
+
+- Title, abstract, authors, funders
+- What the folders and files contain and how they relate to each other
+- How data was generated, instrument/software settings
+- Column names and units
+- How data has been changed/transformed (if done manually)
+
+See [here](https://research-hub.auckland.ac.nz/article/research-data-readme) for more information.
+
+### Lesson structure
+
+The rest of this lesson focuses on spreadsheets, and how to keep tabular data in spreadsheets tidy.
 
 1. [Formatting data tables in spreadsheets](01-format-data.md)
 2. [Formatting problems](02-common-mistakes.md)
 3. [Dates as data](03-dates-as-data.md)
 4. [Quality control](04-quality-control.md)
-5. [Exporting data](05-exporting-data.md)
+5. [Exporting data](06-exporting-data.md)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Be aware of the limitations of spreadsheet software when working with research data.
-- Good data organisation is the foundation of any research project.
+- Good project organisation is the foundation of any research project.
+- Time invested into good project organisation is paid back multiple times over the course of a project.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+For a more expansive view of good project organisation, see [Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510) by Greg Wilson and colleagues, published in PLoS Computational Biology.
 
