@@ -6,19 +6,13 @@ title: Setup
 
 ## Data
 
-**Download** this data file to your computer: [https://ndownloader.figshare.com/files/2252083](https://ndownloader.figshare.com/files/2252083)
+Download [this](https://ndownloader.figshare.com/files/2252083) data file to your computer. 
 
 #### About the data
 
-The data for this lesson is a part of the Data Carpentry Ecology workshop.
-It is a teaching version of the Portal Database. The data in this lesson
-is a subset of the teaching version that has been intentionally 'messed up'
-for this lesson.
+The data used across the Data Carpentry lessons is a simplified version of the Portal Project Database designed for teaching. This dataset contains observations taken from a small mammal community in southern Arizona as part of a project studying the effects of rodents and ants on the plant community. The rodents are sampled on a series of 24 plots, with different experimental manipulations controlling which rodents are allowed to access which plots.
 
-The data for this lesson and the workshop are in the
-[Portal Project Teaching Database](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459)
-available on FigShare, with a CC-BY license
-available for reuse.
+The study has been running for almost 40 years and the full dataset has been used in over 100 publications. The data we're going to look at has been simplified a little bit for the workshop, but the full version is available to download if you're interested.  
 
 > Ernest, M., Brown, J., Valone, T., and White, E.P. (2017). Portal Project Teaching Database. Version 6. Figshare. [DOI: 10.6084/m9.figshare.1314459.v6](https://figshare.com/articles/Portal_Project_Teaching_Database/1314459)
 
@@ -28,25 +22,27 @@ available for reuse.
 
 ## Software
 
-To interact with spreadsheets, we can use LibreOffice, Microsoft Excel, Gnumeric, OpenOffice.org, or other programs. Commands may differ a bit between programs, but the general ideas for thinking about spreadsheets are the same.
+Because most researchers use Microsoft Excel, the examples and screenshots in this lesson
+reflect Excel. If you don't have access to Excel, you can use LibreOffice instead. The 
+commands and interface is bit different but the general principles are the same.
 
-For this lesson, if you don't have a spreadsheet program already, you can use LibreOffice. It's a free, open source spreadsheet program.
+#### Download LibreOffice
 
-#### Windows
+**Windows:** 
 
 - Download the Installer
   - Install LibreOffice by going to [the installation page](https://www.libreoffice.org/download/libreoffice-fresh/). The version for Windows should automatically be selected. Click Download Version X.X.X (whichever is the most recent version). You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.
 - Install LibreOffice
 - Once the installer is downloaded, double click on it and LibreOffice should install.
 
-#### Mac OS X
+*Mac OS X:**
 
 - Download the Installer
   - Install LibreOffice by going to [the installation page](https://www.libreoffice.org/download/libreoffice-fresh/). The version for Mac should automatically be selected. Click Download Version X.X.X (whichever is the most recent version). You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.
 - Install LibreOffice
 - Once the installer is downloaded, double click on it and LibreOffice should install.
 
-#### Linux
+*Linux:**
 
 - Download the Installer
   - Install LibreOffice by going to [the installation page](https://www.libreoffice.org/download/libreoffice-fresh/). The version for Linux should automatically be selected. Click Download Version X.X.X (whichever is the most recent version). You will go to a page that asks about a donation, but you don't need to make one. Your download should begin automatically.

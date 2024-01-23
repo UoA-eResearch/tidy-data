@@ -38,15 +38,6 @@ later when we talk about dates).
 
 Doing statistics, plotting data, writing code, and doing in-depth data cleaning are best handled by other software which has been designed for these tasks. Data Carpentry includes lessons on Openrefine and R, which are better suited to performing these kinds of operations.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Exercise
-
-- 
-  
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
 ## Structuring Data in Spreadsheets
 
 There are, however, useful things we can do with spreadsheet software to help us
