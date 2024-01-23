@@ -245,68 +245,29 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
 
-<p>Good data organization is the foundation of any research project.
-Most researchers have data in spreadsheets, so it’s the place that many
-research projects start.</p>
-<p>We organize data in spreadsheets in the ways that we as humans want
-to work with the data, but computers require that data be organized in
-particular ways. In order to use tools that make computation more
-efficient, such as programming languages like R or Python, we need to
-structure our data the way that computers need the data. Since this is
-where most research projects start, this is where we want to start
-too!</p>
+<p>Good data organisation is the foundation of any research project.
+Setting up a clear and consistent project structure, and keeping data
+tidy, represent relatively small investments in time, but can have major
+impacts on how easy it is to find files, understand your data, do your
+work, and collaborate with others.</p>
 <p>In this lesson, you will learn:</p>
-<ul><li>Good data entry practices - formatting data tables in
+<ul><li>Tips for keeping digital project files organised</li>
+<li>Good data entry practices and how to format data tables in
 spreadsheets</li>
 <li>How to avoid common formatting mistakes</li>
 <li>Approaches for handling dates in spreadsheets</li>
-<li>Basic quality control and data manipulation in spreadsheets</li>
+<li>Basic quality control in spreadsheets</li>
 <li>Exporting data from spreadsheets</li>
-</ul><p>In this lesson, however, you will <em>not</em> learn about data
-analysis with spreadsheets. Much of your time as a researcher will be
-spent in the initial ‘data wrangling’ stage, where you need to organize
-the data to perform a proper analysis later. It’s not the most fun, but
-it is necessary. In this lesson you will learn how to think about data
-organization and some practices for more effective data wrangling. With
-this approach you can better format current data and plan new data
-collection so less data wrangling is needed.</p>
-<div id="getting-started" class="callout prereq">
-<div class="callout-square">
-<i class="callout-icon" data-feather="check"></i>
-</div>
-<div id="getting-started" class="callout-inner">
-<h3 class="callout-title">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
-</h3>
-<div class="callout-content">
-<p>Data Carpentry’s teaching is hands-on, so participants are encouraged
-to use their own computers to insure the proper setup of tools for an
-efficient workflow. <br><strong>These lessons assume no prior knowledge
-of the skills or tools.</strong></p>
-<p>To get started, follow the directions in the “<a href="index.html#setup">Setup</a>” tab to download data to your computer and
-follow any installation instructions.</p>
-<div class="section level4">
-<h4 id="prerequisites">Prerequisites<a class="anchor" aria-label="anchor" href="#prerequisites"></a></h4>
-<p>This lesson requires a working copy of spreadsheet software, such as
-Microsoft Excel or LibreOffice or OpenOffice.org (see more details in
-“<a href="index.html#setup">Setup</a>”). <br>To most effectively use these
-materials, please make sure to install everything <em>before</em>
-working through this lesson.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="for-instructors" class="callout prereq">
-<div class="callout-square">
-<i class="callout-icon" data-feather="check"></i>
-</div>
-<div id="for-instructors" class="callout-inner">
-<h3 class="callout-title">For Instructors<a class="anchor" aria-label="anchor" href="#for-instructors"></a>
-</h3>
-<div class="callout-content">
-<p>If you are teaching this lesson in a workshop, please see the <a href="instructor-notes.html">Instructor notes</a>.</p>
-</div>
-</div>
-</div>
+</ul><p>In this lesson you will <em>not</em> learn about data analysis or
+plotting in spreadsheets for the simple reason that better software
+exists to perform these tasks (like R or Python).</p>
+<p>However, much of your time as a researcher will be spent in the
+initial ‘data wrangling’ stage, where you need to organise data to
+perform a proper analysis later. It’s not the most fun, but it is
+necessary. In this lesson you will learn how to think about data
+organisation and some practices for more effective data wrangling. You
+can apply the tips from this lesson to your current and future
+projects.</p>
 
 
       <section id="schedule"><table class="table table schedule table-striped" role="presentation"><tbody><tr><td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
@@ -388,16 +349,21 @@ Finish
 <h3 class="callout-title">Data<a class="anchor" aria-label="anchor" href="#data"></a>
 </h3>
 <div class="callout-content">
-<p><strong>Download</strong> this data file to your computer: <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">https://ndownloader.figshare.com/files/2252083</a></p>
+<p>Download <a href="https://ndownloader.figshare.com/files/2252083" class="external-link">this</a> data file
+to your computer.</p>
 <div class="section level4">
 <h4 id="about-the-data">About the data<a class="anchor" aria-label="anchor" href="#about-the-data"></a></h4>
-<p>The data for this lesson is a part of the Data Carpentry Ecology
-workshop. It is a teaching version of the Portal Database. The data in
-this lesson is a subset of the teaching version that has been
-intentionally ‘messed up’ for this lesson.</p>
-<p>The data for this lesson and the workshop are in the <a href="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459" class="external-link">Portal
-Project Teaching Database</a> available on FigShare, with a CC-BY
-license available for reuse.</p>
+<p>The data used across the Data Carpentry lessons is a simplified
+version of the Portal Project Database designed for teaching. This
+dataset contains observations taken from a small mammal community in
+southern Arizona as part of a project studying the effects of rodents
+and ants on the plant community. The rodents are sampled on a series of
+24 plots, with different experimental manipulations controlling which
+rodents are allowed to access which plots.</p>
+<p>The study has been running for almost 40 years and the full dataset
+has been used in over 100 publications. The data we’re going to look at
+has been simplified a little bit for the workshop, but the full version
+is available to download if you’re interested.</p>
 <blockquote>
 <p>Ernest, M., Brown, J., Valone, T., and White, E.P. (2017). Portal
 Project Teaching Database. Version 6. Figshare. <a href="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459" class="external-link">DOI:
@@ -415,14 +381,13 @@ Project Teaching Database. Version 6. Figshare. <a href="https://figshare.com/ar
 <h3 class="callout-title">Software<a class="anchor" aria-label="anchor" href="#software"></a>
 </h3>
 <div class="callout-content">
-<p>To interact with spreadsheets, we can use LibreOffice, Microsoft
-Excel, Gnumeric, OpenOffice.org, or other programs. Commands may differ
-a bit between programs, but the general ideas for thinking about
-spreadsheets are the same.</p>
-<p>For this lesson, if you don’t have a spreadsheet program already, you
-can use LibreOffice. It’s a free, open source spreadsheet program.</p>
+<p>Because most researchers use Microsoft Excel, the examples and
+screenshots in this lesson reflect Excel. If you don’t have access to
+Excel, you can use LibreOffice instead. The commands and interface is
+bit different but the general principles are the same.</p>
 <div class="section level4">
-<h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h4>
+<h4 id="download-libreoffice">Download LibreOffice<a class="anchor" aria-label="anchor" href="#download-libreoffice"></a></h4>
+<p><strong>Windows:</strong></p>
 <ul><li>Download the Installer
 <ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
 installation page</a>. The version for Windows should automatically be
@@ -433,9 +398,7 @@ don’t need to make one. Your download should begin automatically.</li>
 <li>Install LibreOffice</li>
 <li>Once the installer is downloaded, double click on it and LibreOffice
 should install.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="mac-os-x">Mac OS X<a class="anchor" aria-label="anchor" href="#mac-os-x"></a></h4>
+</ul><p>*Mac OS X:**</p>
 <ul><li>Download the Installer
 <ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
 installation page</a>. The version for Mac should automatically be
@@ -446,9 +409,7 @@ don’t need to make one. Your download should begin automatically.</li>
 <li>Install LibreOffice</li>
 <li>Once the installer is downloaded, double click on it and LibreOffice
 should install.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="linux">Linux<a class="anchor" aria-label="anchor" href="#linux"></a></h4>
+</ul><p>*Linux:**</p>
 <ul><li>Download the Installer
 <ul><li>Install LibreOffice by going to <a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="external-link">the
 installation page</a>. The version for Linux should automatically be
