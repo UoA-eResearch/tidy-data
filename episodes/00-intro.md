@@ -16,31 +16,20 @@ exercises: 3
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Lesson outline
-
-After this lesson, you will be able to:
-
-- Apply best practices for organising files in research projects
-- Apply tidy data principles to formatting data tables
-- Identify and address common formatting mistakes
-- Understand approaches for handling dates in spreadsheets
-- Utilise basic quality control features and data manipulation practices
-- Effectively export data from spreadsheet programs
-
 ### Project Organisation
 
-Using computers to create, modify, and manage digital files is an essential skill for all researchers. Applying best practices to the way you manage research data and files will save you an enormous amount of time, and help you to get from research question to publication with fewer headaches. When you need to come back to a project after a couple of months or years you will appreciate navigating clean and tidy files and folders. The below principles are a useful starting point.
+Organising digital files into projects and managing them effectively is an essential skill for researchers to have, and yet these skills are seldom taught as part of formal university courses. The following list of practices are a useful starting point for you to adapt to your own needs. 
 
 1. Use logical directory and file names.
 
-Each research project should have it's own project directory (folder), named after the project, containing files organised into a sensible folder hierarchy. The level at which projects become separate will be different for each researcher, based on the kinds of projects they work on. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts generated from it. As a general rule, if two projects share more than half of their files then it might make sense to manage them as a single project. 
+Each research project should have it's own project directory (folder) containing files organised into a sensible folder hierarchy. Name your project folders in a consistent way and include fields that are useful for you. The threshold at which closely-related projects become separate will depend on the kinds of projects you work on and what is a useful way to organise them. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts it generates. 
 
-Every project will have different needs, but a suggested set of common subfolders include:
+Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example:
 
-- `data`: Keep raw, untouched data files here.
+- `data`: Keep raw, unedited data files here.
 - `results`: Keep cleaned/transformed datasets, figures, and tables here.
 - `docs`: Keep manuscripts, lab notebooks, and other documents here.
-- `src`: Keep source code or script files here.
+- `src`: Keep source files here (code/scripts).
 
 File names should:
 
@@ -52,13 +41,13 @@ For example, `2020-01-20_bird-counts_north.csv` contains a date, subject, and fi
 
 2. Ensure files are backed up
 
-Hardware fails. Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers to use. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
+Hardware fails. Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers and postgraduate research students to use. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
 
-A related concept is 'version control'. These systems are frequently used in software development to track each change made to a set of files, take snapshots of files at various points, and provide the ability to roll back to a previous snapshot. When paired with services like GitHub they allow researchers to collaborate on analyses and writing manuscripts. Version control is out of scope for this lesson but see [here](https://uoa-eresearch.github.io/git-novice/) for more information. 
+A related concept is 'version control'. Version control systems are frequently used in software development to track each change made to each file and provide the ability to roll back to previous versions. When paired with services like GitHub they allow researchers to collaborate on analyses and writing manuscripts in a much more efficient way than emailing documents back and forth. Version control is out of scope for this lesson but see [here](https://uoa-eresearch.github.io/git-novice/) for more information. 
 
 3. Keep a copy of the raw data
 
-One of the most important principles for working with research data is to keep a copy of all raw data files, whether they are generated by an instrument or software package, or transcribed by hand. It is essential to maintain the provenance of data in order to respond to questions from funders, institutions, and journal editors, should they arise. Having in-tact raw data also means you can recreate any modified datasets you've run analyses on.
+One of the most important principles for working with research data is to keep a copy of all raw data files, whether they are generated by an instrument or software package, or transcribed by hand. It is essential to maintain the provenance of data in order to respond to questions from funders, institutions, and journal reviewers, should they arise. Having in-tact raw data also means you can recreate any modified datasets, figures, or results from analyses you've performed.
 
 4. Create 'tidy' data
 
@@ -84,7 +73,7 @@ See [here](https://research-hub.auckland.ac.nz/article/research-data-readme) for
 
 ### Lesson structure
 
-The rest of this lesson focuses on spreadsheets, and how to keep tabular data in spreadsheets tidy.
+The rest of this lesson focuses on practices for working with tabular data in spreadsheets:
 
 1. [Formatting data tables in spreadsheets](01-format-data.md)
 2. [Formatting problems](02-common-mistakes.md)
@@ -94,8 +83,8 @@ The rest of this lesson focuses on spreadsheets, and how to keep tabular data in
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Good project organisation is the foundation of any research project.
-- Time invested into good project organisation is paid back multiple times over the course of a project.
+- Good project organisation encompasses the naming, arrangement, backing up, and documenting of files.
+- Time invested into project organisation is paid back multiple times over the course of a project.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
