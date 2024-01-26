@@ -301,7 +301,7 @@
         
 <section id="aio-00-intro"><p>Content from <a href="00-intro.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-01-19 |
+<p>Last updated on 2024-01-26 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -335,47 +335,31 @@ organised.</li>
 </div>
 </div>
 <div class="section level3">
-<h3 id="lesson-outline">Lesson outline<a class="anchor" aria-label="anchor" href="#lesson-outline"></a>
-</h3>
-<p>After this lesson, you will be able to:</p>
-<ul>
-<li>Apply best practices for organising files in research projects</li>
-<li>Apply tidy data principles to formatting data tables</li>
-<li>Identify and address common formatting mistakes</li>
-<li>Understand approaches for handling dates in spreadsheets</li>
-<li>Utilise basic quality control features and data manipulation
-practices</li>
-<li>Effectively export data from spreadsheet programs</li>
-</ul>
-</div>
-<div class="section level3">
 <h3 id="project-organisation">Project Organisation<a class="anchor" aria-label="anchor" href="#project-organisation"></a>
 </h3>
-<p>Using computers to create, modify, and manage digital files is an
-essential skill for all researchers. Applying best practices to the way
-you manage research data and files will save you an enormous amount of
-time, and help you to get from research question to publication with
-fewer headaches. When you need to come back to a project after a couple
-of months or years you will appreciate navigating clean and tidy files
-and folders. The below principles are a useful starting point.</p>
+<p>Organising digital files into projects and managing them effectively
+is an essential skill for researchers to have, and yet these skills are
+seldom taught as part of formal university courses. The following list
+of practices are a useful starting point for you to adapt to your own
+needs.</p>
 <ol style="list-style-type: decimal">
 <li>Use logical directory and file names.</li>
 </ol>
-<p>Each research project should have it’s own project directory
-(folder), named after the project, containing files organised into a
-sensible folder hierarchy. The level at which projects become separate
-will be different for each researcher, based on the kinds of projects
-they work on. For example, each discrete set of data resulting in a
-publication may have it’s own project folder, or perhaps each grant has
-it’s own project folder containing the datasets and manuscripts
-generated from it. As a general rule, if two projects share more than
-half of their files then it might make sense to manage them as a single
-project.</p>
-<p>Every project will have different needs, but a suggested set of
-common subfolders include:</p>
+<p>Each research project should have it’s own project directory (folder)
+containing files organised into a sensible folder hierarchy. Name your
+project folders in a consistent way and include fields that are useful
+for you. The threshold at which closely-related projects become separate
+will depend on the kinds of projects you work on and what is a useful
+way to organise them. For example, each discrete set of data resulting
+in a publication may have it’s own project folder, or perhaps each grant
+has it’s own project folder containing the datasets and manuscripts it
+generates.</p>
+<p>Every project will have different needs, but using a set of common
+subfolders means you will always know where certain files live. For
+example:</p>
 <ul>
 <li>
-<code>data</code>: Keep raw, untouched data files here.</li>
+<code>data</code>: Keep raw, unedited data files here.</li>
 <li>
 <code>results</code>: Keep cleaned/transformed datasets, figures,
 and tables here.</li>
@@ -383,7 +367,7 @@ and tables here.</li>
 <code>docs</code>: Keep manuscripts, lab notebooks, and other
 documents here.</li>
 <li>
-<code>src</code>: Keep source code or script files here.</li>
+<code>src</code>: Keep source files here (code/scripts).</li>
 </ul>
 <p>File names should:</p>
 <ul>
@@ -403,16 +387,17 @@ useful consideration when working lots of files.</p>
 up your research projects, or better yet, store them on a platform or
 service that is automatically backed up for you. The University of
 Auckland provides Research Drive and Dropbox team folders for
-researchers to use. Both are backed up automatically. See <a href="https://research-hub.auckland.ac.nz/article/choosing-data-storage" class="external-link">here</a>
+researchers and postgraduate research students to use. Both are backed
+up automatically. See <a href="https://research-hub.auckland.ac.nz/article/choosing-data-storage" class="external-link">here</a>
 for more information.</p>
-<p>A related concept is ‘version control’. These systems are frequently
-used in software development to track each change made to a set of
-files, take snapshots of files at various points, and provide the
-ability to roll back to a previous snapshot. When paired with services
-like GitHub they allow researchers to collaborate on analyses and
-writing manuscripts. Version control is out of scope for this lesson but
-see <a href="https://uoa-eresearch.github.io/git-novice/" class="external-link">here</a> for
-more information.</p>
+<p>A related concept is ‘version control’. Version control systems are
+frequently used in software development to track each change made to
+each file and provide the ability to roll back to previous versions.
+When paired with services like GitHub they allow researchers to
+collaborate on analyses and writing manuscripts in a much more efficient
+way than emailing documents back and forth. Version control is out of
+scope for this lesson but see <a href="https://uoa-eresearch.github.io/git-novice/" class="external-link">here</a> for more
+information.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Keep a copy of the raw data</li>
 </ol>
@@ -420,9 +405,9 @@ more information.</p>
 is to keep a copy of all raw data files, whether they are generated by
 an instrument or software package, or transcribed by hand. It is
 essential to maintain the provenance of data in order to respond to
-questions from funders, institutions, and journal editors, should they
+questions from funders, institutions, and journal reviewers, should they
 arise. Having in-tact raw data also means you can recreate any modified
-datasets you’ve run analyses on.</p>
+datasets, figures, or results from analyses you’ve performed.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>Create ‘tidy’ data</li>
 </ol>
@@ -455,8 +440,8 @@ for more information.</p>
 <div class="section level3">
 <h3 id="lesson-structure">Lesson structure<a class="anchor" aria-label="anchor" href="#lesson-structure"></a>
 </h3>
-<p>The rest of this lesson focuses on spreadsheets, and how to keep
-tabular data in spreadsheets tidy.</p>
+<p>The rest of this lesson focuses on practices for working with tabular
+data in spreadsheets:</p>
 <ol style="list-style-type: decimal">
 <li><a href="01-format-data.html">Formatting data tables in
 spreadsheets</a></li>
@@ -474,10 +459,10 @@ spreadsheets</a></li>
 </h3>
 <div class="callout-content">
 <ul>
-<li>Good project organisation is the foundation of any research
-project.</li>
-<li>Time invested into good project organisation is paid back multiple
-times over the course of a project.</li>
+<li>Good project organisation encompasses the naming, arrangement,
+backing up, and documenting of files.</li>
+<li>Time invested into project organisation is paid back multiple times
+over the course of a project.</li>
 </ul>
 </div>
 </div>
@@ -1690,8 +1675,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-01-23",
-  "datePublished": "2024-01-23"
+  "dateModified": "2024-01-26",
+  "datePublished": "2024-01-26"
 }
 
   </script><script>
