@@ -259,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Dates as data</h1>
-        <p>Last updated on 2024-01-17 |
+        <p>Last updated on 2024-02-12 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -278,7 +278,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What are good approaches for handling dates in spreadsheets?</li>
+<ul><li>What is a safe approach for handling dates in spreadsheets?</li>
 </ul></div>
 </div>
 </div>
@@ -287,8 +287,6 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Describe how dates are stored and formatted in spreadsheets.</li>
-<li>Describe the advantages of alternative date formatting in
-spreadsheets.</li>
 <li>Demonstrate best practices for entering dates in spreadsheets.</li>
 </ul></div>
 </div>
@@ -297,8 +295,8 @@ spreadsheets.</li>
 </div>
 <p>Dates in spreadsheets can be a problem. A spreadsheet application may
 display dates in a seemingly correct way (to a human observer) but how
-it actually handles and stores the dates behinds the scenes may be
-problematic. Problems with dates can be compounded by the use of DATE
+it actually handles and stores the dates behinds the scenes may cause
+issues. Problems with dates can be compounded by the use of DATE
 functions within a given spreadsheet program (LibreOffice Calc,
 Microsoft Excel, OpenOffice, Gnumeric). These functions are usually only
 compatible within the same family of products.</p>
@@ -311,7 +309,7 @@ compatible within the same family of products.</p>
 </h3>
 <div class="callout-content">
 <p>Most of the images of spreadsheets in this lesson come from Microsoft
-Excel, run on a Mac or on Windows.</p>
+Excel running on a Mac or Windows PC.</p>
 </div>
 </div>
 </div>
@@ -319,9 +317,11 @@ Excel, run on a Mac or on Windows.</p>
 that aren’t dates into dates. For example, many protein or gene names
 such as MAR1, DEC1, and OCT4 will automatically be changed into dates by
 Excel. And once overwritten, the original value of the cell is lost. In
-fact, the HUGO Gene Nomenclature Committee, released <a href="https://doi.org/10.1038/s41588-020-0669-3" class="external-link">guidelines</a> in 2020
-which included “symbols that affect data handling and retrieval”, in a
-nod to ongoing issues with Excel. Microsoft subsequently released an <a href="https://insider.microsoft365.com/en-us/blog/control-data-conversions-in-excel-for-windows-and-mac" class="external-link">update</a>
+fact, a global body in charge of setting nomenclature for genes released
+<a href="https://doi.org/10.1038/s41588-020-0669-3" class="external-link">guidelines</a> in
+2020 which included “symbols that affect data handling and retrieval” as
+one of the criteria which should be accounted for, in a nod to ongoing
+issues with Excel. Microsoft subsequently released an <a href="https://insider.microsoft365.com/en-us/blog/control-data-conversions-in-excel-for-windows-and-mac" class="external-link">update</a>
 to Excel in 2023 that allows users to disable automatic data conversion
 of dates. This serves as an important cautionary tale!</p>
 <div id="note-1" class="callout callout">
@@ -332,7 +332,7 @@ of dates. This serves as an important cautionary tale!</p>
 <h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
 </h3>
 <div class="callout-content">
-<p>To turn off automatic data conversion in Excel:</p>
+<p>To turn off automatic data conversion for dates in Excel:</p>
 <ul><li>On Windows: File &gt; Options &gt; Data &gt; Automatic Data
 Conversion &gt; Untick “Convert continuous numbers and letters to
 date”</li>
@@ -345,12 +345,12 @@ date”</li>
 <section id="preferred-date-format"><h2 class="section-heading">Preferred date format<a class="anchor" aria-label="anchor" href="#preferred-date-format"></a>
 </h2>
 <hr class="half-width"><p>Dates are commonly stored in a single column because this seems like
-the most natural way to record dates. But it’s actually much safer to
-store dates split into their year, month, and day components in separate
-columns. When entering or recording data, create each of these columns
-and place the values for day, month, and year into them. For existing
-spreadsheets, we can use some of Excel’s built-in functions to help
-us.</p>
+the most natural way to record dates. But it can be safer to store dates
+split into their year, month, and day components in separate columns.
+When entering or recording data, create each of these columns and place
+the values for day, month, and year into them. For existing
+spreadsheets, we can use some of Excel’s built-in functions to help us
+extract each component.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -388,7 +388,7 @@ dataset without the field assistant realising.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><img src="fig/solution_exercise_1_dates.png" class="figure"> {alt=‘dates, exersize
 1’ .output}</p>
@@ -424,7 +424,7 @@ functions <code>HOUR()</code>, <code>MINUTE()</code> and
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>Typing <code>=NOW()-TODAY()</code> will result in a decimal value
 that is not easily human parsable to a clock-based time. You will need
@@ -472,7 +472,7 @@ Excel?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <ul><li>Click to the <code>dates</code> tab of the workbook and double-click
 on any of the values in the <code>Date collected</code> column. Notice
@@ -496,19 +496,6 @@ into Excel fundamentally changed the data once again!</li>
 </div>
 </div>
 </div>
-</div>
-<div class="section level3">
-<h3 id="advantages-of-alternative-date-formatting">Advantages of Alternative Date Formatting<a class="anchor" aria-label="anchor" href="#advantages-of-alternative-date-formatting"></a></h3>
-</div>
-<div class="section level3">
-<h3 id="day">Storing dates as YEAR, MONTH, DAY<a class="anchor" aria-label="anchor" href="#day"></a></h3>
-<p>Storing dates in YEAR, MONTH, DAY format helps to avoid ambiguity.
-For example, this is a spreadsheet representing insect counts that were
-taken every few days over the summer:</p>
-<figure><img src="fig/6_excel_dates_2.jpg" alt="So, so ambiguous, it's even confusing Excel" class="figure mx-auto d-block"></figure><p>If Excel was to be believed, this person had been collecting bugs
-<strong>in the future</strong>.</p>
-<p>Separate date data into separate fields (day, month, year), which
-will eliminate any chance of ambiguity.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -581,8 +568,8 @@ easier to handle.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/03-dates-as-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/03-dates-as-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-01-17",
-  "datePublished": "2024-02-06"
+  "dateModified": "2024-02-12",
+  "datePublished": "2024-02-12"
 }
 
   </script><script>
