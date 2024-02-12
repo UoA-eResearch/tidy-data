@@ -7,21 +7,19 @@ exercises: 3
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - Describe how dates are stored and formatted in spreadsheets.
-- Describe the advantages of alternative date formatting in spreadsheets.
 - Demonstrate best practices for entering dates in spreadsheets.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are good approaches for handling dates in spreadsheets?
+- What is a safe approach for handling dates in spreadsheets?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Dates in spreadsheets can be a problem. A spreadsheet application may display dates in a
 seemingly correct way (to a human observer) but how it actually handles
-and stores the dates behinds the scenes may be problematic. Problems with dates can be compounded by the use of DATE functions within a given spreadsheet program (LibreOffice Calc, Microsoft Excel, OpenOffice,
-Gnumeric). These functions are usually only compatible within the same
+and stores the dates behinds the scenes may cause issues. Problems with dates can be compounded by the use of DATE functions within a given spreadsheet program (LibreOffice Calc, Microsoft Excel, OpenOffice, Gnumeric). These functions are usually only compatible within the same
 family of products. 
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -29,19 +27,18 @@ family of products.
 ## Note
 
 Most of the images of spreadsheets in this lesson come
-from Microsoft Excel, run on a Mac or on Windows. 
+from Microsoft Excel running on a Mac or Windows PC. 
   
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Excel is famous within the scientific community for turning things that aren't dates into dates. For example,
-many protein or gene names such as MAR1, DEC1, and OCT4 will automatically be changed into dates by Excel. And once overwritten, the original value of the cell is lost. In fact, the HUGO Gene Nomenclature Committee, released [guidelines](https://doi.org/10.1038/s41588-020-0669-3) in 2020 which included "symbols that affect data handling and retrieval", in a nod to ongoing issues with Excel. Microsoft subsequently released an [update](https://insider.microsoft365.com/en-us/blog/control-data-conversions-in-excel-for-windows-and-mac) to Excel in 2023 that allows users to disable automatic data conversion of dates. This serves as an important cautionary tale! 
+Excel is famous within the scientific community for turning things that aren't dates into dates. For example, many protein or gene names such as MAR1, DEC1, and OCT4 will automatically be changed into dates by Excel. And once overwritten, the original value of the cell is lost. In fact, a global body in charge of setting nomenclature for genes released [guidelines](https://doi.org/10.1038/s41588-020-0669-3) in 2020 which included "symbols that affect data handling and retrieval" as one of the criteria which should be accounted for, in a nod to ongoing issues with Excel. Microsoft subsequently released an [update](https://insider.microsoft365.com/en-us/blog/control-data-conversions-in-excel-for-windows-and-mac) to Excel in 2023 that allows users to disable automatic data conversion of dates. This serves as an important cautionary tale! 
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Note
 
-To turn off automatic data conversion in Excel:
+To turn off automatic data conversion for dates in Excel:
 
 - On Windows: File > Options > Data > Automatic Data Conversion > Untick "Convert continuous numbers and letters to date"
 - On Mac: Excel > Preferences > Edit > Automatic Data Conversion > > Untick "Convert continuous numbers and letters to date"
@@ -51,8 +48,7 @@ To turn off automatic data conversion in Excel:
 
 ## Preferred date format
 
-Dates are commonly stored in a single column because this seems like the most natural way to record dates.
-But it's actually much safer to store dates split into their year, month, and day components in separate columns. When entering or recording data, create each of these columns and place the values for day, month, and year into them. For existing spreadsheets, we can use some of Excel's built-in functions to help us. 
+Dates are commonly stored in a single column because this seems like the most natural way to record dates. But it can be safer to store dates split into their year, month, and day components in separate columns. When entering or recording data, create each of these columns and place the values for day, month, and year into them. For existing spreadsheets, we can use some of Excel's built-in functions to help us extract each component. 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -149,17 +145,6 @@ What happens to the dates in the `dates` tab of our workbook if we save this she
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Advantages of Alternative Date Formatting
-
-### Storing dates as YEAR, MONTH, DAY {#day}
-
-Storing dates in YEAR, MONTH, DAY format helps to avoid ambiguity. For example, this is a spreadsheet representing insect counts that were taken every few days over the summer:
-
-![](fig/6_excel_dates_2.jpg){alt="So, so ambiguous, it's even confusing Excel"}
-
-If Excel was to be believed, this person had been collecting bugs **in the future**. 
-
-Separate date data into separate fields (day, month, year), which will eliminate any chance of ambiguity.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
