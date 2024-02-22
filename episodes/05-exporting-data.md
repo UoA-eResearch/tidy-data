@@ -59,12 +59,6 @@ An important note for backwards compatibility: you can open CSV files in Excel!
 
 ![](fig/excel-to-csv.png){alt='Saving an Excel file to CSV'}
 
-## A Note on Cross-platform Operability
-
-By default, most coding and statistical environments expect UNIX-style line endings (ASCII `LF` character) as representing line breaks.  However, Windows uses an alternate line ending signifier (ASCII `CR LF` characters) by default for legacy compatibility with Teletype-based systems.
-
-As such, when exporting to CSV using Excel, it's best to select "Windows comma separated (.csv)" file for compatibility.
-
 #### Caveats on commas
 
 In some datasets, the data values themselves may include commas (,). This is particularly true in countries that
@@ -76,7 +70,7 @@ programs in the same way as CSV files. For more of a discussion on data formats 
 
 #### Special characters
 
-.CSV files saved with UTF-8 encoding should display special characters, such as Chinese Characters. However, by default Microsoft Excel uses ANSI encoding which causes many special characters to display incorrectly. To import such a .CSV file, in Excel navigate to the Data tab > From Text/CSV > select the file and then in the import wizard select 65001 Unicode (UTF-8) from the Encoding dropdown.
+.CSV files saved with UTF-8 encoding should display special characters, such as Chinese Characters. However, by default Microsoft Excel uses ANSI encoding which causes many special characters to display incorrectly. To import a .CSV file containing special characters, in Excel navigate to the Data tab > From Text/CSV > select the file and then in the import wizard select 65001 Unicode (UTF-8) from the Encoding dropdown.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 

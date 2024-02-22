@@ -86,7 +86,7 @@ With the person next to you (if the workshop is in-person), or in the chat (if t
   towards the end of lesson in episode [03-dates-as-data](03-dates-as-data.md). If participants have not spotted the
   problem with dates in 'plot 3' table, that's fine as you will address peculiarities of working with dates in
   spreadsheets in episode [03-dates-as-data](03-dates-as-data.md).  
-  
+- Download a cleaned version of the messy data [here](data/survey_data_spreadsheet_clean.csv) to see what a tidy version of this dataset looks like.
 
 :::::::::::::::::::::::::
 

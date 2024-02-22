@@ -52,10 +52,10 @@ other values.
 chosen a list of values, enter a comma-delimited or semi-colon list of allowable
 values in the `Source` box.
 
-Let's try this out by setting the plot column in our spreadsheet to only allow
+Let's try this out by setting the plot column in our [clean spreadsheet](data/survey_data_spreadsheet_clean.csv) to only allow
 plot values that are integers between 1 and 24.
 
-1. Select the `plot_id` column
+1. Select the `plot` column
 2. On the `Data` tab select `Data Validation`
 3. In the `Allow` box select `Whole number`
 4. Set the minimum and maximum values to 1 and 24.
@@ -111,20 +111,12 @@ Conditional formatting can highlight bad values based on certain criteria. This 
 
 ### Exercise
 
-Download this semi-cleaned [spreadsheet file](https://github.com/datacarpentry/spreadsheet-ecology-lesson/blob/gh-pages/data/survey_sorting_exercise.xlsx?raw=true).
-
-1. Make sure the Weight\_grams column is highlighted.
-2. In the main Excel menu bar, click `Home` > `Conditional Formatting...` choose a formatting rule.
-3. Apply any `2-Colour Scale` formatting rule.
-4. Now we can scan through and different colours will stand out. Do you notice any strange values?
+Use conditional formatting on the clean spreadsheet
 
 :::::::::::::::  solution
 
 ### Solution
 
-Cells that contain non-numerical values are not coloured. This includes both the cells where the letter "g" was included and the empty cells.
-![](fig/conditional_formating.png)
-{alt='quality\_control4, exercise2' .output}
 
 :::::::::::::::::::::::::
 
