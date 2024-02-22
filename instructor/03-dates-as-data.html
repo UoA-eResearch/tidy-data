@@ -259,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Dates as data</h1>
-        <p>Last updated on 2024-02-12 |
+        <p>Last updated on 2024-02-22 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -390,51 +390,11 @@ dataset without the field assistant realising.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><img src="../fig/solution_exercise_1_dates.png" class="figure"> {alt=‘dates, exersize
 1’ .output}</p>
 </div>
-</div>
-</div>
-</div>
-<div id="exercise-1" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<div id="exercise-1" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise-1"></a>
-</h3>
-<div class="callout-content">
-<p>Pulling hour, minute and second out of the current time.</p>
-<p>Current time and date are best retrieved using the functions
-<code>NOW()</code>, which returns the current date and time, and
-<code>TODAY()</code>, which returns the current date. The results will
-be formatted according to your computer’s settings.</p>
-<ol style="list-style-type: decimal"><li>Calculate the current time using <code>NOW()-TODAY()</code> (and
-format the cell as time).</li>
-<li>Extract the hour, minute and second from the current time using
-functions <code>HOUR()</code>, <code>MINUTE()</code> and
-<code>SECOND()</code>.</li>
-<li>Press <code>F9</code> to force the spreadsheet to recalculate the
-<code>NOW()</code> function, and check that it has been updated.</li>
-</ol></div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<ol style="list-style-type: decimal"><li>Typing <code>=NOW()-TODAY()</code> will result in a decimal value
-that is not easily human parsable to a clock-based time. You will need
-to use the strategies in the third part of this challenge to convert
-this decimal value to readable time.</li>
-<li>To extract the hour, type <code>=HOUR(NOW()-TODAY())</code> and
-similarly for minute and second.</li>
-</ol></div>
 </div>
 </div>
 </div>
@@ -453,48 +413,19 @@ you’re using, you can end up actually entering your data in a way that
 Excel will badly misinterpret and you will end up with errors in your
 data that will be extremely difficult to track down and
 troubleshoot.</p>
-<div id="exercise-2" class="callout challenge">
+<div id="note-2" class="callout callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="exercise-2" class="callout-inner">
-<h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise-2"></a>
+<div id="note-2" class="callout-inner">
+<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-2"></a>
 </h3>
 <div class="callout-content">
-<p>What happens to the dates in the <code>dates</code> tab of our
-workbook if we save this sheet in Excel (in <code>csv</code> format) and
-then open the file in a plain text editor (like TextEdit or Notepad)?
-What happens to the dates if we then open the <code>csv</code> file in
-Excel?</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
-</button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
-<div class="accordion-body">
-<ul><li>Click to the <code>dates</code> tab of the workbook and double-click
-on any of the values in the <code>Date collected</code> column. Notice
-that the dates display with the year 2015.</li>
-<li>Select <code>File -&gt; Save As</code> in Excel and in the drop down
-menu for file format select
-<code>CSV UTF-8 (Comma delimited) (.csv)</code>. Click
-<code>Save</code>.</li>
-<li>You will see a pop-up that says “This workbook cannot be saved in
-the selected file format because it contains multiple sheets.” Choose
-<code>Save Active Sheet</code>.</li>
-<li>Navigate to the file in your finder application. Right click and
-select <code>Open With</code>. Choose a plain text editor application
-and view the file. Notice that the dates display as month/day without
-any year information.</li>
-<li>Now right click on the file again and open with Excel. Notice that
-the dates display with the current year, not 2015.<br>
-As you can see, exporting data from Excel and then importing it back
-into Excel fundamentally changed the data once again!</li>
-</ul></div>
+<p>Before entering dates, preformat the column as ‘text’ by selecting
+the column &gt; right click &gt; select ‘Format cells’ &gt; select
+‘Text’. This way, however you enter your dates is what will actually be
+stored in the column. The dates will not be converted into an
+integer.</p>
 </div>
 </div>
 </div>
@@ -570,8 +501,8 @@ easier to handle.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/03-dates-as-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/03-dates-as-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-12",
-  "datePublished": "2024-02-20"
+  "dateModified": "2024-02-22",
+  "datePublished": "2024-02-22"
 }
 
   </script><script>

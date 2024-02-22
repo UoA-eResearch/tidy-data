@@ -184,19 +184,12 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. Exporting data
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-        
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#a-note-on-cross-platform-operability">A Note on Cross-platform Operability</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
         
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -259,7 +252,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Exporting data</h1>
-        <p>Last updated on 2024-01-17 |
+        <p>Last updated on 2024-02-22 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/05-exporting-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -349,16 +342,7 @@ Values’ (<code>*.csv</code>).</li>
 it and hit ‘Save’.</li>
 </ol><p>An important note for backwards compatibility: you can open CSV files
 in Excel!</p>
-<figure><img src="../fig/excel-to-csv.png" alt="Saving an Excel file to CSV" class="figure mx-auto d-block"></figure><section id="a-note-on-cross-platform-operability"><h2 class="section-heading">A Note on Cross-platform Operability<a class="anchor" aria-label="anchor" href="#a-note-on-cross-platform-operability"></a>
-</h2>
-<hr class="half-width"><p>By default, most coding and statistical environments expect
-UNIX-style line endings (ASCII <code>LF</code> character) as
-representing line breaks. However, Windows uses an alternate line ending
-signifier (ASCII <code>CR LF</code> characters) by default for legacy
-compatibility with Teletype-based systems.</p>
-<p>As such, when exporting to CSV using Excel, it’s best to select
-“Windows comma separated (.csv)” file for compatibility.</p>
-<div class="section level4">
+<figure><img src="../fig/excel-to-csv.png" alt="Saving an Excel file to CSV" class="figure mx-auto d-block"></figure><div class="section level4">
 <h4 id="caveats-on-commas">Caveats on commas<a class="anchor" aria-label="anchor" href="#caveats-on-commas"></a></h4>
 <p>In some datasets, the data values themselves may include commas (,).
 This is particularly true in countries that use commas as decimal
@@ -379,9 +363,10 @@ discussion page</a>.</p>
 <p>.CSV files saved with UTF-8 encoding should display special
 characters, such as Chinese Characters. However, by default Microsoft
 Excel uses ANSI encoding which causes many special characters to display
-incorrectly. To import such a .CSV file, in Excel navigate to the Data
-tab &gt; From Text/CSV &gt; select the file and then in the import
-wizard select 65001 Unicode (UTF-8) from the Encoding dropdown.</p>
+incorrectly. To import a .CSV file containing special characters, in
+Excel navigate to the Data tab &gt; From Text/CSV &gt; select the file
+and then in the import wizard select 65001 Unicode (UTF-8) from the
+Encoding dropdown.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -399,7 +384,10 @@ in a format that can be used consistently by most programs.</li>
 </div>
 </div>
 </div>
-</section></div> <!-- / div.lesson-content -->
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/04-quality-control.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -457,8 +445,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/05-exporting-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/05-exporting-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-01-17",
-  "datePublished": "2024-02-20"
+  "dateModified": "2024-02-22",
+  "datePublished": "2024-02-22"
 }
 
   </script><script>
