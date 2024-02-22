@@ -81,36 +81,6 @@ You can see that even though we expected the year to be 2014, the year is actual
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Exercise
-
-Pulling hour, minute and second out of the current time.
-
-Current time and date are best retrieved using the functions `NOW()`, which
-returns the current date and time, and `TODAY()`, which returns the current
-date. The results will be formatted according to your computer's settings.
-
-1. Calculate the current time using `NOW()-TODAY()` (and format the cell as time).
-2. Extract the hour, minute and second from the current time using
-  functions `HOUR()`, `MINUTE()` and `SECOND()`.
-3. Press `F9` to force the spreadsheet to recalculate the `NOW()` function,
-  and check that it has been updated.
-
-:::::::::::::::  solution
-
-## Solution
-
-1. Typing `=NOW()-TODAY()` will result in a decimal value that is not easily human parsable to a clock-based time. You will need to use the strategies in the third part of this challenge to convert this decimal value to readable time.
-2. To extract the hour, type `=HOUR(NOW()-TODAY())` and similarly for minute and second.  
-  
-  
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 ### Dates are actually stored as integers
 
 Spreadsheet programs can display dates in a variety of ways, but these "features" often allow ambiguity to creep into your data. Ideally, data should be as unambiguous as possible..
@@ -122,29 +92,13 @@ Excel stores dates as numbers - see the last column in the above figure. Essenti
 If you refer to the figure above, you'll see that
 there are many ways that ambiguity creeps into your data depending on the format you chose when you enter your data, and if you're not fully aware of which format you're using, you can end up actually entering your data in a way that Excel will badly misinterpret and you will end up with errors in your data that will be extremely difficult to track down and troubleshoot.
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+:::::::::::::::::::::::::::::::::::::::::  callout
 
-## Exercise
+## Note
 
-What happens to the dates in the `dates` tab of our workbook if we save this sheet in Excel (in `csv` format) and then open the file in a plain text editor (like TextEdit or Notepad)? What happens to the dates if we then open the `csv` file in Excel?
-
-:::::::::::::::  solution
-
-## Solution
-
-- Click to the `dates` tab of the workbook and double-click on any of the values in the `Date collected` column. Notice that the dates display with the year 2015.
-- Select `File -> Save As` in Excel and in the drop down menu for file format select `CSV UTF-8 (Comma delimited) (.csv)`. Click `Save`.
-- You will see a pop-up that says "This workbook cannot be saved in the selected file format because it contains multiple sheets." Choose `Save Active Sheet`.
-- Navigate to the file in your finder application. Right click and select `Open With`. Choose a plain text editor application and view the file. Notice that the dates display as month/day without any year information.
-- Now right click on the file again and open with Excel. Notice that the dates display with the current year, not 2015.  
-  As you can see, exporting data from Excel and then importing it back into Excel fundamentally changed the data once again!  
-  
-  
-
-:::::::::::::::::::::::::
+Before entering dates, preformat the column as 'text' by selecting the column > right click > select 'Format cells' > select 'Text'. This way, however you enter your dates is what will actually be stored in the column. The dates will not be converted into an integer.  
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
