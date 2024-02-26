@@ -12,24 +12,24 @@ exercises: 3
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for ensuring we can find and understand research files?
+- What are basic principles for organising research files?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Project Organisation
 
-Organising digital files into projects and managing them effectively are essential skills for researchers, and yet these skills are seldom taught as part of formal university courses. The following list of practices are a useful starting point for you to adapt to your own needs. 
+Organising digital files into projects and managing them effectively are essential skills for researchers, but are seldom taught at university. The following list of practices are a useful starting point for you to adapt to your own needs. 
 
-1. Use sensible directory and file names.
+1. Use sensible directory and file names
 
-Each research project should have it's own project directory (folder) containing files organised into a logical folder hierarchy. Name your project folders in a consistent way and include fields that are useful for you. The threshold at which closely-related projects become separate will depend on the kinds of projects you work on and what is a useful way to organise them. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts generated as part of the overall proejct. 
+Each research project should have it's own project directory (folder) containing files organised into a logical folder hierarchy. The threshold at which closely-related projects become separate will depend on the kinds of projects you work on. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts generated as part of the overall project. 
 
-Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example:
+Name your project folders and subfolders in a consistent way and include fields that are useful for you. Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example:
 
 - `data`: Keep raw, unedited data files here.
 - `results`: Keep cleaned/transformed datasets, figures, and tables here.
 - `docs`: Keep manuscripts, lab notebooks, and other documents here.
-- `src`: Keep source files here (code/scripts).
+- `src`: Keep source files (code/scripts) here.
 
 File names should:
 
@@ -37,17 +37,17 @@ File names should:
 - Avoid special characters and spaces. 
 - Conform to a schema or template.
 
-For example, `2020-01-20_bird-counts_north.csv` contains a date, subject, and field site location in three fields separated by underscores. This is much more informative than `data.xlsx`. The order of fields determines how files will sort, and this may be a useful consideration when working lots of files. 
+For example, `2020-01-20_bird-counts_north.csv` contains a date, subject, and location in three fields separated by underscores. This is much more informative than `data.xlsx`. The order of fields determines how files will sort, and this may be a useful consideration when working with lots of files. 
 
 2. Ensure files are backed up
 
-Hardware fails. Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers and postgraduate research students to use. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
+Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers and postgraduate research students. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
 
 A related concept is 'version control'. Version control systems are frequently used in software development to track each change made to a set of files and to provide the ability to roll back to previous versions. When paired with services like GitHub they allow researchers to collaborate on analyses and write manuscripts in a much more efficient way than emailing documents back and forth. Version control is out of scope for this lesson but see [here](https://uoa-eresearch.github.io/git-novice/) for more information. 
 
 3. Keep a copy of the raw data
 
-One of the most important principles for working with research data is to keep a copy of all raw data files, whether they are generated by an instrument, software package, or transcribed by hand. It is essential to maintain the provenance of data in order to respond to questions from funders, institutions, and journal reviewers, should they arise. Having in-tact raw data also means you can easily recreate any figures or results that you may be relying on.
+One of the most important principles for working with research data is to keep a copy of all raw data files, whether they are generated by an instrument, software package, or transcribed by hand. It is essential to maintain the provenance of data in order to respond to questions from funders, institutions, and journal reviewers, should they arise. Having in-tact raw data also means you can easily recreate any figures or results.
 
 4. Create 'tidy' data
 
@@ -57,7 +57,7 @@ Tidy datasets are those where:
 - Each observation has it's own row.
 - Each cell contains a single value.
 
-The idea is to avoid combining multiple pieces of data in a cell. We'll cover this more in the next episode. 
+The idea is to ensure data is s tructured in a way that computers can recognise, in order to use programming languages like R or Python later on. We'll cover this more in the next episode. 
 
 5. Document your project with a README
 
@@ -69,11 +69,11 @@ A README is a plain text file (.txt) that lives in the project folder and contai
 - Column names and units
 - How data has been changed/transformed (if done manually)
 
-See [here](https://research-hub.auckland.ac.nz/article/research-data-readme) for more information.
+See [here](https://research-hub.auckland.ac.nz/article/research-data-readme) for more information about READMEs.
 
 ### Lesson structure
 
-Many researchers commonly work with data in spreadsheets, so the rest of this lesson focuses on practices for working with tabular data:
+Many researchers commonly work with data in spreadsheets, so the rest of this lesson focuses on tidying tabular data:
 
 1. [Formatting data tables in spreadsheets](01-format-data.md)
 2. [Formatting problems](02-common-mistakes.md)
@@ -84,7 +84,7 @@ Many researchers commonly work with data in spreadsheets, so the rest of this le
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Good project organisation encompasses the naming, arrangement, backing up, and documenting of files.
-- Time invested into project organisation is paid back multiple times over the course of a project.
+- Time invested into project organisation is paid back multiple times over during a project.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
