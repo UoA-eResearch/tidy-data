@@ -271,7 +271,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Formatting problems</h1>
-        <p>Last updated on 2024-01-17 |
+        <p>Last updated on 2024-02-26 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/02-common-mistakes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -312,47 +312,56 @@ identify issues with the messy dataset discussed in the previous
 episode.</p>
 <p>Instructors: don’t go through this episode except to refer to
 responses to the exercise in the previous episode.</p>
-<ul><li><a href="#tables">Using multiple tables</a></li>
-<li><a href="#tabs">Using multiple tabs</a></li>
-<li><a href="#headers">Adding column headers into your data</a></li>
-<li><a href="#zeros">Not filling in zeros</a></li>
-<li><a href="#null">Using problematic null values</a></li>
-<li><a href="#formatting">Using formatting to convey
-information</a></li>
-<li><a href="#formatting-pretty">Using formatting to make the data sheet
-look pretty</a></li>
-<li><a href="#units">Placing comments or units in cells</a></li>
-<li><a href="#info">Entering more than one piece of information in a
-cell</a></li>
-<li><a href="#variable-name">Using problematic variable names</a></li>
-<li><a href="#special">Using special characters in data</a></li>
-<li><a href="#metadata">Inclusion of metadata in data table</a></li>
-<li><a href="03-dates-as-data.html">Date formatting</a></li>
+<ul><li><a href="#common-spreadsheet-errors">Common Spreadsheet
+Errors</a></li>
+<li><a href="#using-multiple-tables-tables">Using multiple tables
+{#tables}</a></li>
+<li><a href="#using-multiple-tabs-tabs">Using multiple tabs
+{#tabs}</a></li>
+<li><a href="#adding-column-headers-into-your-data-headers">Adding
+column headers into your data {#headers}</a></li>
+<li><a href="#not-filling-in-zeros-zeros">Not filling in zeros
+{#zeros}</a></li>
+<li><a href="#using-problematic-null-values-null">Using problematic null
+values {#null}</a></li>
+<li><a href="#using-formatting-to-convey-information-formatting">Using
+formatting to convey information {#formatting}</a></li>
+<li><a href="#using-formatting-to-make-the-data-sheet-look-pretty-formatting-pretty">Using
+formatting to make the data sheet look pretty
+{#formatting-pretty}</a></li>
+<li><a href="#placing-comments-or-units-in-cells-units">Placing comments
+or units in cells {#units}</a></li>
+<li><a href="#entering-more-than-one-piece-of-information-in-a-cell-info">Entering
+more than one piece of information in a cell {#info}</a></li>
+<li><a href="#using-problematic-variable-names-variable-name">Using
+problematic variable names {#variable-name}</a></li>
+<li><a href="#using-special-characters-in-data-special">Using special
+characters in data {#special}</a></li>
+<li><a href="#inclusion-of-metadata-in-data-table-metadata">Inclusion of
+metadata in data table {#metadata}</a></li>
 </ul></section><section id="tables"><h2 class="section-heading">Using multiple tables<a class="anchor" aria-label="anchor" href="#tables"></a>
 </h2>
-<hr class="half-width"><p>A common strategy is creating multiple data tables within one
-spreadsheet. It might be convenient for you now, but:</p>
+<hr class="half-width"><p>Creating multiple tables within one spreadsheet might seem
+convenient, but:</p>
 <ul><li>you won’t be able to import the data into specialised analyses
 software because it confuses the computer.</li>
 <li>you could be using the same variable name in multiple places, which
 will make it harder to clean your data up into a usable form.</li>
-</ul><p>The example below depicts the problem:</p>
-<figure><img src="fig/2_datasheet_example.jpg" alt="multiple tabs" class="figure mx-auto d-block"></figure><p>In the example above, the computer will see (for example) row 4 and
+</ul><figure><img src="fig/2_datasheet_example.jpg" alt="multiple tabs" class="figure mx-auto d-block"></figure><p>In the example above, the computer will see (for example) row 4 and
 assume that all columns A-AF refer to the same sample. This row actually
 represents four distinct samples.</p>
 </section><section id="tabs"><h2 class="section-heading">Using multiple tabs<a class="anchor" aria-label="anchor" href="#tabs"></a>
 </h2>
-<hr class="half-width"><p>Excel workbooks can hold multiple spreadsheets in separate tabs,
-which might seem convenient but which actually prevents your data from
-being tidy.</p>
+<hr class="half-width"><p>Creating multiple spreadsheets in separate tabs might seem
+convenient, but:</p>
 <ul><li>you’re more likely to accidentally add inconsistencies if your data
 is split between multiple tabs</li>
 <li>you’ll need to combine the data into a single table to analyse them
-together anyway. If the tabs are inconsistently formatted, you might
-have to combine them manually. Better to add different dates as a
-variable within a single unified table.</li>
-</ul><p>Before adding a tab ask yourself if it’s actually a new column you
-need to add.</p>
+together anyway.</li>
+</ul><p>If the tabs are inconsistently formatted, you might have to combine
+them manually. Better to add different dates as a variable within a
+single unified table. Before adding a tab ask yourself if it’s actually
+a new column you need to add.</p>
 </section><section id="headers"><h2 class="section-heading">Adding column headers into your data<a class="anchor" aria-label="anchor" href="#headers"></a>
 </h2>
 <hr class="half-width"><p>Your data sheet might get very long over the course of your work.
@@ -361,8 +370,8 @@ top of the spreadsheet. But don’t repeat your header row. These can
 easily get mixed into the data, leading to problems down the road.</p>
 <p>Instead you can freeze the column headers so that they remain visible
 even when you have a spreadsheet with many rows.</p>
-<p><a href="https://support.office.com/en-ca/article/Freeze-column-headings-for-easy-scrolling-57ccce0c-cf85-4725-9579-c5d13106ca6a" class="external-link">Documentation
-on how to freeze column headers in MS Excel</a></p>
+<p><a href="https://support.microsoft.com/en-au/office/freeze-panes-to-lock-rows-and-columns-dab2ffc9-020d-4026-8121-67dd25f2508f" class="external-link">How
+to freeze column headers in MS Excel</a></p>
 </section><section id="zeros"><h2 class="section-heading">Not filling in zeros<a class="anchor" aria-label="anchor" href="#zeros"></a>
 </h2>
 <hr class="half-width"><p>There is a very important difference between a zero and a blank cell
@@ -382,163 +391,70 @@ zeros as zeros and truly missing data as blank cells.</p>
 <hr class="half-width"><p>There are many reasons why null values are represented differently
 within a dataset. Sometimes confusing null values are automatically
 recorded from the measuring device. If that’s the case, there’s not much
-you can do, but it can be addressed in data cleaning with a tool like <a href="https://www.datacarpentry.org/OpenRefine-ecology-lesson/" class="external-link">OpenRefine</a>
-before analysing or sharing. In other cases, null values are used to
-convey different reasons why the data is missing. This is important
-information to capture, but instead of using one column to capture two
-pieces of information, it would be better to create a new column like
-‘data_missing’ and use that column to capture the different reasons.</p>
-<p>Blank cells are the best choices for most applications.</p>
+you can do, but it can be addressed in data cleaning with a tool like
+OpenRefine before analysing or sharing. In other cases, null values are
+used to convey different reasons why the data is missing. This is
+important information to capture, but instead of using one column to
+capture two pieces of information, it would be better to create a new
+column like ‘data_missing’ and use that column to capture the different
+reasons.</p>
+<p>For mising data, blank cells are usually the best choice.</p>
 </section><section id="formatting"><h2 class="section-heading">Using formatting to convey information<a class="anchor" aria-label="anchor" href="#formatting"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: highlighting cells, rows or columns that
-should be excluded from an analysis, leaving blank rows to indicate
-separations in data.</p>
-<figure><img src="fig/formatting.png" alt="formatting" class="figure mx-auto d-block"></figure><p><strong>Solution</strong>: create a new field to encode which data
+<hr class="half-width"><p>Sometimes people use formatting to convey information which should be
+captured elsewhere. For example: - highlighting cells, rows, or columns
+that should be excluded from an analysis - leaving blank rows to
+indicate separations in data</p>
+<figure><img src="fig/formatting.png" alt="formatting" class="figure mx-auto d-block"></figure><p>A better solution is to create a new column to encode which data
 should be excluded.</p>
 <figure><img src="fig/good_formatting.png" alt="good formatting" class="figure mx-auto d-block"></figure></section><section id="formatting-pretty"><h2 class="section-heading">Using formatting to make the data sheet look pretty<a class="anchor" aria-label="anchor" href="#formatting-pretty"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: merging cells.</p>
-<p><strong>Solution</strong>: Formatting a worksheet to be more
-aesthetically pleasing by merging cells will make your data unreadable
-by statistics software. Consider restructuring your data in such a way
-that you will not need to merge cells to organise your data.</p>
+<hr class="half-width"><p>Sometimes people use formatting to make the spreadsheet look nice.
+For example, by merging cells. But this will make your data unreadable
+by statistical software.</p>
 </section><section id="units"><h2 class="section-heading">Placing comments or units in cells<a class="anchor" aria-label="anchor" href="#units"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: Your data was collected, in part, by a
-summer student who you later found out was misidentifying some of your
-species, some of the time. You want a way to note these data are
-suspect.</p>
-<p><strong>Solution</strong>: Most analysis software can’t see Excel or
-LibreOffice comments, and would be confused by comments placed within
-your data cells. As described above for formatting, create another field
-if you need to add notes to cells. Similarly, don’t include units in
-cells: ideally, all the measurements you place in one column should be
-in the same unit, but if for some reason they aren’t, create another
-field and specify the units the cell is in.</p>
+<hr class="half-width"><p>If you need a way to incorporae important notes about certain data in
+the spreadsheet, create a new column to identify observations which may
+be suspect. You can put information such as units or calibration
+information within your README.</p>
 </section><section id="info"><h2 class="section-heading">Entering more than one piece of information in a cell<a class="anchor" aria-label="anchor" href="#info"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: You find one male, and one female of the
-same species. You enter this as 1M, 1F.</p>
-<p><strong>Solution</strong>: Don’t include more than one piece of
-information in a cell. This will limit the ways in which you can analyse
-your data. If you need both these measurements, design your data sheet
-to include this information. For example, include one column for number
-of individuals and a separate column for sex.</p>
+<hr class="half-width"><p>Don’t include more than one piece of information in a cell. This will
+limit the ways in which you can analyse your data. If you need both
+these measurements, design your data sheet to include this information.
+For example, include one column for number of individuals and a separate
+column for sex.</p>
 </section><section id="variable-name"><h2 class="section-heading">Using problematic variable names<a class="anchor" aria-label="anchor" href="#variable-name"></a>
 </h2>
-<hr class="half-width"><p>Choose descriptive variable names, and be careful not to include
-spaces, numbers, or special characters of any kind. Spaces can be
-misinterpreted by parsers that use whitespace as delimiters and some
+<hr class="half-width"><p>Choose descriptive variable/column names, and be careful not to
+include spaces, numbers, or special characters of any kind. Spaces can
+be misinterpreted by parsers that use whitespace as delimiters and some
 programs don’t like field names that are text strings that start with
 numbers.</p>
-<p>Underscores (<code>_</code>) are a good alternative to spaces, or
-consider writing names in camel case (like this: ExampleFileName).
-Remember that abbreviations that make sense at the moment may not be so
-obvious in 6 months, but don’t overdo it with names that are excessively
-long. Including the units in the field names avoids confusion and
-enables others to readily interpret your fields. It’s useful to add
-definitions of variables and their units toa README.txt file.</p>
-<p><strong>Examples</strong></p>
-<table align="left" style="width =50%; border: 1px solid black;" class="table"><tr><td>
-<b>Good Name</b>
-</td>
-<br><td>
-<b>Good Alternative </b>
-</td>
-<br><td>
-<b>Avoid </b>
-</td>
-<br></tr><tr><td>
-Max_temp_C
-</td>
-<td>
-MaxTemp
-</td>
-<td>
-Maximum Temp (°C)
-</td>
-</tr><tr><td>
-Precipitation_mm
-</td>
-<td>
-Precipitation
-</td>
-<td>
-precmm
-</td>
-</tr><tr><td>
-Mean_year_growth
-</td>
-<td>
-MeanYearGrowth
-</td>
-<td>
-Mean growth/year
-</td>
-</tr><tr><td>
-sex
-</td>
-<td>
-sex
-</td>
-<td>
-M/F
-</td>
-</tr><tr><td>
-weight
-</td>
-<td>
-weight
-</td>
-<td>
-w.
-</td>
-</tr><tr><td>
-cell_type
-</td>
-<td>
-CellType
-</td>
-<td>
-Cell Type
-</td>
-</tr><tr><td>
-Observation_01
-</td>
-<td>
-first_observation
-</td>
-<td>
-1st Obs
-</td>
-</tr></table></section><section id="special"><h2 class="section-heading">Using special characters in data<a class="anchor" aria-label="anchor" href="#special"></a>
+<p>Consider using ‘lower_snake’ case (lower case words separated by
+underscores) for variable/column names.</p>
+<p>Remember to define your variable names and state the units in your
+README file.</p>
+</section><section id="special"><h2 class="section-heading">Using special characters in data<a class="anchor" aria-label="anchor" href="#special"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: You treat your spreadsheet program as a
-word processor when writing notes, for example copying data directly
-from Word or other applications.</p>
-<p><strong>Solution</strong>: This is a common strategy. When writing
-longer text in a cell, people often include line breaks, em-dashes, etc
-in their spreadsheet. Also, when copying data in from applications such
-as Word, formatting and fancy non-standard characters (such as left- and
-right-aligned quotation marks) are included. When exporting this data
-into a coding/statistical environment or into a relational database,
-dangerous things may occur, such as lines being cut in half and encoding
-errors being thrown.</p>
+<hr class="half-width"><p>Avoid copying data directly from Word or other applications, because
+line breaks, em-dashes, formatting and non-standard characters (such as
+left- and right-aligned quotation marks) are included. When exporting
+this data into a coding/statistical environment or into a relational
+database, dangerous things may occur, such as lines being cut in half
+and encoding errors being thrown.</p>
 <p>General best practice is to avoid adding characters such as newlines,
 tabs, and vertical tabs. In other words, treat a text cell as if it were
 a simple web form that can only contain text and spaces.</p>
 </section><section id="metadata"><h2 class="section-heading">Inclusion of metadata in data table<a class="anchor" aria-label="anchor" href="#metadata"></a>
 </h2>
-<hr class="half-width"><p><strong>Example</strong>: You add a legend at the top or bottom of
-your data table explaining column meaning, units, exceptions, etc.</p>
-<p><strong>Solution</strong>: Recording data about your data
-(“metadata”) is essential. You may be on intimate terms with your
-dataset while you are collecting and analysing it, but the chances that
-you will still remember that the variable “sglmemgp” means single member
-of group, for example, or the exact algorithm you used to transform a
-variable or create a derived one, after a few months, a year, or more
-are slim.</p>
+<hr class="half-width"><p>Recording data about your data (“metadata”) is essential. You may be
+on intimate terms with your dataset while you are collecting and
+analysing it, but the chances that you will still remember that the
+variable “sglmemgp” means single member of group, for example, or the
+exact algorithm you used to transform a variable or create a derived
+one, after a few months, a year, or more are slim.</p>
 <p>There are many reasons other people may want to examine or use your
 data - to understand your findings, to verify your findings, to review
 your submitted publication, to replicate your results, to design a
@@ -549,19 +465,13 @@ documenting your data during the collection and analysis phase of your
 research cannot be overestimated, especially if your research is going
 to be part of the scholarly record.</p>
 <p>However, metadata should not be contained in the data file itself.
-Unlike a table in a paper or a supplemental file, metadata (in the form
-of legends) should not be included in a data file since this information
-is not data, and including it can disrupt how computer programs
-interpret your data file. Rather, metadata should be stored in a
-separate file. A common convention is to create a plain text file (.txt)
-called README.txt and store this kind of contextual information about
-your data inside it. You can include project details such as authors,
-funders, abstract, as well as comments, units, information about how
-null values are encoded, and other information which is important to
-document but can disrupt the formatting of your data file.</p>
-<p>Additionally, file or database level metadata describes how files
-that make up the dataset relate to each other; what format are they are
-in; and whether they supercede or are superceded by previous files.</p>
+Rather, metadata should be stored in a separate file. A common
+convention is to create a plain text file (.txt) called README.txt and
+store this kind of contextual information about your data inside it. You
+can include project details such as authors, funders, abstract, as well
+as comments, units, information about how null values are encoded, and
+other information which is important to document but can disrupt the
+formatting of your data file.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -643,8 +553,8 @@ spreadsheet look pretty.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/02-common-mistakes.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-01-17",
-  "datePublished": "2024-02-22"
+  "dateModified": "2024-02-26",
+  "datePublished": "2024-02-26"
 }
 
   </script><script>

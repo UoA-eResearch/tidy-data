@@ -252,7 +252,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2024-02-12 |
+        <p>Last updated on 2024-02-26 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -273,8 +273,7 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What are basic principles for ensuring we can find and understand
-research files?</li>
+<ul><li>What are basic principles for organising research files?</li>
 </ul></div>
 </div>
 </div>
@@ -292,23 +291,21 @@ organised.</li>
 <div class="section level3">
 <h3 id="project-organisation">Project Organisation<a class="anchor" aria-label="anchor" href="#project-organisation"></a></h3>
 <p>Organising digital files into projects and managing them effectively
-are essential skills for researchers, and yet these skills are seldom
-taught as part of formal university courses. The following list of
-practices are a useful starting point for you to adapt to your own
-needs.</p>
-<ol style="list-style-type: decimal"><li>Use sensible directory and file names.</li>
+are essential skills for researchers, but are seldom taught at
+university. The following list of practices are a useful starting point
+for you to adapt to your own needs.</p>
+<ol style="list-style-type: decimal"><li>Use sensible directory and file names</li>
 </ol><p>Each research project should have it’s own project directory (folder)
-containing files organised into a logical folder hierarchy. Name your
-project folders in a consistent way and include fields that are useful
-for you. The threshold at which closely-related projects become separate
-will depend on the kinds of projects you work on and what is a useful
-way to organise them. For example, each discrete set of data resulting
-in a publication may have it’s own project folder, or perhaps each grant
-has it’s own project folder containing the datasets and manuscripts
-generated as part of the overall proejct.</p>
-<p>Every project will have different needs, but using a set of common
-subfolders means you will always know where certain files live. For
-example:</p>
+containing files organised into a logical folder hierarchy. The
+threshold at which closely-related projects become separate will depend
+on the kinds of projects you work on. For example, each discrete set of
+data resulting in a publication may have it’s own project folder, or
+perhaps each grant has it’s own project folder containing the datasets
+and manuscripts generated as part of the overall project.</p>
+<p>Name your project folders and subfolders in a consistent way and
+include fields that are useful for you. Every project will have
+different needs, but using a set of common subfolders means you will
+always know where certain files live. For example:</p>
 <ul><li>
 <code>data</code>: Keep raw, unedited data files here.</li>
 <li>
@@ -318,23 +315,22 @@ and tables here.</li>
 <code>docs</code>: Keep manuscripts, lab notebooks, and other
 documents here.</li>
 <li>
-<code>src</code>: Keep source files here (code/scripts).</li>
+<code>src</code>: Keep source files (code/scripts) here.</li>
 </ul><p>File names should:</p>
 <ul><li>Be short, descriptive, and consistent.</li>
 <li>Avoid special characters and spaces.</li>
 <li>Conform to a schema or template.</li>
 </ul><p>For example, <code>2020-01-20_bird-counts_north.csv</code> contains a
-date, subject, and field site location in three fields separated by
-underscores. This is much more informative than <code>data.xlsx</code>.
-The order of fields determines how files will sort, and this may be a
-useful consideration when working lots of files.</p>
+date, subject, and location in three fields separated by underscores.
+This is much more informative than <code>data.xlsx</code>. The order of
+fields determines how files will sort, and this may be a useful
+consideration when working with lots of files.</p>
 <ol start="2" style="list-style-type: decimal"><li>Ensure files are backed up</li>
-</ol><p>Hardware fails. Ensure you’re not the victim of data loss by backing
-up your research projects, or better yet, store them on a platform or
-service that is automatically backed up for you. The University of
-Auckland provides Research Drive and Dropbox team folders for
-researchers and postgraduate research students to use. Both are backed
-up automatically. See <a href="https://research-hub.auckland.ac.nz/article/choosing-data-storage" class="external-link">here</a>
+</ol><p>Ensure you’re not the victim of data loss by backing up your research
+projects, or better yet, store them on a platform or service that is
+automatically backed up for you. The University of Auckland provides
+Research Drive and Dropbox team folders for researchers and postgraduate
+research students. Both are backed up automatically. See <a href="https://research-hub.auckland.ac.nz/article/choosing-data-storage" class="external-link">here</a>
 for more information.</p>
 <p>A related concept is ‘version control’. Version control systems are
 frequently used in software development to track each change made to a
@@ -351,14 +347,15 @@ an instrument, software package, or transcribed by hand. It is essential
 to maintain the provenance of data in order to respond to questions from
 funders, institutions, and journal reviewers, should they arise. Having
 in-tact raw data also means you can easily recreate any figures or
-results that you may be relying on.</p>
+results.</p>
 <ol start="4" style="list-style-type: decimal"><li>Create ‘tidy’ data</li>
 </ol><p>Tidy datasets are those where:</p>
 <ul><li>Each variable has it’s own column.</li>
 <li>Each observation has it’s own row.</li>
 <li>Each cell contains a single value.</li>
-</ul><p>The idea is to avoid combining multiple pieces of data in a cell.
-We’ll cover this more in the next episode.</p>
+</ul><p>The idea is to ensure data is s tructured in a way that computers can
+recognise, in order to use programming languages like R or Python later
+on. We’ll cover this more in the next episode.</p>
 <ol start="5" style="list-style-type: decimal"><li>Document your project with a README</li>
 </ol><p>A README is a plain text file (.txt) that lives in the project folder
 and contains as much contextual information about your project as you
@@ -371,12 +368,12 @@ other</li>
 <li>Column names and units</li>
 <li>How data has been changed/transformed (if done manually)</li>
 </ul><p>See <a href="https://research-hub.auckland.ac.nz/article/research-data-readme" class="external-link">here</a>
-for more information.</p>
+for more information about READMEs.</p>
 </div>
 <div class="section level3">
 <h3 id="lesson-structure">Lesson structure<a class="anchor" aria-label="anchor" href="#lesson-structure"></a></h3>
 <p>Many researchers commonly work with data in spreadsheets, so the rest
-of this lesson focuses on practices for working with tabular data:</p>
+of this lesson focuses on tidying tabular data:</p>
 <ol style="list-style-type: decimal"><li><a href="01-format-data.html">Formatting data tables in
 spreadsheets</a></li>
 <li><a href="02-common-mistakes.html">Formatting problems</a></li>
@@ -394,7 +391,7 @@ spreadsheets</a></li>
 <ul><li>Good project organisation encompasses the naming, arrangement,
 backing up, and documenting of files.</li>
 <li>Time invested into project organisation is paid back multiple times
-over the course of a project.</li>
+over during a project.</li>
 </ul></div>
 </div>
 </div>
@@ -463,8 +460,8 @@ published in PLoS Computational Biology.</p>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/00-intro.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/00-intro.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-12",
-  "datePublished": "2024-02-22"
+  "dateModified": "2024-02-26",
+  "datePublished": "2024-02-26"
 }
 
   </script><script>
