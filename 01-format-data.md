@@ -78,7 +78,7 @@ In the chat, identify what is wrong with this spreadsheet and what you could do 
 
 ### Tidied Data
 
-You can download a cleaned version of the messy data [here](data/survey_data_spreadsheet_clean.csv) to see what a tidy version of this dataset looks like. Points to consider:
+You can download a cleaned version of the messy data [here](data/survey_data_spreadsheet_clean.xlsx) to see what a tidy version of this dataset looks like. Points to consider:
 
 - Multiple tables have been combined into a single table where each observation has it's own row.
 - Column headings (or variable names) have been simplified.
