@@ -16,8 +16,8 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-When you have a well-structured data table, you can use several simple
-techniques within your spreadsheet to ensure the data you enter is
+When you have set up a well-structured data table, you can use several simple
+techniques within your spreadsheet software to ensure the data you enter is
 free of errors. These approaches include techniques that are
 implemented prior to entering data (quality assurance) and
 techniques that are used after entering data to check for errors
@@ -34,7 +34,7 @@ allowed.
 
 To control the kind of data entered into a spreadsheet we use Data Validation
 (Excel) or Validity (Libre Office Calc), to set the values that can be entered
-in each data column.
+in each data column:
 
 1\. Select the cells or column you want to validate
 
@@ -52,10 +52,9 @@ other values.
 chosen a list of values, enter a comma-delimited or semi-colon list of allowable
 values in the `Source` box.
 
-Let's try this out by setting the plot column in our [clean spreadsheet](data/survey_data_spreadsheet_clean.csv) to only allow
-plot values that are integers between 1 and 24.
+Let's try this out. Open up the [cleaned data](data/survey_data_spreadsheet_clean.xlsx).
 
-1. Select the `plot` column
+1. Select the `plot` column. 
 2. On the `Data` tab select `Data Validation`
 3. In the `Allow` box select `Whole number`
 4. Set the minimum and maximum values to 1 and 24.
@@ -73,14 +72,7 @@ your own message in the `Input Message` tab
 
 ![](fig/input_message.png){alt='Image of Input Message tab'}
 
-or allow invalid data to result in a warning rather than an error by modifying the `Style`
-option on the `Error Alert` tab.
-
-![](fig/error_alert.png){alt='Image of Error Alert tab'}
-
-Quality assurance can make data entry easier as well as more robust. For
-example, if you use a list of options to restrict data entry, the spreadsheet
-will provide you with a dropdown list of the available items. So, instead of
+You can also restrict data entry to a list of options in a dropdown list. So, instead of
 trying to remember how to spell *Dipodomys spectabilis*, you can select the
 right option from the list.
 
@@ -92,16 +84,13 @@ right option from the list.
 
 ## Note
 
-If you have used formulas in your spreadsheet, then before doing any quality control operations it's best to save your spreadsheet and create a new copy. In the new copy, copy and paste the contents as values so the formulas are removed. Because formulas refer to other cells, and you may be moving cells around, you may compromise the integrity of your data if you do not take this step.
-  
+If you have used formulas in your spreadsheet, then before doing any quality control operations it's best to save your spreadsheet and create a new copy. In the new copy, copy the contents and paste as values so the formulas are removed. Because formulas refer to other cells, and you may be moving cells around, you may compromise the integrity of your data if you do not take this step.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Manual method: Sorting
 
-Bad values often sort to the bottom or top of the column. For example, if your data should be numeric, then alphabetical and null data will group at the ends of the sorted data. Sort your data by each field, one at a time. Scan through each column, but pay the most attention to the top and the bottom of a column. If your dataset is well-structured and does not contain formulas, sorting should never affect the integrity of your dataset.
-
-**But remember** to expand your sort in order to prevent data corruption. Expanding your sort ensures that the all the data in one row move together instead of only sorting a single column in isolation. Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
+Bad values often sort to the bottom or top of the column. For example, if your data should be numeric, then alphabetical and null data will group at the ends of the sorted data. Sort your data by each field, one at a time. Scan through each column, but pay the most attention to the top and the bottom of a column. If your dataset is well-structured and does not contain formulas, sorting should never affect the integrity of your dataset. **Remember** to expand your sort to prevent data corruption. Expanding your sort ensures that all the data in one row move together instead of only sorting a single column in isolation. Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 
 ### Conditional formatting
 
@@ -111,7 +100,7 @@ Conditional formatting can highlight bad values based on certain criteria. This 
 
 ### Exercise
 
-Use conditional formatting on the clean spreadsheet
+Let's check the `weight` column with conditional formatting to flag suspicious values.
 
 :::::::::::::::  solution
 
