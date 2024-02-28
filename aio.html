@@ -469,7 +469,7 @@ practices in scientific computing</a> by Greg Wilson and colleagues,
 published in PLoS Computational Biology.</p>
 </div></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables in Spreadsheets</a></p>
 <hr>
-<p>Last updated on 2024-02-26 |
+<p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -603,7 +603,7 @@ you could do to fix the problem.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
@@ -631,7 +631,7 @@ dates in spreadsheets in episode <a href="03-dates-as-data.html">03-dates-as-dat
 <div class="section level3">
 <h3 id="tidied-data">Tidied Data<a class="anchor" aria-label="anchor" href="#tidied-data"></a>
 </h3>
-<p>You can download a cleaned version of the messy data <a href="data/survey_data_spreadsheet_clean.csv">here</a> to see what a
+<p>You can download a cleaned version of the messy data <a href="data/survey_data_spreadsheet_clean.xlsx">here</a> to see what a
 tidy version of this dataset looks like. Points to consider:</p>
 <ul>
 <li>Multiple tables have been combined into a single table where each
@@ -1046,7 +1046,7 @@ spreadsheet look pretty.</li>
 </div>
 </section></section><section id="aio-03-dates-as-data"><p>Content from <a href="03-dates-as-data.html">Dates as data</a></p>
 <hr>
-<p>Last updated on 2024-02-26 |
+<p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1081,12 +1081,12 @@ spreadsheet look pretty.</li>
 <p>Dates in spreadsheets can be a problem. A spreadsheet application may
 display dates in a seemingly correct way (to a human observer) while
 actually storing the date in a way that may cause issues.</p>
-<div id="note" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a>
 </h3>
 <div class="callout-content">
 <p>Most of the images of spreadsheets in this lesson come from Microsoft
@@ -1106,12 +1106,12 @@ ongoing issues with Excel. Microsoft subsequently released an <a href="https://i
 to Excel in 2023 that allows users to disable automatic data conversion
 of these kinds of data into dates. This serves as an important
 cautionary tale!</p>
-<div id="note-1" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note-1" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note-1">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
 </h3>
 <div class="callout-content">
 <p>To turn off automatic data conversion for dates in Excel:</p>
@@ -1130,18 +1130,39 @@ settings. See below for more information.</p>
 </div>
 </div>
 </div>
-<section id="preferred-date-format"><h2 class="section-heading">Preferred date format<a class="anchor" aria-label="anchor" href="#preferred-date-format"></a>
+<section id="recommended-date-format"><h2 class="section-heading">Recommended date format<a class="anchor" aria-label="anchor" href="#recommended-date-format"></a>
 </h2>
 <hr class="half-width">
-<p>There are two ‘tidy’ ways to store dates in spreadsheets.</p>
-<ol style="list-style-type: decimal">
-<li>Split between multiple columns, so that the year, month, and day
-component each get their own column.</li>
-<li>Within a single column, formatted in accordance with ISO 8601
-standard: YYYY-MM-DD.</li>
-</ol>
-<p>Let’s take a look at the first option and assume you have an existing
-set of dates in a spreadsheet that you’d like to split up.</p>
+<p>To avoid ambiguity, dates should be written as
+<code>yyyy-mm-dd</code>. But Excel and other spreadsheet software tend
+to transform this data into their own date formats, changing the
+underlying data in the process.</p>
+<p>For example, take the date <code>2024-01-13</code>. When you add this
+value to a cell inside a new Excel spreadsheet (<code>.xlsx</code>) and
+save the spreadsheet in the same format, the date is overwritten to
+<code>13/01/2024</code>. Similarly, when you add this date to a cell
+inside a new Excel spreadsheet (<code>.xlsx</code>) and save the
+spreadsheet in a plain text format (<code>.csv</code>), the date is
+again overwritten to <code>13/01/2024</code>. Even when you create a new
+plain text spreadsheet (<code>.csv</code>) and save the file in
+<code>.csv</code> format, the date is overwritten to
+<code>13/01/2024</code>. When you create a new plain text spreadsheet
+(<code>.csv</code>), pre-format a column as ‘text’ (right click the
+column label &gt; format cells &gt; Text), and enter the date, it will
+be stored correctly and display correctly. However, when this
+<code>.csv</code> file is opened back up again in Excel the date is
+reinterpreted by Excel, converted to it’s internal format, and
+overwritten as <code>13/01/2024</code>.</p>
+<p>Why is Excel doing this? When data is imported into Excel, it will
+automatically identify cells containing dates and convert these into
+it’s internal date format. In the background, Excel stores dates as
+integers, and then picks a format to display them with based on your
+computer’s regional date settings.</p>
+<p>The <strong>only</strong> guaranteed way to avoid this is to make
+different columns to record year, month, and day separately. You can
+then join the date components up later on in the software used for
+analysis. If you already have dates in a single column, you can split
+them up using some handy Excel functions.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1150,17 +1171,18 @@ set of dates in a spreadsheet that you’d like to split up.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>Pulling day, month, and year out of dates.</p>
+<p>Pulling day, month, and year out of dates entered into a single
+column.</p>
 <ol style="list-style-type: decimal">
 <li>Create a tab called <code>dates</code> in our messy spreadsheet and
 copy the ‘plot 3’ table from the <code>2014</code> tab (that contains
 the problematic dates).</li>
 <li>Create new columns for day, month, and year.</li>
-<li>Make sure they are formatted as numbers, not dates, by
-right-clicking the column &gt; format cells &gt; number.</li>
+<li>Make sure the new columns are formatted as numbers, not dates, by
+selecting the columns, right-clicking them &gt; format cells &gt;
+number.</li>
 <li>Extract day, month, and year from the dates in the
-<code>Date collected</code> column into new columns. For this we can use
-the following built-in Excel functions:</li>
+<code>Date collected</code> column into the new columns by using:</li>
 </ol>
 <p><code>YEAR()</code></p>
 <p><code>MONTH()</code></p>
@@ -1190,69 +1212,6 @@ without the field assistant realising.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="dates-are-actually-stored-as-integers">Dates are actually stored as integers<a class="anchor" aria-label="anchor" href="#dates-are-actually-stored-as-integers"></a>
-</h3>
-<p>Spreadsheet programs can display dates in a variety of ways, but
-these “features” often allow ambiguity to creep into your data. Ideally,
-data should be as unambiguous as possible.</p>
-<figure><img src="fig/5_excel_dates_1.jpg" alt="Many formats, many ambiguities" class="figure mx-auto d-block"></figure><p>Excel stores dates as numbers: see the last column in the above
-figure. Excel stores dates as a number representing the number of days
-since December 31, 1899. So July 2, 2014 is stored as 41822 because it
-is 41,822 days after December 31, 1899.</p>
-<p>If you’re not fully aware of which date format you’re using, you can
-end up entering your data in a way that Excel will badly misinterpret
-and you will end up with errors in your data that will be extremely
-difficult to track down and troubleshoot.</p>
-</div>
-</section><section id="single-column-dates"><h2 class="section-heading">Single-column Dates<a class="anchor" aria-label="anchor" href="#single-column-dates"></a>
-</h2>
-<hr class="half-width">
-<p>The second “tidy” way to store dates is within a single column,
-formatted in accordance with ISO 8601 standard: <code>YYYY-MM-DD</code>.
-But actually using this date format in Excel is more challenging than
-first appears.</p>
-<p>For example, take the date <code>2024-01-13</code>. When you add this
-value to a cell inside a new Excel spreadsheet (<code>.xlsx</code>) and
-save the spreadsheet in the same format, the date is overwritten to
-<code>13/01/2024</code>. Similarly, when you add this date to a cell
-inside a new Excel spreadsheet (<code>.xlsx</code>) and save the
-spreadsheet in a non-Excel format (<code>.csv</code>), the date is again
-overwritten to <code>13/01/2024</code>. Even when you create a new
-non-Excel formatted spreadsheet (<code>.csv</code>) and save the file
-still in <code>.csv</code> format, the date is overwritten to
-13/01/2024. When you create a new non-Excel formatted spreadsheet
-(<code>.csv</code>), pre-format the column as ‘text’ (right click the
-column label &gt; format cells &gt; Text), and enter the date, it will
-be stored correctly and display correctly. However, when this
-<code>.csv</code> file is opened back up again in Excel the date is
-reinterpreted by Excel, converted to a number, and overwritten as
-<code>13/01/2024</code>.</p>
-<p>Why is Excel doing this? When a spreadsheet is opened in Excel it is
-automatically converting the date to an integer and changing the date
-format based on your computer’s regional date settings. The
-<strong>only</strong> way to enter a date as <code>YYYY-MM-DD</code> and
-have it be both stored and displayed correctly in Excel is to change
-your regional date setting.</p>
-<div id="note-2" class="callout callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="note-2" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-2"></a>
-</h3>
-<div class="callout-content">
-<p>To stop Excel overwriting and incorrectly displaying dates in
-<code>YYYY-MM-DD</code> format you need to change Windows region
-settings. This will also change the display of your date in the
-taskbar.</p>
-<ul>
-<li>On Windows: Start menu &gt; Region &gt; Additional settings &gt;
-Date tab &gt; enter ‘yyyy-MM-dd’ into ‘Short Date’</li>
-</ul>
-</div>
-</div>
-</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1270,7 +1229,7 @@ easier to handle.</li>
 </div>
 </section></section><section id="aio-04-quality-control"><p>Content from <a href="04-quality-control.html">Quality control</a></p>
 <hr>
-<p>Last updated on 2024-02-22 |
+<p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/04-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1303,12 +1262,12 @@ and limit incorrect data entry.</li>
 </div>
 </div>
 </div>
-<p>When you have a well-structured data table, you can use several
-simple techniques within your spreadsheet to ensure the data you enter
-is free of errors. These approaches include techniques that are
-implemented prior to entering data (quality assurance) and techniques
-that are used after entering data to check for errors (quality
-control).</p>
+<p>When you have set up a well-structured data table, you can use
+several simple techniques within your spreadsheet software to ensure the
+data you enter is free of errors. These approaches include techniques
+that are implemented prior to entering data (quality assurance) and
+techniques that are used after entering data to check for errors
+(quality control).</p>
 <section id="quality-assurance"><h2 class="section-heading">Quality Assurance<a class="anchor" aria-label="anchor" href="#quality-assurance"></a>
 </h2>
 <hr class="half-width">
@@ -1320,7 +1279,7 @@ one of the kinds of data being collected is a count, only integers
 greater than or equal to zero should be allowed.</p>
 <p>To control the kind of data entered into a spreadsheet we use Data
 Validation (Excel) or Validity (Libre Office Calc), to set the values
-that can be entered in each data column.</p>
+that can be entered in each data column:</p>
 <p>1. Select the cells or column you want to validate</p>
 <p>2. On the <code>Data</code> tab select
 <code>Data Validation</code></p>
@@ -1330,10 +1289,9 @@ items, dates, and other values.</p>
 <figure><img src="fig/data_validation_window.png" alt="Image of Data Validation window" class="figure mx-auto d-block"></figure><p>4. After selecting an item enter any additional details. For example,
 if you’ve chosen a list of values, enter a comma-delimited or semi-colon
 list of allowable values in the <code>Source</code> box.</p>
-<p>Let’s try this out by setting the plot column in our <a href="data/survey_data_spreadsheet_clean.csv">clean spreadsheet</a> to
-only allow plot values that are integers between 1 and 24.</p>
+<p>Let’s try this out. Open up the <a href="data/survey_data_spreadsheet_clean.xlsx">cleaned data</a>.</p>
 <ol style="list-style-type: decimal">
-<li>Select the <code>plot</code> column</li>
+<li>Select the <code>plot</code> column.</li>
 <li>On the <code>Data</code> tab select
 <code>Data Validation</code>
 </li>
@@ -1346,28 +1304,23 @@ valid plot. The spreadsheet stops us from entering the wrong value and
 asks us if we would like to try again.</p>
 <figure><img src="fig/invalid_value.png" alt="Image of error when trying to enter invalid data" class="figure mx-auto d-block"></figure><p>You can also customise the resulting message to be more informative
 by entering your own message in the <code>Input Message</code> tab</p>
-<figure><img src="fig/input_message.png" alt="Image of Input Message tab" class="figure mx-auto d-block"></figure><p>or allow invalid data to result in a warning rather than an error by
-modifying the <code>Style</code> option on the <code>Error Alert</code>
-tab.</p>
-<figure><img src="fig/error_alert.png" alt="Image of Error Alert tab" class="figure mx-auto d-block"></figure><p>Quality assurance can make data entry easier as well as more robust.
-For example, if you use a list of options to restrict data entry, the
-spreadsheet will provide you with a dropdown list of the available
-items. So, instead of trying to remember how to spell <em>Dipodomys
+<figure><img src="fig/input_message.png" alt="Image of Input Message tab" class="figure mx-auto d-block"></figure><p>You can also restrict data entry to a list of options in a dropdown
+list. So, instead of trying to remember how to spell <em>Dipodomys
 spectabilis</em>, you can select the right option from the list.</p>
 <figure><img src="fig/drop_down_list2.png" alt="Image of drop-down menu" class="figure mx-auto d-block"></figure></section><section id="quality-control"><h2 class="section-heading">Quality Control<a class="anchor" aria-label="anchor" href="#quality-control"></a>
 </h2>
 <hr class="half-width">
-<div id="note" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a>
 </h3>
 <div class="callout-content">
 <p>If you have used formulas in your spreadsheet, then before doing any
 quality control operations it’s best to save your spreadsheet and create
-a new copy. In the new copy, copy and paste the contents as values so
+a new copy. In the new copy, copy the contents and paste as values so
 the formulas are removed. Because formulas refer to other cells, and you
 may be moving cells around, you may compromise the integrity of your
 data if you do not take this step.</p>
@@ -1383,10 +1336,9 @@ will group at the ends of the sorted data. Sort your data by each field,
 one at a time. Scan through each column, but pay the most attention to
 the top and the bottom of a column. If your dataset is well-structured
 and does not contain formulas, sorting should never affect the integrity
-of your dataset.</p>
-<p><strong>But remember</strong> to expand your sort in order to prevent
-data corruption. Expanding your sort ensures that the all the data in
-one row move together instead of only sorting a single column in
+of your dataset. <strong>Remember</strong> to expand your sort to
+prevent data corruption. Expanding your sort ensures that all the data
+in one row move together instead of only sorting a single column in
 isolation. Sorting by only a single column will scramble your data - a
 single row will no longer represent an individual observation.</p>
 </div>
@@ -1405,7 +1357,8 @@ flag inconsistent values when entering data.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>Use conditional formatting on the clean spreadsheet</p>
+<p>Let’s check the <code>weight</code> column with conditional
+formatting to flag suspicious values.</p>
 </div>
 </div>
 </div>
@@ -1632,8 +1585,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-27",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-02-28",
+  "datePublished": "2024-02-28"
 }
 
   </script><script>

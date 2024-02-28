@@ -176,8 +176,7 @@
         
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#preferred-date-format">Preferred date format</a></li>
-<li><a href="#single-column-dates">Single-column Dates</a></li>
+        <ul><li><a href="#recommended-date-format">Recommended date format</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -260,7 +259,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Dates as data</h1>
-        <p>Last updated on 2024-02-26 |
+        <p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/03-dates-as-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -299,13 +298,12 @@
 <p>Dates in spreadsheets can be a problem. A spreadsheet application may
 display dates in a seemingly correct way (to a human observer) while
 actually storing the date in a way that may cause issues.</p>
-<div id="note" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h3>
 <div class="callout-content">
 <p>Most of the images of spreadsheets in this lesson come from Microsoft
 Excel running on a Mac or Windows PC.</p>
@@ -324,13 +322,12 @@ ongoing issues with Excel. Microsoft subsequently released an <a href="https://i
 to Excel in 2023 that allows users to disable automatic data conversion
 of these kinds of data into dates. This serves as an important
 cautionary tale!</p>
-<div id="note-1" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="note-1" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note-1">Note<a class="anchor" aria-label="anchor" href="#note-1"></a></h3>
 <div class="callout-content">
 <p>To turn off automatic data conversion for dates in Excel:</p>
 <ul><li>On Windows: File &gt; Options &gt; Data &gt; Automatic Data
@@ -346,15 +343,38 @@ settings. See below for more information.</p>
 </div>
 </div>
 </div>
-<section id="preferred-date-format"><h2 class="section-heading">Preferred date format<a class="anchor" aria-label="anchor" href="#preferred-date-format"></a>
+<section id="recommended-date-format"><h2 class="section-heading">Recommended date format<a class="anchor" aria-label="anchor" href="#recommended-date-format"></a>
 </h2>
-<hr class="half-width"><p>There are two ‘tidy’ ways to store dates in spreadsheets.</p>
-<ol style="list-style-type: decimal"><li>Split between multiple columns, so that the year, month, and day
-component each get their own column.</li>
-<li>Within a single column, formatted in accordance with ISO 8601
-standard: YYYY-MM-DD.</li>
-</ol><p>Let’s take a look at the first option and assume you have an existing
-set of dates in a spreadsheet that you’d like to split up.</p>
+<hr class="half-width"><p>To avoid ambiguity, dates should be written as
+<code>yyyy-mm-dd</code>. But Excel and other spreadsheet software tend
+to transform this data into their own date formats, changing the
+underlying data in the process.</p>
+<p>For example, take the date <code>2024-01-13</code>. When you add this
+value to a cell inside a new Excel spreadsheet (<code>.xlsx</code>) and
+save the spreadsheet in the same format, the date is overwritten to
+<code>13/01/2024</code>. Similarly, when you add this date to a cell
+inside a new Excel spreadsheet (<code>.xlsx</code>) and save the
+spreadsheet in a plain text format (<code>.csv</code>), the date is
+again overwritten to <code>13/01/2024</code>. Even when you create a new
+plain text spreadsheet (<code>.csv</code>) and save the file in
+<code>.csv</code> format, the date is overwritten to
+<code>13/01/2024</code>. When you create a new plain text spreadsheet
+(<code>.csv</code>), pre-format a column as ‘text’ (right click the
+column label &gt; format cells &gt; Text), and enter the date, it will
+be stored correctly and display correctly. However, when this
+<code>.csv</code> file is opened back up again in Excel the date is
+reinterpreted by Excel, converted to it’s internal format, and
+overwritten as <code>13/01/2024</code>.</p>
+<p>Why is Excel doing this? When data is imported into Excel, it will
+automatically identify cells containing dates and convert these into
+it’s internal date format. In the background, Excel stores dates as
+integers, and then picks a format to display them with based on your
+computer’s regional date settings.</p>
+<p>The <strong>only</strong> guaranteed way to avoid this is to make
+different columns to record year, month, and day separately. You can
+then join the date components up later on in the software used for
+analysis. If you already have dates in a single column, you can split
+them up using some handy Excel functions.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -363,16 +383,17 @@ set of dates in a spreadsheet that you’d like to split up.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>Pulling day, month, and year out of dates.</p>
+<p>Pulling day, month, and year out of dates entered into a single
+column.</p>
 <ol style="list-style-type: decimal"><li>Create a tab called <code>dates</code> in our messy spreadsheet and
 copy the ‘plot 3’ table from the <code>2014</code> tab (that contains
 the problematic dates).</li>
 <li>Create new columns for day, month, and year.</li>
-<li>Make sure they are formatted as numbers, not dates, by
-right-clicking the column &gt; format cells &gt; number.</li>
+<li>Make sure the new columns are formatted as numbers, not dates, by
+selecting the columns, right-clicking them &gt; format cells &gt;
+number.</li>
 <li>Extract day, month, and year from the dates in the
-<code>Date collected</code> column into new columns. For this we can use
-the following built-in Excel functions:</li>
+<code>Date collected</code> column into the new columns by using:</li>
 </ol><p><code>YEAR()</code></p>
 <p><code>MONTH()</code></p>
 <p><code>DAY()</code></p>
@@ -399,65 +420,6 @@ without the field assistant realising.</p>
 1’ .output}</p>
 </div>
 </div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="dates-are-actually-stored-as-integers">Dates are actually stored as integers<a class="anchor" aria-label="anchor" href="#dates-are-actually-stored-as-integers"></a></h3>
-<p>Spreadsheet programs can display dates in a variety of ways, but
-these “features” often allow ambiguity to creep into your data. Ideally,
-data should be as unambiguous as possible.</p>
-<figure><img src="../fig/5_excel_dates_1.jpg" alt="Many formats, many ambiguities" class="figure mx-auto d-block"></figure><p>Excel stores dates as numbers: see the last column in the above
-figure. Excel stores dates as a number representing the number of days
-since December 31, 1899. So July 2, 2014 is stored as 41822 because it
-is 41,822 days after December 31, 1899.</p>
-<p>If you’re not fully aware of which date format you’re using, you can
-end up entering your data in a way that Excel will badly misinterpret
-and you will end up with errors in your data that will be extremely
-difficult to track down and troubleshoot.</p>
-</div>
-</section><section id="single-column-dates"><h2 class="section-heading">Single-column Dates<a class="anchor" aria-label="anchor" href="#single-column-dates"></a>
-</h2>
-<hr class="half-width"><p>The second “tidy” way to store dates is within a single column,
-formatted in accordance with ISO 8601 standard: <code>YYYY-MM-DD</code>.
-But actually using this date format in Excel is more challenging than
-first appears.</p>
-<p>For example, take the date <code>2024-01-13</code>. When you add this
-value to a cell inside a new Excel spreadsheet (<code>.xlsx</code>) and
-save the spreadsheet in the same format, the date is overwritten to
-<code>13/01/2024</code>. Similarly, when you add this date to a cell
-inside a new Excel spreadsheet (<code>.xlsx</code>) and save the
-spreadsheet in a non-Excel format (<code>.csv</code>), the date is again
-overwritten to <code>13/01/2024</code>. Even when you create a new
-non-Excel formatted spreadsheet (<code>.csv</code>) and save the file
-still in <code>.csv</code> format, the date is overwritten to
-13/01/2024. When you create a new non-Excel formatted spreadsheet
-(<code>.csv</code>), pre-format the column as ‘text’ (right click the
-column label &gt; format cells &gt; Text), and enter the date, it will
-be stored correctly and display correctly. However, when this
-<code>.csv</code> file is opened back up again in Excel the date is
-reinterpreted by Excel, converted to a number, and overwritten as
-<code>13/01/2024</code>.</p>
-<p>Why is Excel doing this? When a spreadsheet is opened in Excel it is
-automatically converting the date to an integer and changing the date
-format based on your computer’s regional date settings. The
-<strong>only</strong> way to enter a date as <code>YYYY-MM-DD</code> and
-have it be both stored and displayed correctly in Excel is to change
-your regional date setting.</p>
-<div id="note-2" class="callout callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="note-2" class="callout-inner">
-<h3 class="callout-title">Note<a class="anchor" aria-label="anchor" href="#note-2"></a>
-</h3>
-<div class="callout-content">
-<p>To stop Excel overwriting and incorrectly displaying dates in
-<code>YYYY-MM-DD</code> format you need to change Windows region
-settings. This will also change the display of your date in the
-taskbar.</p>
-<ul><li>On Windows: Start menu &gt; Region &gt; Additional settings &gt;
-Date tab &gt; enter ‘yyyy-MM-dd’ into ‘Short Date’</li>
-</ul></div>
 </div>
 </div>
 <div id="keypoints1" class="callout keypoints">
@@ -531,8 +493,8 @@ easier to handle.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/03-dates-as-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/instructor/03-dates-as-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-26",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-02-28",
+  "datePublished": "2024-02-28"
 }
 
   </script><script>
