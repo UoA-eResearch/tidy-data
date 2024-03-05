@@ -78,11 +78,11 @@
   Tidy Data
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 16%" class="percentage">
-    16%
+<aside class="col-md-12 lesson-progress"><div style="width: 13%" class="percentage">
+    13%
   </div>
   <div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 16%" aria-valuenow="16" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar data" role="progressbar" style="width: 13%" aria-valuenow="13" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -260,7 +260,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Formatting data tables in Spreadsheets</h1>
-        <p>Last updated on 2024-02-28 |
+        <p>Last updated on 2024-03-05 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -297,7 +297,7 @@ spreadsheet.</li>
 </div>
 </div>
 </div>
-<p>Spreadsheets are ubiquitous in research environments, yet many
+<p>Spreadsheets are common in research environments, yet many
 researchers are never taught how to properly format tabular data to
 ensure it is easy to analyse later. Since most researchers use Excel as
 their primary spreadsheet software, the rest of this lesson will make
@@ -322,8 +322,8 @@ run into problems when working with research data when we forget Excel’s
 purpose and limitations. For example:</p>
 <ul><li>Be very cautious when opening and saving research data in Excel
 because by default it automatically reformats certain types of data, and
-this can introduce major errors (we’ll explore an example later when we
-talk about dates).</li>
+this can introduce major errors into your data (we’ll explore an example
+later when we talk about dates).</li>
 <li>Making tables ‘pretty’ with merged cells, borders, highlighting, and
 notes in the margin mean that the data will not be recognised when
 imported into specialised data analysis software, and will first require
@@ -332,19 +332,14 @@ time-consuming manual clean up.</li>
 like Excel cannot be reproduced by someone else without detailed
 instructions, and it’s easy to introduce errors when creating plots by
 hand.</li>
-</ul></section><section id="structuring-data-in-spreadsheets"><h2 class="section-heading">Structuring Data in Spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
+</ul><p>But spreadsheet software also has some useful features to help us to
+keep our data error-free and formatted correctly.</p>
+</section><section id="structuring-data-in-spreadsheets"><h2 class="section-heading">Structuring Data in Spreadsheets<a class="anchor" aria-label="anchor" href="#structuring-data-in-spreadsheets"></a>
 </h2>
-<hr class="half-width"><p>There are, however, useful things we can do with spreadsheet software
-to help us with our research. Ensuring tabular data is consistent and
-structured in a way that computers understand means we can harness the
-power of programming languages like R or Python to perform complex
-analyses with a few lines of code. But to do that, we need to set up our
-data in a way the computer can understand (and computers are very
-literal).</p>
-<p>The number one rule for working with tabular data in spreadsheet
+<hr class="half-width"><p>The number one rule for working with tabular data in spreadsheet
 software is to keep it “tidy”:</p>
-<ol style="list-style-type: decimal"><li>Put all your variables in columns - the thing you’re measuring, like
-‘weight’ or ‘temperature’.</li>
+<ol style="list-style-type: decimal"><li>Put all your variables in columns - the things you’re measuring,
+like ‘weight’ or ‘temperature’.</li>
 <li>Put each observation in its own row.</li>
 <li>Don’t combine multiple pieces of information in one cell. You want
 maximum freedom to sort or subset your data later on.</li>
@@ -354,13 +349,15 @@ maximum freedom to sort or subset your data later on.</li>
 version of the Portal Project Database - a dataset containing
 observations of rodents in southern Arizona as part of a project
 studying the effects of rodents and ants on the plant community. The
-rodents are sampled from a series of 24 plots, with different
+rodents are captured in a series of 24 plots, with different
 experimental manipulations controlling which rodents are allowed to
-access which plots.</p>
+access which plots. Measurements are recorded for each captured
+rodent.</p>
 <p>The study has been running for almost 40 years and the full dataset
 has been used in over 100 publications. The data we’re going to look at
 has been simplified a little bit for the workshop, but the full version
-is available to download if you’re interested.</p>
+is <a href="https://portal.weecology.org/" class="external-link">available to download</a> if
+you’re interested.</p>
 <div id="exercise" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -392,19 +389,6 @@ you could do to fix the problem.</p>
 <ul><li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
 messy dataset. As different points are brought up, refer to <a href="02-common-mistakes.html">02-common-mistakes</a> or expand a bit on
 the point.</li>
-<li>Note: There is a problem with dates in table ‘plot 3’ in the
-<code>2014</code> tab. The field assistant who collected the data for
-year 2014 initially forgot to include their data for ‘plot 3’. They came
-back in 2015 to include the missing data and entered the dates for ‘plot
-3’ in the dataset without the year. Excel automatically filled in the
-missing year as the current year (i.e. 2015) - introducing an error in
-the data without the field assistant realising. If you get a response
-from the participants that they’ve spotted and fixed the problem with
-date, you can say you’ll come back to dates again towards the end of
-lesson in episode <a href="03-dates-as-data.html">03-dates-as-data</a>.
-If participants have not spotted the problem with dates in ‘plot 3’
-table, that’s fine as you will address peculiarities of working with
-dates in spreadsheets in episode <a href="03-dates-as-data.html">03-dates-as-data</a>.</li>
 </ul></div>
 </div>
 </div>
@@ -412,8 +396,10 @@ dates in spreadsheets in episode <a href="03-dates-as-data.html">03-dates-as-dat
 </div>
 <div class="section level3">
 <h3 id="tidied-data">Tidied Data<a class="anchor" aria-label="anchor" href="#tidied-data"></a></h3>
-<p>You can download a cleaned version of the messy data <a href="data/survey_data_spreadsheet_clean.xlsx">here</a> to see what a
-tidy version of this dataset looks like. Points to consider:</p>
+<p>Download a cleaned version of the messy data <a href="data/survey_data_spreadsheet_clean.xlsx">here</a> to see what a
+tidy version of this dataset looks like. It’s worth opening up the messy
+and cleaned spreadsheet side by side to compare the difference. Points
+to consider:</p>
 <ul><li>Multiple tables have been combined into a single table where each
 observation has it’s own row.</li>
 <li>Column headings (or variable names) have been simplified.</li>
@@ -422,6 +408,8 @@ up.</li>
 <li>Missing data is represented by blank cells.</li>
 <li>A <code>calibrated</code> column has been added to remove the need
 for messy formatting.</li>
+<li>The date column has been split into 3 separate columns - more on
+this later.</li>
 </ul><p>This tidy dataset is an example of data in ‘long format’. However, we
 tend to be more familiar with data in ‘wide’ format because that is
 often how people store data in spreadsheets.</p>
@@ -452,11 +440,11 @@ wide format:</p>
 <td>4.2</td>
 <td>5.1</td>
 <td>3.9</td>
-</tr></tbody></table><p>Data in wide format expands by adding more columns. If we continued
-taking a measurment from each subject for 3 more days we would add
-day4-day6 as columns to the right.</p>
-<p>Data in long format expands by adding additional rows below. The
-above data in long format would look like this:</p>
+</tr></tbody></table><p>Data in wide format expands by adding more columns to the right. If
+we continued taking a measurment from each subject for 3 more days we
+would add day4-day6 as columns to the right.</p>
+<p>Data in long format, however, expands by adding additional rows
+below. The above data in long format would look like this:</p>
 <table class="table"><thead><tr class="header"><th>subject</th>
 <th>sex</th>
 <th>region</th>
@@ -510,18 +498,15 @@ above data in long format would look like this:</p>
 </tr></tbody></table><p>You can see how <code>day</code> has been added as it’s own column,
 and each measurement has gone into the <code>value</code> column. Note
 also how <code>subject</code>, <code>sex</code>, and <code>region</code>
-are repeated to give each <code>day</code>/<code>value</code>
-combination their own row. This means long format data is often larger
-than wide format due to the repetition.</p>
+are repeated to give each <code>value</code> it’s own row. This means
+long format data is often larger than wide format datas.</p>
 <p>Data in ‘long’ format is often much easier to do statsitics on and to
 visualise in plots, and this is especially the case with programming
 languages like R and Python. Therefore it is generally best to store
-data in long format so that you have maximum flexibility to subset the
-data any way you want.</p>
-<p>For example, we could see values for all females on day 2 by
-filtering out the other rows. But if our data was in wide format, we
-would need to filter out rows and columns. We’ll learn how to switch
-between long and wide format data later in the R lesson.</p>
+data in long format so that you have maximum flexibility to subset and
+plot the data without having to first change it to long format. We’ll
+learn how to switch between long and wide format data later in the R
+lesson.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -599,7 +584,7 @@ it later.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/01-format-data.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/01-format-data.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-28",
+  "dateModified": "2024-03-05",
   "datePublished": "2024-03-05"
 }
 

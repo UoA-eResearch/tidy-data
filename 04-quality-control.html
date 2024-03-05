@@ -78,11 +78,11 @@
   Tidy Data
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 74%" class="percentage">
-    74%
+<aside class="col-md-12 lesson-progress"><div style="width: 73%" class="percentage">
+    73%
   </div>
   <div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 74%" aria-valuenow="74" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar data" role="progressbar" style="width: 73%" aria-valuenow="73" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -260,7 +260,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Quality control</h1>
-        <p>Last updated on 2024-02-28 |
+        <p>Last updated on 2024-03-05 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/04-quality-control.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -295,20 +295,40 @@ and limit incorrect data entry.</li>
 </div>
 </div>
 </div>
-<p>When you have set up a well-structured data table, you can use
-several simple techniques within your spreadsheet software to ensure the
-data you enter is free of errors. These approaches include techniques
-that are implemented prior to entering data (quality assurance) and
-techniques that are used after entering data to check for errors
-(quality control).</p>
+<p>Remember how two different field assistants recorded data in their
+own way inside the messy spreadsheet? When data is not recorded in a
+consistent way it is very difficult to work with, and often a lot of
+time has to be spent cleaning it and fixing it first. How do we avoid
+this? One way is to use the built-in features of spreadsheet software to
+ensure data is entered in a consistent way.</p>
+<p>These approaches include techniques that are implemented prior to
+entering data (quality assurance) and techniques that are used after
+entering data to check for errors (quality control).</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h3>
+<div class="callout-content">
+<p>If you have used formulas in your spreadsheet, then before doing any
+quality control operations it’s best to save your spreadsheet and create
+a new copy. In the new copy, copy the contents and paste as values so
+the formulas are removed. Because formulas refer to other cells, and you
+may be moving cells around, you may compromise the integrity of your
+data if you do not take this step.</p>
+</div>
+</div>
+</div>
 <section id="quality-assurance"><h2 class="section-heading">Quality Assurance<a class="anchor" aria-label="anchor" href="#quality-assurance"></a>
 </h2>
-<hr class="half-width"><p>Quality assurance stops bad data from ever being entered by checking
-to see if values are valid during data entry. For example, if research
-is being conducted at sites A, B, and C, then the value V (which is
-right next to B on the keyboard) should never be entered. Likewise if
-one of the kinds of data being collected is a count, only integers
-greater than or equal to zero should be allowed.</p>
+<hr class="half-width"><p>Quality assurance prevents errors from being introduced into the
+spreadsheet by checking to see if values are valid during data entry.
+For example, if research is being conducted at sites A, B, and C, then
+the value V (which is right next to B on the keyboard) should never be
+entered. Likewise if one of the kinds of data being collected is a
+count, only integers (whole numbers) greater than or equal to zero
+should be allowed.</p>
 <p>To control the kind of data entered into a spreadsheet we use Data
 Validation (Excel) or Validity (Libre Office Calc), to set the values
 that can be entered in each data column:</p>
@@ -339,24 +359,8 @@ list. So, instead of trying to remember how to spell <em>Dipodomys
 spectabilis</em>, you can select the right option from the list.</p>
 <figure><img src="fig/drop_down_list2.png" alt="Image of drop-down menu" class="figure mx-auto d-block"></figure></section><section id="quality-control"><h2 class="section-heading">Quality Control<a class="anchor" aria-label="anchor" href="#quality-control"></a>
 </h2>
-<hr class="half-width"><div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h3>
-<div class="callout-content">
-<p>If you have used formulas in your spreadsheet, then before doing any
-quality control operations it’s best to save your spreadsheet and create
-a new copy. In the new copy, copy the contents and paste as values so
-the formulas are removed. Because formulas refer to other cells, and you
-may be moving cells around, you may compromise the integrity of your
-data if you do not take this step.</p>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="manual-method-sorting">Manual method: Sorting<a class="anchor" aria-label="anchor" href="#manual-method-sorting"></a></h3>
+<hr class="half-width"><div class="section level3">
+<h3 id="manual-sorting">Manual sorting<a class="anchor" aria-label="anchor" href="#manual-sorting"></a></h3>
 <p>Bad values often sort to the bottom or top of the column. For
 example, if your data should be numeric, then alphabetical and null data
 will group at the ends of the sorted data. Sort your data by each field,
@@ -383,8 +387,21 @@ flag inconsistent values when entering data.</p>
 <h3 class="callout-title">Exercise<a class="anchor" aria-label="anchor" href="#exercise"></a>
 </h3>
 <div class="callout-content">
-<p>Let’s check the <code>weight</code> column with conditional
-formatting to flag suspicious values.</p>
+<p>Let’s check the <code>weight</code> column in our <a href="data/survey_data_spreadsheet_clean.xlsx">cleaned data</a> to flag
+suspicious values with conditional formatting. Let’s assume that we’re
+not expecting to see any weights under 10 grams or over 200 grams.</p>
+<ol style="list-style-type: decimal"><li>Select the <code>weight</code> column.</li>
+<li>In the main Excel menu bar, click Home &gt; Conditional Formatting
+&gt; Manage rules.</li>
+<li>Select New Rule, then in the ‘Select a rule type box’, select
+‘Format only cells that contain’.</li>
+<li>In the ‘Rule description’ box, change <code>between</code> to
+<code>not between</code>, and enter <code>10</code> and <code>200</code>
+in the boxes.</li>
+<li>Now select the ‘Format’ box, ‘Fill’ tab, and select a colour. Select
+OK on each dialog box.</li>
+</ol><p>What kind of values have been highlighted in the <code>weight</code>
+column?</p>
 </div>
 </div>
 </div>
@@ -393,9 +410,10 @@ formatting to flag suspicious values.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-
+<p>All cells containing numbers below 10, above 200, or with blank
+values, should now be highlighted.</p>
 </div>
 </div>
 </div>
@@ -480,7 +498,7 @@ data.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/04-quality-control.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/04-quality-control.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-02-28",
+  "dateModified": "2024-03-05",
   "datePublished": "2024-03-05"
 }
 
