@@ -42,13 +42,10 @@ Instructors: don't go through this episode except to refer to responses to the e
 Creating multiple tables within one spreadsheet might seem convenient, but:
 
 - you won't be able to import the data into specialised analyses software because it confuses the computer.
-- you could be using the same variable name in multiple places, which will make it harder to clean your data up
-into a usable form. 
 
 ![](fig/2_datasheet_example.jpg){alt='multiple tabs'}
 
-In the example above, the computer will see (for example) row 4 and assume that all columns A-AF
-refer to the same sample. This row actually represents four distinct samples.
+In the example above, the computer will see (for example) row 4 and assume that all columns A-AF refer to the same sample. This row actually represents four distinct samples.
 
 ## Using multiple tabs {#tabs}
 

@@ -16,20 +16,25 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-When you have set up a well-structured data table, you can use several simple
-techniques within your spreadsheet software to ensure the data you enter is
-free of errors. These approaches include techniques that are
-implemented prior to entering data (quality assurance) and
-techniques that are used after entering data to check for errors
-(quality control).
+Remember how two different field assistants recorded data in their own way inside the messy spreadsheet? When data is not recorded in a consistent way it is very difficult to work with, and often a lot of time has to be spent cleaning it and fixing it first. How do we avoid this? One way is to use the built-in features of spreadsheet software to ensure data is entered in a consistent way.
+
+These approaches include techniques that are implemented prior to entering data (quality assurance) and techniques that are used after entering data to check for errors (quality control).
+
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Note
+
+If you have used formulas in your spreadsheet, then before doing any quality control operations it's best to save your spreadsheet and create a new copy. In the new copy, copy the contents and paste as values so the formulas are removed. Because formulas refer to other cells, and you may be moving cells around, you may compromise the integrity of your data if you do not take this step. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Quality Assurance
 
-Quality assurance stops bad data from ever being entered by checking to see if
+Quality assurance prevents errors from being introduced into the spreadsheet by checking to see if
 values are valid during data entry. For example, if research is being conducted
 at sites A, B, and C, then the value V (which is right next to B on the
 keyboard) should never be entered. Likewise if one of the kinds of data being
-collected is a count, only integers greater than or equal to zero should be
+collected is a count, only integers (whole numbers) greater than or equal to zero should be
 allowed.
 
 To control the kind of data entered into a spreadsheet we use Data Validation
@@ -80,15 +85,7 @@ right option from the list.
 
 ## Quality Control
 
-:::::::::::::::::::::::::::::::::::::::::  callout
-
-## Note
-
-If you have used formulas in your spreadsheet, then before doing any quality control operations it's best to save your spreadsheet and create a new copy. In the new copy, copy the contents and paste as values so the formulas are removed. Because formulas refer to other cells, and you may be moving cells around, you may compromise the integrity of your data if you do not take this step.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-### Manual method: Sorting
+### Manual sorting
 
 Bad values often sort to the bottom or top of the column. For example, if your data should be numeric, then alphabetical and null data will group at the ends of the sorted data. Sort your data by each field, one at a time. Scan through each column, but pay the most attention to the top and the bottom of a column. If your dataset is well-structured and does not contain formulas, sorting should never affect the integrity of your dataset. **Remember** to expand your sort to prevent data corruption. Expanding your sort ensures that all the data in one row move together instead of only sorting a single column in isolation. Sorting by only a single column will scramble your data - a single row will no longer represent an individual observation.
 
@@ -100,12 +97,19 @@ Conditional formatting can highlight bad values based on certain criteria. This 
 
 ### Exercise
 
-Let's check the `weight` column with conditional formatting to flag suspicious values.
+Let's check the `weight` column in our [cleaned data](data/survey_data_spreadsheet_clean.xlsx) to flag suspicious values with conditional formatting. Let's assume that we're not expecting to see any weights under 10 grams or over 200 grams. 
+
+1. Select the `weight` column. 
+2. In the main Excel menu bar, click Home > Conditional Formatting > Manage rules.
+3. Select New Rule, then in the 'Select a rule type box', select 'Format only cells that contain'.
+4. In the 'Rule description' box, change `between` to `not between`, and enter `10` and `200` in the boxes.
+5. Now select the 'Format' box, 'Fill' tab, and select a colour. Select OK on each dialog box.
+
+What kind of values have been highlighted in the `weight` column?
 
 :::::::::::::::  solution
 
-### Solution
-
+All cells containing numbers below 10, above 200, or with blank values, should now be highlighted.
 
 :::::::::::::::::::::::::
 
