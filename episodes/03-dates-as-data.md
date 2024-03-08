@@ -43,6 +43,7 @@ To turn off automatic data conversion for dates in Excel:
 
 Note: This will only stop Excel from turning text/number combinations such as MAR4, DEC8, etc into dates. It will not prevent Excel from changing the way dates are interpreted and displayed based on regional settings. See below for more information.
 
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Recommended date format
