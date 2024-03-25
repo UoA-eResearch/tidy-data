@@ -75,7 +75,7 @@ Spreadsheet or statistical software will likely misinterpret blank cells if you 
 
 There are many reasons why null values are represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that's the case, there's not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysing or sharing. In other cases, null values are used to convey different reasons why the data is missing. This is important information to capture, but instead of using one column to capture two pieces of information, it would be better to create a new column like 'data\_missing' and use that column to capture the different reasons.
 
-For mising data, blank cells are usually the best choice.
+For missing data, blank cells are usually the best choice.
 
 ## Using formatting to convey information {#formatting}
 

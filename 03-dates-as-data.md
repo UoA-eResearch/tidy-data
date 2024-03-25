@@ -54,7 +54,7 @@ For example, take the date `2024-01-13`. When you add this value to a cell insid
 
 Why is Excel doing this? When data is imported into Excel, it will automatically identify cells containing dates and convert these into it's internal date format. In the background, Excel stores dates as integers, and then picks a format to display them with based on your computer's regional date settings.
 
-While it is possible to stop this from happening by changing your regional date settings, whenever someone else (like your supervisor or colleague) opens and saves the file, the dates will be converted based on their regioanl date settings, which means they are likely to end up back in `13/01/2024` format.
+While it is possible to stop this from happening by changing your regional date settings, whenever someone else (like your supervisor or colleague) opens and saves the file, the dates will be converted based on their regional date settings, which means they are likely to end up back in `13/01/2024` format.
 
 The **only** guaranteed way to avoid this is to make different columns to record year, month, and day separately. You can then join the date components up later on in the software used for analysis. If you already have dates in a single column, you can split them up using some handy Excel functions.
 
