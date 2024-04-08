@@ -12,7 +12,7 @@ exercises: 5
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for organising research files?
+- What are some basic principles for organising research files?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -26,10 +26,11 @@ Each research project should have it's own project directory (folder) containing
 
 Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example:
 
-- `data`: Keep raw, unedited data files here.
-- `results`: Keep cleaned/transformed datasets, figures, and tables here.
+- `data_raw`: Keep raw, unedited data files here.
+- `data_clean`: Keep cleaned/transformed datasets here.
+- `figs`: Keep figures and tables here.
 - `docs`: Keep manuscripts, lab notebooks, and other documents here.
-- `src`: Keep source files (code/scripts) here.
+- `scripts`: Keep scripts or code documents here.
 
 Like folder names, filenames should:
 
@@ -53,8 +54,8 @@ If you need to manually tidy or transform the data, it's best to make your chang
 
 Tidy spreadsheets are those where:
 
-- Each variable has it's own column.
-- Each observation has it's own row.
+- Each variable has its own column.
+- Each observation has its own row.
 - Each cell contains a single value.
 
 The idea is to ensure data is structured in a way that computers are expecting, in order to use programming languages like R or Python later on. We'll cover this more in the next episode. 
