@@ -42,13 +42,10 @@ Instructors: don't go through this episode except to refer to responses to the e
 Creating multiple tables within one spreadsheet might seem convenient, but:
 
 - you won't be able to import the data into specialised analyses software because it confuses the computer.
-- you could be using the same variable name in multiple places, which will make it harder to clean your data up
-into a usable form. 
 
 ![](fig/2_datasheet_example.jpg){alt='multiple tabs'}
 
-In the example above, the computer will see (for example) row 4 and assume that all columns A-AF
-refer to the same sample. This row actually represents four distinct samples.
+In the example above, the computer will see (for example) row 4 and assume that all columns A-AF refer to the same sample. This row actually represents four distinct samples.
 
 ## Using multiple tabs {#tabs}
 
@@ -78,7 +75,7 @@ Spreadsheet or statistical software will likely misinterpret blank cells if you 
 
 There are many reasons why null values are represented differently within a dataset. Sometimes confusing null values are automatically recorded from the measuring device. If that's the case, there's not much you can do, but it can be addressed in data cleaning with a tool like OpenRefine before analysing or sharing. In other cases, null values are used to convey different reasons why the data is missing. This is important information to capture, but instead of using one column to capture two pieces of information, it would be better to create a new column like 'data\_missing' and use that column to capture the different reasons.
 
-For mising data, blank cells are usually the best choice.
+For missing data, blank cells are usually the best choice.
 
 ## Using formatting to convey information {#formatting}
 
