@@ -12,7 +12,7 @@ exercises: 3
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What are basic principles for organising research files?
+- What are some basic principles for organising research files?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -24,12 +24,13 @@ Organising digital files into projects and managing them effectively are essenti
 
 Each research project should have it's own project directory (folder) containing files organised into a logical folder hierarchy. The threshold at which closely-related projects become separate will depend on the kinds of projects you work on. For example, each discrete set of data resulting in a publication may have it's own project folder, or perhaps each grant has it's own project folder containing the datasets and manuscripts generated as part of the overall project. 
 
-Name your project folders and subfolders in a consistent way and include fields that are useful for you. Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example:
+Name your project folders and subfolders in a consistent way and include fields that are useful for you. Every project will have different needs, but using a set of common subfolders means you will always know where certain files live. For example, you could use the following:
 
-- `data`: Keep raw, unedited data files here.
-- `results`: Keep cleaned/transformed datasets, figures, and tables here.
+- `data_raw`: Keep raw, unedited data files here.
+- `data_clean`: Keep cleaned/transformed datasets here.
+- `figs`: Keep figures and tables here.
 - `docs`: Keep manuscripts, lab notebooks, and other documents here.
-- `src`: Keep source files (code/scripts) here.
+- `scripts`: Keep scripts or code documents here.
 
 File names should:
 
@@ -39,7 +40,7 @@ File names should:
 
 For example, `2020-01-20_bird-counts_north.csv` contains a date, subject, and location in three fields separated by underscores. This is much more informative than `data.xlsx`. The order of fields determines how files will sort, and this may be a useful consideration when working with lots of files. 
 
-2. Ensure files are backed up
+1. Ensure files are backed up
 
 Ensure you're not the victim of data loss by backing up your research projects, or better yet, store them on a platform or service that is automatically backed up for you. The University of Auckland provides Research Drive and Dropbox team folders for researchers and postgraduate research students. Both are backed up automatically. See [here](https://research-hub.auckland.ac.nz/article/choosing-data-storage) for more information.
 
@@ -53,8 +54,8 @@ One of the most important principles for working with research data is to keep a
 
 Tidy datasets are those where:
 
-- Each variable has it's own column.
-- Each observation has it's own row.
+- Each variable has its own column.
+- Each observation has its own row.
 - Each cell contains a single value.
 
 The idea is to ensure data is s tructured in a way that computers can recognise, in order to use programming languages like R or Python later on. We'll cover this more in the next episode. 

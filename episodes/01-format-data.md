@@ -62,7 +62,7 @@ We're going to open up a messy version of a spreadsheet containing some of the P
 
 You can see that the data is spread across two tabs within this Excel workbook. Let's assume two field assistants conducted the surveys, one in 2013 and one in 2014, and they both kept track of the data in their own way in tabs `2013` and `2014` of the workbook. Let's say you were the person in charge of this project and you wanted to start analysing the data.
 
-In the chat, identify what is wrong with this spreadsheet and what you could do to fix the problem. 
+In the chat, identify issues with the data which would make it difficult to understand or analyse. 
 
 :::::::::::::::  solution
 
@@ -116,7 +116,7 @@ You can see how `day` has been added as it's own column, and each measurement ha
 
 Data in 'long' format is often much easier to do statsitics on and to visualise in plots, and this is especially the case with programming languages like R and Python. Therefore it is generally best to store data in long format so that you have maximum flexibility to subset the data any way you want. 
 
-For example, we could see values for all females on day 2 by filtering out the other rows. But if our data was in wide format, we would need to filter out rows and columns. We'll learn how to switch between long and wide format data later in the R lesson.
+We'll learn how to switch between long and wide format data later in the R lesson.
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
