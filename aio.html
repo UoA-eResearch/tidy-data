@@ -301,7 +301,7 @@
         
 <section id="aio-00-intro"><p>Content from <a href="00-intro.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-03-05 |
+<p>Last updated on 2024-04-08 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/00-intro.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -315,7 +315,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What are basic principles for organising research files?</li>
+<li>What are some basic principles for organising research files?</li>
 </ul>
 </div>
 </div>
@@ -354,15 +354,17 @@ subfolders means you will always know where certain files live. For
 example:</p>
 <ul>
 <li>
-<code>data</code>: Keep raw, unedited data files here.</li>
+<code>data_raw</code>: Keep raw, unedited data files here.</li>
 <li>
-<code>results</code>: Keep cleaned/transformed datasets, figures,
-and tables here.</li>
+<code>data_clean</code>: Keep cleaned/transformed datasets
+here.</li>
+<li>
+<code>figs</code>: Keep figures and tables here.</li>
 <li>
 <code>docs</code>: Keep manuscripts, lab notebooks, and other
 documents here.</li>
 <li>
-<code>src</code>: Keep source files (code/scripts) here.</li>
+<code>scripts</code>: Keep scripts or code documents here.</li>
 </ul>
 <p>Like folder names, filenames should:</p>
 <ul>
@@ -400,8 +402,8 @@ data in multiple locations.</p>
 </ol>
 <p>Tidy spreadsheets are those where:</p>
 <ul>
-<li>Each variable has it’s own column.</li>
-<li>Each observation has it’s own row.</li>
+<li>Each variable has its own column.</li>
+<li>Each observation has its own row.</li>
 <li>Each cell contains a single value.</li>
 </ul>
 <p>The idea is to ensure data is structured in a way that computers are
@@ -513,7 +515,7 @@ practices in scientific computing</a> by Greg Wilson and colleagues,
 published in PLoS Computational Biology.</p>
 </div></section><section id="aio-01-format-data"><p>Content from <a href="01-format-data.html">Formatting data tables in Spreadsheets</a></p>
 <hr>
-<p>Last updated on 2024-03-05 |
+<p>Last updated on 2024-04-08 |
         
         <a href="https://github.com/datacarpentry/spreadsheet-ecology-lesson/edit/main/episodes/01-format-data.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -635,8 +637,8 @@ in 2013 and one in 2014, and they both kept track of the data in their
 own way in tabs <code>2013</code> and <code>2014</code> of the workbook.
 Let’s say you were the person in charge of this project and you wanted
 to start analysing the data.</p>
-<p>In the chat, identify what is wrong with this spreadsheet and what
-you could do to fix the problem.</p>
+<p>In the chat, identify issues with the data which would make it
+difficult to understand or analyse.</p>
 </div>
 </div>
 </div>
@@ -805,10 +807,10 @@ long format data is often larger than wide format datas.</p>
 <p>Data in ‘long’ format is often much easier to do statsitics on and to
 visualise in plots, and this is especially the case with programming
 languages like R and Python. Therefore it is generally best to store
-data in long format so that you have maximum flexibility to subset and
-plot the data without having to first change it to long format. We’ll
-learn how to switch between long and wide format data later in the R
-lesson.</p>
+data in long format so that you have maximum flexibility to subset the
+data any way you want.</p>
+<p>We’ll learn how to switch between long and wide format data later in
+the R lesson.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1627,8 +1629,8 @@ in a format that can be used consistently by most programs.</li>
   "url": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "identifier": "https://datacarpentry.github.io/spreadsheet-ecology-lesson/aio.html",
   "dateCreated": "2015-03-09",
-  "dateModified": "2024-04-02",
-  "datePublished": "2024-04-02"
+  "dateModified": "2024-04-08",
+  "datePublished": "2024-04-08"
 }
 
   </script><script>
