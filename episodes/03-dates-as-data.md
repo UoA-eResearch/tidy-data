@@ -64,7 +64,7 @@ The **only** guaranteed way to avoid this is to make different columns to record
 
 Pulling day, month, and year out of dates entered into a single column.
 
-1. Create a tab called `dates` in our messy spreadsheet and copy the 'plot 3' table from the `2014` tab (that contains the problematic dates).
+1. Open the `dates` tab in our messy spreadsheet and you will see the 'plot 3' table from the `2014` tab (that contains the problematic dates).
 2. Create new columns for day, month, and year. 
 3. Make sure the new columns are formatted as numbers, not dates, by selecting the columns, right-clicking them > format cells > number.
 4. Extract day, month, and year from the dates in the `Date collected` column into the new columns by using:
