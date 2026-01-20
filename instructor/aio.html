@@ -537,7 +537,7 @@ description, and their units</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>See <a href="https://research-hub.auckland.ac.nz/article/research-data-readme" class="external-link">here</a>
 for more information about READMEs.</p>
@@ -713,7 +713,7 @@ difficult to understand or analyse.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>All the mistakes in <a href="02-common-mistakes.html">02-common-mistakes</a> are present in the
@@ -751,7 +751,7 @@ often how people store data in spreadsheets.</p>
 variable each day for each subject. The data would look like this in
 wide format:</p>
 <table class="table">
-<thead><tr class="header">
+<thead><tr>
 <th>subject</th>
 <th>sex</th>
 <th>region</th>
@@ -760,7 +760,7 @@ wide format:</p>
 <th>day3</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>001</td>
 <td>m</td>
 <td>nth</td>
@@ -768,7 +768,7 @@ wide format:</p>
 <td>2.7</td>
 <td>2.6</td>
 </tr>
-<tr class="even">
+<tr>
 <td>002</td>
 <td>f</td>
 <td>sth</td>
@@ -776,7 +776,7 @@ wide format:</p>
 <td>5.2</td>
 <td>4.3</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>003</td>
 <td>f</td>
 <td>wst</td>
@@ -792,7 +792,7 @@ would add day4-day6 as columns to the right.</p>
 <p>Data in long format, however, expands by adding additional rows
 below. The above data in long format would look like this:</p>
 <table class="table">
-<thead><tr class="header">
+<thead><tr>
 <th>subject</th>
 <th>sex</th>
 <th>region</th>
@@ -800,63 +800,63 @@ below. The above data in long format would look like this:</p>
 <th>value</th>
 </tr></thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>001</td>
 <td>m</td>
 <td>nth</td>
 <td>1</td>
 <td>2.5</td>
 </tr>
-<tr class="even">
+<tr>
 <td>001</td>
 <td>m</td>
 <td>nth</td>
 <td>2</td>
 <td>2.7</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>001</td>
 <td>m</td>
 <td>nth</td>
 <td>3</td>
 <td>2.6</td>
 </tr>
-<tr class="even">
+<tr>
 <td>002</td>
 <td>f</td>
 <td>sth</td>
 <td>1</td>
 <td>3.1</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>002</td>
 <td>f</td>
 <td>sth</td>
 <td>2</td>
 <td>5.2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>002</td>
 <td>f</td>
 <td>sth</td>
 <td>3</td>
 <td>4.3</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>003</td>
 <td>f</td>
 <td>wst</td>
 <td>1</td>
 <td>4.2</td>
 </tr>
-<tr class="even">
+<tr>
 <td>003</td>
 <td>f</td>
 <td>wst</td>
 <td>2</td>
 <td>5.1</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>003</td>
 <td>f</td>
 <td>wst</td>
@@ -1486,7 +1486,7 @@ column?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>All cells containing numbers below 10, above 200, or with blank
 values, should now be highlighted.</p>
@@ -1673,7 +1673,7 @@ in a format that can be used consistently by most programs.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.18.3" class="external-link">sandpaper (0.18.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.18.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
